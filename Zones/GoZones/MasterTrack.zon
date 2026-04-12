@@ -1,0 +1,10 @@
+Zone MasterTrack
+
+
+    MasterFader                 TrackVolume
+    /Control+Alt+MasterFader     LastTouchedFXParam
+    /Plugin                      GoZone MasterTrackFXMenu   
+    /RotaryPush|                 Reaper     _S&M_TOGLFLOATFXEL
+    /User       GoZoneHome
+    
+ZoneEnd

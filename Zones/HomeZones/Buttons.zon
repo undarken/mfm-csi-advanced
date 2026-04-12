@@ -1,0 +1,832 @@
+Zone Buttons 
+
+
+
+                   Footswitch1       Reaper _ad515113b8a549f4bc1f8fa9e113d2c3                                                         //record drop in
+                   Footswitch2       Reaper _ad515113b8a549f4bc1f8fa9e113d2c3                                                         //record drop in 
+                   
+                   
+
+                   
+
+
+                           
+   	 
+// TRACK  - This is what you want to happen going to the SELECTED TRACKS ZONE:
+
+   	    	 
+                         Track       ClearModifiers  		          
+                         Track       Reaper  _SWS_MINTRACKS                                                               Feedback=No // SWS: Minimize selected track(s)                                                                            
+                         Track       Reaper   40401                                                                       Feedback=No // Automation: Set all tracks automation mode to read                              
+                         Track       Reaper   41150                                                                       Feedback=No // hide all envelopes all tracks 
+                         Track       Reaper  _SWSTL_HIDEUNSEL                                                             Feedback=No // SWS: Hide unselected track(s) 
+                         Track       Reaper   41148                                                                       Feedback=No // Envelope: Show all envelopes for tracks
+                         Track       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                  Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
+                         Track       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                                  Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                         Track       Reaper   40457                                                                       Feedback=No // Screenset: Load track view #04 - track envelopes
+                         Track       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                  Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua
+                         Track       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                  Feedback=No // Script: HeDa_View Scroll Top.lua
+                         Track       Reaper  _SWS_VZOOMFITMIN   
+                                     
+                         Track       GoZone SelectedTracks    
+                         
+// Plugin - This is what you want to happen going to the SelectedTrackFXMenu Zone:
+
+                         
+                        Plugin       ClearModifier Shift                                                                  Feedback=No // ClearModifier Shift      
+                        Plugin       ClearModifier Option                                                                 Feedback=No // ClearModifier Option 
+                        Plugin       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                  Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua  
+                        Plugin       Reaper  40401                                                                        Feedback=No // Automation: Set all tracks automation mode to read                          
+                        Plugin       Reaper  _SWS_UNSELMASTER                                                             Feedback=No // SWS: Unselect master track
+                        Plugin       Reaper  _SWS_HIDEMASTER                                                              Feedback=No // SWS: Hide master track
+                        Plugin       Reaper   41150                                                                       Feedback=No // Envelope: Hide all envelopes for all tracks                                        
+                        Plugin       Reaper  _SWSTL_HIDEUNSEL                                                             Feedback=No // SWS: Hide unselected track(s)                            
+                        Plugin       Reaper  _BR_SHOW_FX_ENV_SEL_TRACK                                                    Feedback=No // SWS/BR: Show all FX envelopes for selected tracks 
+                        Plugin       Reaper   40406                                                                       Feedback=No // Track: Toggle track volume envelope visible 
+                        Plugin       Reaper   42020                                                                       Feedback=No // Track: Toggle track trim envelope visible                        
+                        Plugin       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                  Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
+                        Plugin       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                                  Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua                          
+                        /Plugin       Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                  Feedback=No // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                        Plugin       Reaper   40456                                                                       Feedback=No // Screenset:Load window set #02
+                        Plugin       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                  Feedback=No // Script: HeDa_View Scroll Top.lu
+                                                                 
+                        Plugin       GoZone SelectedTrackFXMenu                                                           Feedback=No // Go to selected track FX Menu zone
+     
+ 
+                     
+// SEND  - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackSend ZONE FROM Home ZONE: 
+
+ 
+                          Send       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                   Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua 
+                          Send       ClearModifiers                                                                        Feedback=No // ClearModifiers
+                          Send       Reaper _SWSTL_SHOWALL                                                                 Feedback=No // show all tracks 
+                          Send       Reaper  _SWSTL_HIDEUNSEL                                                              Feedback=No // SWS: Hide unselected track(s)                                                    
+                          Send       Reaper  40086                                                                         Feedback=No // Automation: Set all tracks automation mode to read
+                          Send       Reaper   40458                                                                        Feedback=No // Screenset: Load window set #05 
+                          Send       Reaper  _S&M_WNCLS3                                                                   Feedback=No // SWS/S&M: Close all floating FX windows  
+                          Send       Reaper  _S&M_WNCLS4                                                                   Feedback=No // SWS/S&M: Close all FX chain windows
+                          Send       Reaper  41150																		   Feedback=No // Envelope: Hide all envelopes for all tracks                            
+                          Send       Reaper  _BR_SHOW_SEND_ENV_VOL_SEL_TRACK                                               Feedback=No // SHOW_SEND_ENV_VOL_SEL_TRACK
+                          Send       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                   Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
+                          Send       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                                   Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua                                                                                             
+                          Send       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                   Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua     
+                          Send       Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                   Feedback=No // Script: Lokasenna_Scroll mixer to first selected track.lua
+                                     
+                          Send       GoZone SelectedTrackSend                                             //
+ 
+                        
+                        
+                    Pan              GoZone VCA
+                    //Global+Pan       GoZone Folder
+                    EQ               GoZone SelectedTrackReceive
+                    //Global+EQ        GoZone TrackReceive
+              
+                    //Global+Send      GoZone TrackSend
+                    Instrument       LearnFocusedFX
+        
+    
+// DISPLAY    
+
+                      NameValue      NameValue 
+         
+             
+             /AssignmentDisplay      GlobalModeDisplay 
+                   /TimeDisplay      MCUTimeDisplay
+                     smpteBeats      CycleTimeDisplayModes    
+
+//FADER BANKS    
+        
+
+    
+                                                           //Functions as a modifier
+                     
+                     
+
+                           Flip      Flip
+
+                                                           
+//MODIFIER          
+          
+            
+                          Shift      Shift  
+                     Shift+solo      NoAction      
+                         Option      Option        
+                        Control      Control        
+                            Alt      Alt 
+                            Zoom     Zoom   
+                  GlobalView         Global 
+                          Scrub      Scrub
+                          
+//ZOOM TO ITEM AND INTO ITEMFADES ZONE
+                          
+ 
+Zoom     Reaper  _SWS_ITEMZOOM // SWS: Zoom to selected items
+Zoom      GoZone "ItemFades"
+
+// L/R/U/D            
+
+
+                        // Left      Left
+                        //Right      Right
+                        //   Up      Up
+                        // Down      Down                              
+                                    
+     
+        
+            
+// F1-F8 - instrument view 
+
+
+   
+                   
+//BASS Tracks                F1      Reaper  _84c1039ca1624decbba3f6dd060d5955                                                           // unselect tracks and items ALL                               
+                             F1      GoHome                                                                                              // tracks and busses Zone
+                             F1      Reaper   40088                                                                                      // set all tracks automation to trim/read     
+                             F1      Reaper   _S&M_CYCLACTION_242                                                                        // Console BASS
+                             F1      Reaper  _SWSTL_HIDEUNSEL                                                                            // Hide Unselected Track
+                             F1      Reaper  _b7a8a1143093436c81ba5c26504c811a                                                           // Custom: CSI show only Selected track with Routing/sends                                                   
+                             F1      Reaper  _S&M_CYCLACTION_196                                                                         // select EFX
+                             F1      Reaper  _SWSTL_HIDE                                                                                 // SWS: Hide selected track(s)  
+                             F1      Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                           
+                             F1      Reaper  _SWSTL_HIDE                                                                                                             
+                             F1      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                 // scroll top
+                             F1      Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   										 //	sel all tracks 
+                             F1      Reaper  _SWS_VZOOMFITMIN_NO_ENV									      							 // SWS: Vertical zoom to selected tracks, minimize others (ignore last track's envelope lanes)            
+ 							 F1      Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															     // Xenakios/SWS: Select first of selected tracks
+ 							 F1      Reaper  _84c1039ca1624decbba3f6dd060d5955                                                           // unselect tracks and items ALL 
+
+//Bass and Routing           
+
+
+                             F1      GoHome                                                                    HoldDelay=400 Feedback=No // tracks and busses Zone
+                             F1      Reaper   40088                                                            HoldDelay=400 Feedback=No // set all tracks automation to trim/read     
+                             F1      Reaper   _S&M_CYCLACTION_242                                              HoldDelay=400 Feedback=No // Console BASS
+                             F1      Reaper  _SWSTL_HIDEUNSEL                                                  HoldDelay=400 Feedback=No // Hide Unselected Track 
+                             F1      Reaper  _b7a8a1143093436c81ba5c26504c811a                                 HoldDelay=400 Feedback=No // Custom: CSI show only Selected track with Routing/sends
+                             F1      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                       HoldDelay=400 Feedback=No // zoom fit arr/screen
+                             F1      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                       HoldDelay=400 Feedback=No // scroll top          
+                             F1      Reaper  _XENAKIOS_SELFIRSTOFSELTRAX									   HoldDelay=400 Feedback=No // Xenakios/SWS: Select first of selected tracks
+                             F1      Reaper  _84c1039ca1624decbba3f6dd060d5955                                 HoldDelay=400 Feedback=No // unselect tracks and items ALL 
+                   
+//Return to Home Zone     
+  
+                 DoublePress+F1      Reaper  _SWSTL_SHOWALL                                                                              // show all tracks 
+                 DoublePress+F1      ClearModifiers                                                                                      // ClearModifiers
+                 DoublePress+F1      Reaper   41150                                                                                      // hide all envelopes all tracks
+                 DoublePress+F1      Reaper   40088                                                                                      // Automation: Set all tracks automation mode to trim/read
+                 DoublePress+F1      Reaper   40454                                                                                      // Screenset: Load window set #01
+                 DoublePress+F1      Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                 // Script: Archie_View; Zoom TCP to fit screen.lua  
+                 DoublePress+F1      Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                 // Script: Lokasenna_Scroll mixer to first selected track.lua
+                 DoublePress+F1      GoHome                                                                                              //
+                 DoublePress+F1      Reaper  40913                                                                                       // Track: Vertical scroll selected tracks into view
+             
+                           
+ //DRUM Tracks               F2      Reaper  _84c1039ca1624decbba3f6dd060d5955                                                           // unselect tracks and items ALL
+                             F2      GoHome                                                                                              // tracks and busses Zone 
+                             F2      Reaper   40088                                                                                      // set all tracks automation to trim/read     
+                             F2      Reaper   _S&M_CYCLACTION_245                                                                        // Console kits
+                             F2      Reaper  _SWSTL_HIDEUNSEL                                                                            // Hide Unselected Track
+                             F2      Reaper  _b7a8a1143093436c81ba5c26504c811a                                                           // Custom: CSI show only Selected track with Routing/sends                                                   
+                             F2      Reaper  _S&M_CYCLACTION_196                                                                         // select EFX
+                             F2      Reaper  _SWSTL_HIDE                                                                                 // SWS: Hide selected track(s)  
+                             F2      Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                           
+                             F2      Reaper  _SWSTL_HIDE                                                                                                             
+                             /F2      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                 // zoom fit arr/screen
+                             F2      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                 // scroll top
+                             F2      Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   										 //	sel all tracks
+                             F2      Reaper  _SWS_VZOOMFITMIN_NO_ENV									      							 // SWS: Vertical zoom to selected tracks, minimize others (ignore last track's envelope lanes)            
+ 							 F2      Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															     // Xenakios/SWS: Select first of selected tracks
+               
+ 							 F2      Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															     // Xenakios/SWS: Select first of selected tracks
+ 							 F2      Reaper  _84c1039ca1624decbba3f6dd060d5955                                                           // unselect tracks and items ALL 
+                                                                       
+//Drums and Routing        
+                             F2      GoHome                                                                    Feedback=No HoldDelay=400 // tracks and busses Zone
+                             F2      Reaper   40088                                                            Feedback=No HoldDelay=400 // set all tracks automation to trim/read     
+                             F2      Reaper   _S&M_CYCLACTION_245                                              Feedback=No HoldDelay=400 // Console KITS
+                             F2      Reaper  _SWSTL_HIDEUNSEL                                                  Feedback=No HoldDelay=400 // Hide Unselected Track 
+                             F2      Reaper  _b7a8a1143093436c81ba5c26504c811a                                 Feedback=No HoldDelay=400 // Custom: CSI show only Selected track with Routing/sends
+                             F2      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                       Feedback=No HoldDelay=400 // zoom fit arr/screen
+                             F2      Reaper  _RS355b98586305894bfdfca7207bdc637a5bd6fad4                       Feedback=No HoldDelay=400 // scroll bottom
+                             F2      Reaper  40297                                                             Feedback=No HoldDelay=400 // UNselect all tracks
+                             F2      GoHome                                                                    Feedback=No HoldDelay=400 // tracks and busses Zone
+                                      
+//Return to Home Zone                          
+                          
+                 DoublePress+F2      Reaper  _SWSTL_SHOWALL                                                                              // show all tracks 
+                 DoublePress+F2      Reaper  40913										                                                 // Track: Vertical scroll selected tracks into view
+                 DoublePress+F2      ClearModifiers                                                                                      // ClearModifiers
+                 DoublePress+F2      Reaper   41150                                                                                      // hide all envelopes all tracks
+                 DoublePress+F2      Reaper   40088                                                                                      // Automation: Set all tracks automation mode to trim/read
+                 DoublePress+F2      Reaper   40454                                                                                      // Screenset: Load window set #01
+                 DoublePress+F2      Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                 // Script: Archie_View; Zoom TCP to fit screen.lua  
+                 DoublePress+F2      Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                 // Script: Lokasenna_Scroll mixer to first selected track.lua
+                 DoublePress+F2      GoHome                                                                                              //  
+                 DoublePress+F2      Reaper  40913										                                                 // Track: Vertical scroll selected tracks into view
+            
+                                   
+//INDIVIDUAL DRUM SECTIONS:
+
+                        Control+F1      ClearModifiers
+                        Control+F1      Reaper  GoHome                                             
+                        Control+F1      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F1      Reaper _fd652f574963475495a5a9e8dba37e8f                                                            // Custom: BD select and zoom
+                        Control+F1      Bank Track -8                                             
+                        Control                                         
+                        Control+F2      Reaper  GoHome                                             
+                        Control+F2      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F2      Reaper _65569129c427422392c6c06671228084                                                            // Custom: SNR select and zoom
+                        Control+F2      Bank Track -8                                             
+                        Control                                                
+                        Control+F3      Reaper  GoHome                                             
+                        Control+F3      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F3      Reaper _46db42948aa7428db0e30c0ac720e3d5                                                            // Custom: selHIHAT all zoom
+                        Control+F3      Bank Track -8                                             
+                        Control                                         
+                        Control+F4      Reaper  GoHome                                             
+                        Control+F4      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F4      Reaper  _6023c2af539f4ef09380c6792573ae4e                                                           // Custom: TOMS  select and zoom
+                        Control+F4      Bank Track -8                                             
+                        Control                                         
+                        Control+F5      Reaper  GoHome                                             
+                        Control+F5      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F5      Reaper _bfba979708a64707a72fb8dd65c63224                                                            // Custom: sel RIDE  all zoom 
+                        Control+F5     Bank Track -8                                             
+                        Control                                         
+                        Control+F6      Reaper  GoHome                                             
+                        Control+F6      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F6      Reaper _49e024a65ba641b7acc1099fb5927d60                                                            // Custom: OHD select + zoom
+                        Control+F6     Bank Track -8                                             
+                        Control                                         
+                        Control+F7      Reaper  GoHome                                             
+                        Control+F7      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F7      Reaper _92bab921574842a1a230907eee55613a                                                            // Custom: DRM - selcect + zoom
+                        Control+F7      Bank Track -8                                             
+                        Control                       
+//MIDI DRUM SELECTION:  Control                                      
+                        Control                       
+                        Control+F8      Reaper  GoHome                                             
+                        Control+F8      Reaper _8ba171045ec74d3a8c68875279ecac84                                                            // Custom: Close all fx chain and floating fx windows
+                        Control+F8      Reaper _4322a1fc5c0c4588a45234af203e5443                                                            // Custom: SELECT  MIDI DRUMS  and PLUGIN
+                        Control+F8      Bank Track -8
+
+
+
+       
+       
+                //ACOUSTIC Tracks
+                							       
+ 							       
+                            F3      Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL
+                            F3      Reaper   40088                                                                                                 // set all tracks automation to trim/read     
+                            F3      Reaper   _S&M_CYCLACTION_246                                                                              // Console ACGT
+                            F3      Reaper  _SWSTL_HIDEUNSEL                                                                                  // Hide Unselected Track
+                            F3      Reaper  _b7a8a1143093436c81ba5c26504c811a                                                                 // Custom: CSI show only Selected track with Routing/sends                                                   
+                            F3      Reaper  _S&M_CYCLACTION_196                                                                               // select EFX
+                            F3      Reaper  _SWSTL_HIDE                                                                                       // SWS: Hide selected track(s)  
+                            F3      Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                   
+                            F3      Reaper  _SWSTL_HIDE                                                                                                                   
+                            F3      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                       // zoom fit arr/screen
+                            F3      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F3      Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   									       	 //	sel all tracks               
+ 							F3      Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															              // Xenakios/SWS: Select first of selected tracks
+ 							F3      Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL
+                                                                               
+                //Acoustic and Routing
+                            
+                            F3        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read     
+                            F3        Reaper   _S&M_CYCLACTION_246                             Feedback=No HoldDelay=400                         // Console ACGT
+                            F3        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track 
+                            F3        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                            F3        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                            F3        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                            F3        Reaper  40297                                            Feedback=No HoldDelay=400                         // UNselect all tracks
+                            F3        GoHome                                                   Feedback=No HoldDelay=400                         // tracks and busses Zone
+                            
+                //Return to Home Zone
+                
+                DoublePress+F3        Reaper  _SWSTL_SHOWALL                                                                                     // show all tracks 
+                DoublePress+F3        ClearModifiers                                                                                             // ClearModifiers
+                DoublePress+F3        Reaper   41150                                                                                             // hide all envelopes all tracks
+                DoublePress+F3        Reaper   40088                                                                                             // Automation: Set all tracks automation mode to trim/read
+                DoublePress+F3        Reaper   40454                                                                                             // Screenset: Load window set #01
+                DoublePress+F3        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                        // Script: Archie_View; Zoom TCP to fit screen.lua  
+                DoublePress+F3        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                        // Script: Lokasenna_Scroll mixer to first selected track.lua
+                DoublePress+F3        GoHome                                                                                                     //      
+                DoublePress+F3        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                            
+                
+                //ELECTRIC Tracks
+                
+                            F4        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
+                            F4        Reaper   40088                                                                                             // set all tracks automation to trim/read     
+                            F4        Reaper   _S&M_CYCLACTION_51                                                                                // Console ACGT
+                            F4        Reaper  _SWSTL_HIDEUNSEL                                                                                   // Hide Unselected Track
+                            F4        Reaper  _b7a8a1143093436c81ba5c26504c811a                                                                  // Custom: CSI show only Selected track with Routing/sends                                                   
+                            F4        Reaper  _S&M_CYCLACTION_196                                                                                // select EFX
+                            F4        Reaper  _SWSTL_HIDE                                                                                        // SWS: Hide selected track(s)  
+                            F4        Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                    
+                            F4        Reaper  _SWSTL_HIDE                                                                                                                    
+                            F4        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                         // zoom fit arr/screen
+                            F4        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                         // scroll top
+                            F4        Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   									        	  //	sel all tracks               
+ 							F4        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															              // Xenakios/SWS: Select first of selected tracks
+ 							F4        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                   // unselect tracks and items ALL
+                                                                               
+                //Electric and Routing
+                            
+                            F4        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read     
+                            F4        Reaper   _S&M_CYCLACTION_51                              Feedback=No HoldDelay=400                         // Console ACGT
+                            F4        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track 
+                            F4        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                            F4        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                            F4        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                            F4        Reaper  40297                                            Feedback=No HoldDelay=400                         // UNselect all tracks
+                            F4        GoHome                                                   Feedback=No HoldDelay=400                         // tracks and busses Zone
+                            
+                //Return to Home Zone
+                
+                DoublePress+F4        Reaper  _SWSTL_SHOWALL                                                                                     // show all tracks 
+                DoublePress+F4        ClearModifiers                                                                                             // ClearModifiers
+                DoublePress+F4        Reaper   41150                                                                                             // hide all envelopes all tracks
+                DoublePress+F4        Reaper   40088                                                                                             // Automation: Set all tracks automation mode to trim/read
+                DoublePress+F4        Reaper   40454                                                                                             // Screenset: Load window set #01
+                DoublePress+F4        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                        // Script: Archie_View; Zoom TCP to fit screen.lua  
+                DoublePress+F4        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                        // Script: Lokasenna_Scroll mixer to first selected track.lua
+                DoublePress+F4        GoHome                                                                                                     //    
+                DoublePress+F4        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                
+                            
+                //KEYS Tracks
+                
+                            F5        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL
+                            F5        Reaper  _e31357bf672d4ff6ab87923c1ed7fa3c                   												// SHOW TRACKS+BUSSES 
+                            F5        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX																		// Xenakios/SWS: Select first of selected tracks
+                            F5        Reaper   40088                                                                                            // set all tracks automation to trim/read     
+                            F5        Reaper   _S&M_CYCLACTION_31                                                                               // Console KEYS
+                            F5        Reaper  _SWSTL_HIDEUNSEL                                                                                  // Hide Unselected Track
+                            F5        Reaper  _b7a8a1143093436c81ba5c26504c811a                                                                 // Custom: CSI show only Selected track with Routing/sends                                                   
+                            F5        Reaper  _S&M_CYCLACTION_196                                                                               // select EFX
+                            F5        Reaper  _SWSTL_HIDE                                                                                       // SWS: Hide selected track(s)  
+                            F5        Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                   
+                            F5        Reaper  _SWSTL_HIDE                                                                                                                   
+                            F5        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                       // zoom fit arr/screen
+                            F5        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F5        Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   									        	  //	sel all tracks               
+ 							F5        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															              // Xenakios/SWS: Select first of selected tracks
+ 							F5        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                   // unselect tracks and items ALL                            
+                                                                               
+                //keys and Routing
+                            
+                            F5        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read     
+                            F5        Reaper   _S&M_CYCLACTION_31                              Feedback=No HoldDelay=400                         // Console KEYS
+                            F5        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track 
+                            F5        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                            F5        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                            F5        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                            F5        Reaper  40297                                            Feedback=No HoldDelay=400                         // UNselect all tracks
+                            F5        GoHome                                                   Feedback=No HoldDelay=400                         // tracks and busses Zone
+                            
+                //Return to Home Zone
+                
+                DoublePress+F5        Reaper  _SWSTL_SHOWALL                                                                                     // show all tracks 
+                DoublePress+F5        ClearModifiers                                                                                             // ClearModifiers
+                DoublePress+F5        Reaper   41150                                                                                             // hide all envelopes all tracks
+                DoublePress+F5        Reaper   40088                                                                                             // Automation: Set all tracks automation mode to trim/read
+                DoublePress+F5        Reaper   40454                                                                                             // Screenset: Load window set #01
+                DoublePress+F5        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                        // Script: Archie_View; Zoom TCP to fit screen.lua  
+                DoublePress+F5        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                        // Script: Lokasenna_Scroll mixer to first selected track.lua
+                DoublePress+F5        GoHome                                                                                                     //   
+                DoublePress+F5        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                
+                            
+                //MIDI Tracks
+                
+                            F6        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL
+                            F6        Reaper   40088                                                                                            // set all tracks automation to trim/read     
+                            F6        Reaper   _S&M_CYCLACTION_157                                                                              // Console MIDI
+                            F6        Reaper  _SWSTL_HIDEUNSEL                                                                                  // Hide Unselected Track
+                            F6        Reaper  _b7a8a1143093436c81ba5c26504c811a                                                                 // Custom: CSI show only Selected track with Routing/sends                                                   
+                            F6        Reaper  _S&M_CYCLACTION_196                                                                               // select EFX
+                            F6        Reaper  _SWSTL_HIDE                                                                                       // SWS: Hide selected track(s)  
+                            F6        Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                   
+                            F6        Reaper  _SWSTL_HIDE                                                                                                                   
+                            F6        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                       // zoom fit arr/screen
+                            F6        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F6        Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   									        	  //	sel all tracks               
+ 							F6        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															              // Xenakios/SWS: Select first of selected tracks
+ 							F6        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                   // unselect tracks and items ALL                            
+                                                                               
+                //MIDI and Routing
+                            
+                            F6        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read     
+                            F6        Reaper   _S&M_CYCLACTION_157                             Feedback=No HoldDelay=400                         // Console K1
+                            F6        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track 
+                            F6        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                            F6        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                            F6        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                            F6        Reaper  40297                                            Feedback=No HoldDelay=400                         // UNselect all tracks
+                            F6        GoHome                                                   Feedback=No HoldDelay=400                         // tracks and busses Zone
+                            
+                //Return to Home Zone
+                
+                DoublePress+F6        Reaper  _SWSTL_SHOWALL                                                                                     // show all tracks 
+                DoublePress+F6        ClearModifiers                                                                                             // ClearModifiers
+                DoublePress+F6        Reaper   41150                                                                                             // hide all envelopes all tracks
+                DoublePress+F6        Reaper   40088                                                                                             // Automation: Set all tracks automation mode to trim/read
+                DoublePress+F6        Reaper   40454                                                                                             // Screenset: Load window set #01
+                DoublePress+F6        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                        // Script: Archie_View; Zoom TCP to fit screen.lua  
+                DoublePress+F6        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                        // Script: Lokasenna_Scroll mixer to first selected track.lua
+                DoublePress+F6        GoHome                                                                                                     //   
+                DoublePress+F6        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                
+                            
+                 //BACKING VOX Tracks
+                
+                //Return to Home Zone
+                
+                            F7        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL
+                            F7        Reaper   40088                                                                                            // set all tracks automation to trim/read     
+                            F7        Reaper   _S&M_CYCLACTION_123                                                                              // Console BVX
+                            F7        Reaper  _SWSTL_HIDEUNSEL                                                                                  // Hide Unselected Track
+                            F7        Reaper  _b7a8a1143093436c81ba5c26504c811a                                                                 // Custom: CSI show only Selected track with Routing/sends                                                   
+                            F7        Reaper  _S&M_CYCLACTION_196                                                                               // select EFX
+                            F7        Reaper  _SWSTL_HIDE                                                                                       // SWS: Hide selected track(s)  
+                            F7        Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                   
+                            F7        Reaper  _SWSTL_HIDE                                                                                                                   
+                            F7        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                       // zoom fit arr/screen
+                            F7        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F7        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F7        Reaper  40297                                                                                             // UNselect all tracks
+                            F7        GoHome                                                                                                    // tracks and busses Zone
+                            F7        Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   									       	    //	sel all tracks               
+ 							F7        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															            // Xenakios/SWS: Select first of selected tracks
+ 							F7        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL                            
+                                                                               
+                //backing vox and Routing
+                            
+                            F7        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read     
+                            F7        Reaper   _S&M_CYCLACTION_123                             Feedback=No HoldDelay=400                         // Console BVX
+                            F7        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track 
+                            F7        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                            F7        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                            F7        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                            F7        Reaper  40297                                            Feedback=No HoldDelay=400                         // UNselect all tracks
+                            F7        GoHome                                                                                                     // tracks and busses Zone
+                            
+                DoublePress+F7        Reaper  _SWSTL_SHOWALL                                                                                    // show all tracks 
+                DoublePress+F7        ClearModifiers                                                                                            // ClearModifiers
+                DoublePress+F7        Reaper   41150                                                                                            // hide all envelopes all tracks
+                DoublePress+F7        Reaper   40088                                                                                            // Automation: Set all tracks automation mode to trim/read
+                DoublePress+F7        Reaper   40454                                                                                            // Screenset: Load window set #01
+                DoublePress+F7        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                       // Script: Archie_View; Zoom TCP to fit screen.lua  
+                DoublePress+F7        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                       // Script: Lokasenna_Scroll mixer to first selected track.lua
+                DoublePress+F7        GoHome                                                                                                    // 
+                DoublePress+F7        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top        
+                     
+                
+                //LEAD VOX Tracks
+                
+                            F8        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL
+                            F8        Reaper   40088                                                                                            // set all tracks automation to trim/read     
+                            F8        Reaper   _S&M_CYCLACTION_122                                                                              // Console LVX
+                            F8        Reaper  _SWSTL_HIDEUNSEL                                                                                  // Hide Unselected Track
+                            F8        Reaper  _b7a8a1143093436c81ba5c26504c811a                                                                 // Custom: CSI show only Selected track with Routing/sends                                                   
+                            F8        Reaper  _S&M_CYCLACTION_196                                                                               // select EFX
+                            F8        Reaper  _SWSTL_HIDE                                                                                       // SWS: Hide selected track(s)  
+                            F8        Reaper  _XENAKIOS_SELTRAXWITHBUSS                                                   
+                            F8        Reaper  _SWSTL_HIDE                                                                                                                   
+                            F8        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                       // zoom fit arr/screen
+                            F8        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F8        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                       // scroll top
+                            F8        Reaper  40297                                                                                             // UNselect all tracks
+                            F8        GoHome                                                                                                    // tracks and busses Zone  
+                            F8        Reaper   _8cee4188feae4ff7b8ec5986e67d39da                   									        	//	sel all tracks               
+ 							F8        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX															            // Xenakios/SWS: Select first of selected tracks
+ 							F8        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                 // unselect tracks and items ALL                          
+                                                                               
+                //lead vox and Routing
+                            
+                            F8        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read     
+                            F8        Reaper   _S&M_CYCLACTION_122                             Feedback=No HoldDelay=400                         // Console LVX
+                            F8        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track 
+                            F8        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                            F8        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                            F8        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                            F8        Reaper  40297                                            Feedback=No HoldDelay=400                         // UNselect all tracks
+                            F8        GoHome                                                   Feedback=No HoldDelay=400                         // tracks and busses Zone
+                            
+                //Return to Home Zone
+                
+                DoublePress+F8        Reaper  _SWSTL_SHOWALL                                                                                     // show all tracks 
+                DoublePress+F8        ClearModifiers                                                                                             // ClearModifiers
+                DoublePress+F8        Reaper   41150                                                                                             // hide all envelopes all tracks
+                DoublePress+F8        Reaper   40088                                                                                             // Automation: Set all tracks automation mode to trim/read
+                DoublePress+F8        Reaper   40454                                                                                             // Screenset: Load window set #01
+                DoublePress+F8        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                        // Script: Archie_View; Zoom TCP to fit screen.lua  
+                DoublePress+F8        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                        // Script: Lokasenna_Scroll mixer to first selected track.lua
+                DoublePress+F8        GoHome                                                                                                     //  
+                DoublePress+F8        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                            
+                            
+                // MIDI TRACKS - USER
+                
+                // Show Tracks With "Aux" in name
+                
+                
+                           Aux        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
+                           Aux        Reaper  _SWSTL_SHOWALL                                                                                     // show all tracks
+                           Aux        Reaper   40088                                                                                             // set all tracks automation to trim/read 
+                           Aux        Reaper   _S&M_CYCLACTION_258                                                                               // Console Aux
+                           Aux        Reaper  _SWSTL_HIDEUNSEL                                                                                   // Hide Unselected Track
+                           Aux        Reaper  _XENAKIOS_SELFIRSTOFSELTRAX 																		 // Xenakios/SWS: Select first of selected tracks
+                           Aux        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                        // zoom fit arr/screen
+                           Aux        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                           Aux        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
+                           
+                           
+                // Show Tracks With "Aux" in name and routing  
+                 
+                 
+                           /Aux        Reaper  _SWSTL_SHOWALL                                   Feedback=No HoldDelay=400                         // show all tracks
+                           Aux        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read 
+                           Aux        Reaper   _S&M_CYCLACTION_258                             Feedback=No HoldDelay=400                         // Console Aux
+                           Aux        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track
+                           Aux        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                           Aux        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                           Aux        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                           
+                 //Return to Home Zone
+                
+               DoublePress+Aux        Reaper  _SWSTL_SHOWALL                                                                                      // show all tracks 
+               DoublePress+Aux        ClearModifiers                                                                                              // ClearModifiers
+               DoublePress+Aux        Reaper   41150                                                                                              // hide all envelopes all tracks
+               DoublePress+Aux        Reaper   40088                                                                                              // Automation: Set all tracks automation mode to trim/read
+               DoublePress+Aux        Reaper   40454                                                                                              // Screenset: Load window set #01
+               DoublePress+Aux        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                         // Script: Archie_View; Zoom TCP to fit screen.lua  
+               DoublePress+Aux        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                         // Script: Lokasenna_Scroll mixer to first selected track.lua
+               DoublePress+Aux        GoHome                                                                                                      //  
+               DoublePress+Aux        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                         // scroll top
+                
+                           
+                 // Show Tracks With "BUSSES" in name
+                 
+                          Busses        Reaper  _SWSTL_SHOWALL                                                                                      // show all tracks  
+                          Busses        Reaper   40088                                                                                             // set all tracks automation to trim/read 
+                          Busses        Reaper  _S&M_CYCLACTION_259                                                                               // Console BUSS
+                          Busses        Reaper  _SWSTL_HIDEUNSEL                                                                                   // Hide Unselected Track
+                          Busses        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                                        // zoom fit arr/screen
+                          Busses        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                        // scroll top
+                           
+                 // Show Tracks With "BUSSES" in name and routing  
+                           
+                          Busses        Reaper   40088                                           Feedback=No HoldDelay=400                         // set all tracks automation to trim/read 
+                          Busses        Reaper   _S&M_CYCLACTION_259                             Feedback=No HoldDelay=400                         // Console BUSS
+                          Busses        Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=400                         // Hide Unselected Track
+                          Busses        Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=400                         // Custom: CSI show only Selected track with Routing/sends
+                          Busses        Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=400                         // zoom fit arr/screen
+                          Busses        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=400                         // scroll top
+                           
+                //Return to Home Zone
+                
+              DoublePress+Busses        Reaper  _SWSTL_SHOWALL                                                                                      // show all tracks 
+              DoublePress+Busses        ClearModifiers                                                                                              // ClearModifiers
+              DoublePress+Busses        Reaper   41150                                                                                              // hide all envelopes all tracks
+              DoublePress+Busses        Reaper   40088                                                                                              // Automation: Set all tracks automation mode to trim/read
+              DoublePress+Busses        Reaper   40454                                                                                              // Screenset: Load window set #01
+              DoublePress+Busses        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                         // Script: Archie_View; Zoom TCP to fit screen.lua  
+              DoublePress+Busses        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                         // Script: Lokasenna_Scroll mixer to first selected track.lua
+              DoublePress+Busses        GoHome                                                                                                      //  
+              DoublePress+Busses        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                         // scroll top          
+              
+                // Show Tracks With "OUTPUT" in name
+                              
+                         Outputs        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                   // unselect tracks and items ALL
+                         Outputs        ClearModifiers                                                                                              // ClearModifiers
+                         Outputs        Reaper  _e31357bf672d4ff6ab87923c1ed7fa3c                                                                   // show all tracks                        
+                         Outputs        Reaper   41150                                                                                              // hide all envelopes all tracks
+                         Outputs        Reaper   40088                                                                                              // Automation: Set all tracks automation mode to trim/read                        
+                         Outputs        GoHome                                                                                                      //  HOME ZONE
+                         
+                         Outputs        Reaper  _28a8d256141740c2a6939e4c0ef19cf1                                                                                 // Custom: MASTER OUT BUSSES ONLY
+                         Outputs       /Reaper  _8cee4188feae4ff7b8ec5986e67d39da																	// SELECT ALL TRACKS EXCEPT MASTER
+                         Outputs       /Reaper  _XENAKIOS_SELFIRSTOFSELTRAX 																		// Xenakios/SWS: Select first of selected tracks
+                         Outputs       /Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                         // scroll top
+                         Outputs        Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                   // unselect tracks and items ALL
+        
+        
+                         Outputs       /Reaper  _84c1039ca1624decbba3f6dd060d5955                                                                   // unselect tracks and items ALL
+                         Outputs       /Reaper  _SWSTL_SHOWALL                                   Feedback=No HoldDelay=800                          // show all tracks 
+                         Outputs       /ClearModifiers                                           Feedback=No HoldDelay=800                          // ClearModifiers
+                         Outputs       /Reaper   41150                                           Feedback=No HoldDelay=800                          // hide all envelopes all tracks
+                         Outputs       /Reaper   40088                                           Feedback=No HoldDelay=800                          // Automation: Set all tracks automation mode to trim/read
+                         Outputs       /Reaper   40454                                           Feedback=No HoldDelay=800                          // Screenset: Load window set #01
+                         Outputs       /Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640      Feedback=No HoldDelay=800                          // Script: Archie_View; Zoom TCP to fit screen.lua  
+                         Outputs       /Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd      Feedback=No HoldDelay=800                          // Script: Lokasenna_Scroll mixer to first selected track.lua
+                         Outputs       /GoHome                                                   Feedback=No HoldDelay=800                          //  
+                         Outputs       /Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=800                          // scroll top
+                         Outputs       /Reaper _28a8d256141740c2a6939e4c0ef19cf1                                                                    // Custom: MASTER OUT BUSSES ONLY//Return to Home Zone
+                         
+              //Return to Home Zone
+                
+            DoublePress+Outputs        Reaper  _SWSTL_SHOWALL                                                                                      // show all tracks 
+            DoublePress+Outputs        ClearModifiers                                                                                              // ClearModifiers
+            DoublePress+Outputs        Reaper   41150                                                                                              // hide all envelopes all tracks
+            DoublePress+Outputs        Reaper   40088                                                                                              // Automation: Set all tracks automation mode to trim/read
+            DoublePress+Outputs        Reaper   40454                                                                                              // Screenset: Load window set #01
+            DoublePress+Outputs        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                         // Script: Archie_View; Zoom TCP to fit screen.lua  
+            DoublePress+Outputs        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                         // Script: Lokasenna_Scroll mixer to first selected track.lua
+            DoublePress+Outputs        GoHome                                                                                                      //  
+            DoublePress+Outputs        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                         // scroll top         
+            
+                
+                                             
+           User                        ClearModifiers              
+           User                        Reaper 40297                                       // Track: Unselect (clear selection of) all tracks
+           User                        Reaper _S&M_WNCLS3                    
+           User                        TrackAutoMode 0
+           User                        Reaper  _SWS_SHOWMASTER                             // Show master track
+           User                        Reaper  _SWS_SELMASTER                              // sel master
+           User                        Reaper   _SWSTL_HIDEUNSEL                           // Hide Unselected Track
+           User                        /Reaper   40463                                      // load window set 10
+           User                        GoZone MasterTrackFXMenu         
+
+           
+           User                        /Reaper  41882                                       // View: Show monitoring FX chain
+           User                        /Reaper    _S&M_TOGLFLOATFXEL                        //  
+           User                        /Reaper _S&M_WNCLS3
+           
+            DoublePress+User        Reaper  _SWSTL_SHOWALL                                                                                      // show all tracks 
+            DoublePress+User        ClearModifiers                                                                                              // ClearModifiers
+            DoublePress+User        Reaper   41150                                                                                              // hide all envelopes all tracks
+            DoublePress+User        Reaper   40088                                                                                              // Automation: Set all tracks automation mode to trim/read
+            DoublePress+User        Reaper _SWS_HIDEMASTER
+            DoublePress+User        Reaper   40454                                                                                              // Screenset: Load window set #01
+            DoublePress+User        Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                                         // Script: Archie_View; Zoom TCP to fit screen.lua  
+            DoublePress+User        Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                         // Script: Lokasenna_Scroll mixer to first selected track.lua
+            DoublePress+User        GoHome                                                                                                      //  
+            DoublePress+User        Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                                         // scroll top         
+            DoublePress+User        Reaper 
+           
+                
+
+         
+//CONTROL+F1-8  = TRACK TEMPLATES :
+
+
+           /Control+F1        Reaper  42714                                                                                              // Toolbar: Open/close toolbar 18 - BASS  track with FX template 
+           /Control+F2        Reaper  41686                                                                                              // Toolbar: Open/close toolbar  8 - Drums track with FX template                      
+           /Control+F4        Reaper  41683                                                                                              // Toolbar: Open/close toolbar  5 - elgt  tracks with FX template
+           /Control+F5        Reaper  41685                                                                                              // Toolbar: Open/close toolbar  7 - Keys  tracks with FX template
+           /Control+F5        Reaper  41937                                                                                              // Toolbar: Open/close toolbar 10 - Synth tracks with FX template  
+           /Control+F6        Reaper  41939                                                                                              // Toolbar: Open/close toolbar 12 - sampl tracks with FX template                                                                                              // 
+          Control+User        Reaper  41684                                                                                              // Toolbar: Open/close toolbar  6 - selection of all pre saved track templates 
+          
+
+
+
+    					       					   
+// AUTOMATION
+
+						       
+    Read                             TrackAutoMode 1
+    Write                            TrackAutoMode 3
+    Trim                             TrackAutoMode 0
+    Touch                            TrackAutoMode 2
+    Latch                            TrackAutoMode 4
+    Group                            TrackAutoMode 5
+    Global+Read                      GlobalAutoMode 1
+    Global+Write                     GlobalAutoMode 3
+    Global+Trim                      GlobalAutoMode 0
+    Global+Touch                     GlobalAutoMode 2
+    Global+Latch                     GlobalAutoMode 4  
+    Global+Group                     GlobalAutoMode 5
+    Shift+Read                       Reaper 40876
+    
+                                   
+//  UTILITIES 
+						     
+						       
+    /Save                             Save 
+    /Undo                             Undo
+    Hold+Undo                        /Reaper 40072  NoFeedback                   // View: Show undo history window
+    Shift+Undo                       /Redo
+    /Cancel                           Cancel
+    /Enter                            Enter
+    
+    
+//MARKER - SOLO						       
+
+
+    Marker                           Marker                                      //Functions as a modifier
+    Marker                           ClearModifiers
+    Marker                           GoZone LDT_Markers_Rotary   MasterTrackNavigator
+    Nudge                            Nudge                                       //Functions as a modifier
+    Cycle                            CycleTimeline
+    Drop                             ToggleScrollLink 
+    Replace                          ToggleEnableFocusedFXMapping
+    Click                            Reaper 40364                                // Toggle metronome
+    Shift+Click                      Reaper _SWS_AWCOUNTRECTOG Feedback=No       // Toggle count-in before recording
+    Hold+Click                       Reaper 40363 Feedback=No                    // Show metronome settings
+    
+    
+// PLAY CONTROLS    
+
+    
+    Rewind                           Rewind   
+    FastForward                      FastForward
+    Stop                             Stop
+    Hold+Stop                        Reaper 40042  Feedback=No                   // Go to start of project
+    Play                             Play
+    Record                           Record    
+    Solo                             ToggleFollowMCP 
+    /Option+Solo                      Reaper 40745                                // Solo in front (dim solo)  
+    
+						       
+// ZOOM/SCRUB/L+R U+D
+						       
+
+
+    
+
+
+						       
+               Up                      Reaper _XENAKIOS_TVPAGEUP                           // Xenakios/SWS: Scroll track view up (page)
+               Down                    Reaper _XENAKIOS_TVPAGEDOWN                         // Xenakios-SWS: Scroll track view down 
+Control+Option+Up                      Reaper _RS811925625c25145349dba5cd9cfc86b6f68d76c5  // Script: MFM Move Item UP (With Boundary Guard).lua
+Control+Option+Down                    Reaper _RSa0d0b219798abaed779cb880edeb63d0430383b3  // Script: MFM move item DOWN (with boundary guard).lua
+
+
+      
+          // Left                      Reaper _SWS_SCROLL_L10                              // SWS: Scroll left 10%
+          // Right                     Reaper _RSf1a611aa2d2417d791de5d69a08abe3b65bd6cc5                      // Script: MFM move item RIGHT by grid and scroll FOLLOW.lua
+      Option+Left                      Reaper _RSc614ba594a155cf96a5bdd7d28fccde0f25dee11                      // Script: MFM move item LEFT  by grid and scroll follow.lua
+      Option+Right                     Reaper _RSf1a611aa2d2417d791de5d69a08abe3b65bd6cc5                      // Script: MFM move item RIGHT by grid and scroll FOLLOW.lua
+Shift+Option+Left                      Reaper _XENAKIOS_SELITEMSTOSTARTOFTRACK                                 // Xenakios/SWS: Select items to start of track 
+Shift+Option+Right                     Reaper _XENAKIOS_SELITEMSTOENDOFTRACK                                   // Xenakios/SWS: Select items to end of track 
+
+     
+
+    
+						       
+// MOVE CURSOR:
+
+                Increase+JogWheel     Reaper "40647"                                               //Move cursor right to grid division                           
+                Decrease+JogWheel     Reaper _8020284d1ca8482b828f464e3852bdf4                     //Move cursor left to grid division and sel items on sel track    
+                
+// SELECT NEXT/PREV TRACK :
+                                                                        
+        Control+Decrease+JogWheel     Reaper 40286                                                   // Track: Go to previous track      
+        Control+Increase+JogWheel     Reaper 40285                                                   // Track: Go to next     track   
+        
+
+// ZOOM GRID:                
+                                                                        
+            Alt+Increase+JogWheel     Reaper _RS0f8d338b34550c87e8a6d8714a53838f3968ed99          //Zoom horizontal in  match grid to view                
+            Alt+Decrease+JogWheel     Reaper _RS3727b9dc4409b238fe55128302daccc9f42ce177          //Zoom horizontal out match grid  to view
+                                
+                                               
+    // MOVE ITEM LEFT AND RIGHT BY GRID
+ 
+ //Option+Increase+JogWheel     Reaper _RSf1a611aa2d2417d791de5d69a08abe3b65bd6cc5 // Script: MFM move item RIGHT by grid and scroll into view.lua 
+ //Option+Decrease+JogWheel     Reaper _RSc614ba594a155cf96a5bdd7d28fccde0f25dee11 // Script: MFM move item LEFT  and scroll follow.lua
+  
+              
+
+                                                                                   
+             Shift+Decrease+JogWheel    Reaper  _XENAKIOS_SELPREVTRACKKEEP                 //Xenakios/SWS: Select prev tracks, keeping current selection 
+             Shift+Increase+JogWheel    Reaper  _XENAKIOS_SELNEXTTRACKKEEP                 //Xenakios/SWS: Select next tracks, keeping current selection
+     Control+Shift+Decrease+JogWheel    Reaper  _XENAKIOS_SELPREVTRACKKEEP                 //Xenakios/SWS: Select prev tracks, keeping current selection 
+     Control+Shift+Increase+JogWheel    Reaper  _XENAKIOS_SELNEXTTRACKKEEP                 //Xenakios/SWS: Select next tracks, keeping current selection     
+  
+  
+
+             
+             
+
+ 
+ //MOVE ITEM UP AND DOWN BY TRACK
+ 
+ Control+Option+Increase+JogWheel     Reaper _RS811925625c25145349dba5cd9cfc86b6f68d76c5 // Script: MFM move item DOWN (with boundary guard).lua _RSa0d0b219798abaed779cb880edeb63d0430383b3
+ Control+Option+Decrease+JogWheel     Reaper _RSa0d0b219798abaed779cb880edeb63d0430383b3 // Script: MFM Move Item UP (With Boundary Guard).lua 
+ 
+ 
+ // SELECT ITEMS FOLLOWING OR PRECEEDING SELECTED ITEM ON SELECTED TRACK
+ 
+ Shift+Option+Decrease+JogWheel                     Reaper _XENAKIOS_SELITEMSTOSTARTOFTRACK                                 // Xenakios/SWS: Select items to start of track
+ Shift+Option+Increase+JogWheel                     Reaper _XENAKIOS_SELITEMSTOENDOFTRACK                                   // Xenakios/SWS: Select items to end of track 
+  
+        
+
+
+
+
+
+
+
+
+
+ZoneEnd
+                          
+
+          

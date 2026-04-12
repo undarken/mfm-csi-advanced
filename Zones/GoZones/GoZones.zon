@@ -1,0 +1,16 @@
+Zone GoZones
+        GlobalViewZone
+        SelectedTracks
+        SelectedTrackSend
+        SelectedTrackReceive
+        SelectedTrackFXMenu
+        MasterTrackFXMenu
+        TrackSend
+        TrackReceive
+        TrackFXMenu
+        VCA
+        Folder
+        SelectedTrackTCPFX
+        LDT_Markers_Rotary   MasterTrackNavigator
+        ItemFades
+ZoneEnd

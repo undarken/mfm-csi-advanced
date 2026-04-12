@@ -1,0 +1,118 @@
+Zone "ItemFades"
+
+    // --- DISPLAYS (Hardcoded to prevent plugin text bleed) ---
+    DisplayUpper1   FixedTextDisplay ""
+    DisplayLower1   FixedTextDisplay ""
+
+    DisplayUpper2   FixedTextDisplay "FadeIn"
+    DisplayLower2   FXParamValueDisplay 0 "CSI_ItemEdit Dummy Plugin"
+
+    DisplayUpper3   FixedTextDisplay "/@PLAY"
+    DisplayLower3   FixedTextDisplay ""
+
+    DisplayUpper4   FixedTextDisplay "/@EDIT"
+    DisplayLower4   FixedTextDisplay ""
+
+    DisplayUpper5   FixedTextDisplay ""
+    DisplayLower5   FixedTextDisplay ""
+
+    DisplayUpper6   FixedTextDisplay " FadeOut"
+    DisplayLower6   FXParamValueDisplay 1 "CSI_ItemEdit Dummy Plugin"
+
+    DisplayUpper7   FixedTextDisplay " Reverse"
+    DisplayLower7   FixedTextDisplay ""
+
+    DisplayUpper8   FixedTextDisplay " Volume"
+    DisplayLower8   FXParamValueDisplay 2 "CSI_ItemEdit Dummy Plugin"
+
+
+    // --- FADERS & ROTARIES ---
+    
+    // Channel 1 (Empty)
+    Fader1          NoAction
+    Rotary1         NoAction
+
+    // Channel 2 (FADE IN BLOCK)
+    Fader2          FXParam 0 "CSI_ItemEdit Dummy Plugin"
+    Rotary2         FXParam 0 "CSI_ItemEdit Dummy Plugin"
+
+    // Channel 3, 4, 5 (Physical Separation / Empty)
+    Fader3          NoAction
+    Rotary3         NoAction
+    Fader4          NoAction
+    Rotary4         NoAction
+    Fader5          NoAction
+    Rotary5         NoAction
+
+    // Channel 6 (FADE OUT BLOCK)
+    Fader6          FXParam 1 "CSI_ItemEdit Dummy Plugin"
+    Rotary6         FXParam 1 "CSI_ItemEdit Dummy Plugin"
+
+    // Channel 7 (REVERSE ITEM)
+    Fader7          NoAction
+    Rotary7         NoAction
+
+    // Channel 8 (ITEM VOLUME)
+    Fader8          FXParam 2 "CSI_ItemEdit Dummy Plugin"
+    Rotary8         FXParam 2 "CSI_ItemEdit Dummy Plugin"
+
+
+    // --- SELECT BUTTONS ---
+    Select1         NoAction
+    Select2         Reaper 41520        // Cycles through Fade In shapes
+    Select3         Reaper 40196        // Item: Split items at play cursor (select right)
+    Select4         Reaper 40759        // Item: Split items at edit cursor (select right)
+    Select5         NoAction
+    Select6         Reaper 41527        // Cycles through Fade Out shapes
+    Select7         NoAction
+    Select8         Reaper 42460        // Normalize items (common gain) to true peak
+
+
+    // --- LOCK OUT ALL TRACK CONTROLS ---
+    Mute1           NoAction
+    Mute2           NoAction
+    Mute3           NoAction
+    Mute4           NoAction
+    Mute5           NoAction
+    Mute6           NoAction
+    Mute7           NoAction
+    Mute8           NoAction
+
+    Solo1           NoAction
+    Solo2           NoAction
+    Solo3           NoAction
+    Solo4           NoAction
+    Solo5           NoAction
+    Solo6           NoAction
+    Solo7           NoAction
+    Solo8           NoAction
+
+    RecordArm1      NoAction
+    RecordArm2      NoAction
+    RecordArm3      NoAction
+    RecordArm4      NoAction
+    RecordArm5      NoAction
+    RecordArm6      NoAction
+    RecordArm7      FXParam 3 "CSI_ItemEdit Dummy Plugin" [ 0.0 1.0 ]  // Toggles Reverse + Light
+    RecordArm8      NoAction
+
+
+    // --- JOG WHEEL OVERRIDES ---
+    
+    // MOVE CURSOR:
+    Increase+JogWheel             Reaper "40647"                                               
+    Decrease+JogWheel             Reaper _8020284d1ca8482b828f464e3852bdf4                     
+                
+    // SELECT NEXT/PREV TRACK :                                                                   
+    Control+Decrease+JogWheel     Reaper 40286                                                   
+    Control+Increase+JogWheel     Reaper 40285                                                   
+        
+    // ZOOM GRID:                
+    Alt+Increase+JogWheel         Reaper _RS0f8d338b34550c87e8a6d8714a53838f3968ed99          
+    Alt+Decrease+JogWheel         Reaper _RS3727b9dc4409b238fe55128302daccc9f42ce177          
+                                
+    // SELECT NEXT/PREV ITEM:
+    Shift+Increase+JogWheel       Reaper _RS555ab317f737800f7f1ab563aeaa1e41a7f8af1b 
+    Shift+Decrease+JogWheel       Reaper _RSdf4886667a484e9d497b259bd0df964c4e5b10f1
+
+ZoneEnd

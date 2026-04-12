@@ -1,0 +1,30 @@
+Zone "GlobalViewZone"
+// The button light stays on while in this zone
+
+GlobalView GoZone GlobalViewZone
+
+// The Grid/Zoom Actions on the Jog Wheel
+
+//Decrease+JogWheel Reaper "_RS209e4cd07f6154eec42b6172ecc371c7316eefd4"
+//Increase+JogWheel Reaper "_6db778ce1ed44c80907c50b7388da7f7"
+
+
+
+
+
+
+
+
+
+// Optional: Add other Global things here later (like Master Faders, etc.)
+
+
+
+
+
+
+
+
+
+
+ZoneEnd

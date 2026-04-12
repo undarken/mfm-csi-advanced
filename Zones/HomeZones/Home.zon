@@ -1,0 +1,24 @@
+Zone Home
+     OnInitialization            SetDoublePressTime 400      // if you want to change from 400ms default 
+    /OnInitialization            ToggleRestrictTextLength 7
+/    OnInitialization           DisableFocusedFXMapping         //Uncomment this line to disable FocusedFX mapping on startup
+/    OnInitialization           ToggleUseLocalModifiers         //Uncomment to restrict modifier broadcast to just this surfaces
+     OnInitialization            SetLatchTime 300
+     /OnInitialization            ToggleUseLocalFXSlot
+     /OnInitialization            ToggleScrollLink
+     
+     
+     
+              /        BankLeft      Bank SelectedTrack -8
+              /       BankRight      Bank SelectedTrack 8
+              /     ChannelLeft      Bank SelectedTrack -1
+              /    ChannelRight      Bank SelectedTrack 1
+
+        IncludedZones
+        Track
+        MasterTrack
+        Buttons
+        /SelectedTrackSend
+        IncludedZonesEnd
+
+ZoneEnd
