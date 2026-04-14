@@ -1,3 +1,4 @@
+
 ITEMSHAPE (ZOOM) – WORKING NOTE
 
 Purpose:
@@ -19,8 +20,8 @@ BUTTON LOGIC
 - Record Arm row = lock/availability per channel.
 - Red ON = available / active for editing.
 - Dark = locked / unavailable.
-- Mute row = bypass the relevant channel effect.
-- We already have lock, so Mute is for audition/bypass.
+- Mute row = bypass or audition the relevant channel effect.
+- We already have lock, so Mute is for listen / bypass behaviour.
 
 CHANNEL LAYOUT
 
@@ -36,20 +37,34 @@ CH 1 – PITCH
 CH 2 – PLAYRATE / TIME
 - Fader 2 = playrate coarse
 - Rotary 2 = stepped playrate
-- Option = fine playrate
-- Select use not fixed yet
+- Option + Fader 2 = fine playrate
+- Option + Rotary 2 = fine stepped playrate
+- Select 2 use not fixed yet
 
 CH 3 – PAN
 - Fader 3 = pan coarse
 - Rotary 3 = stepped pan
-- Option = fine pan
-- Select use not fixed yet
+- Option + Fader 3 = fine pan
+- Option + Rotary 3 = fine stepped pan
+- Select 3 use not fixed yet
 
-CH 4
-- Spare for now
+CH 4 – CROSSFADE CENTER
+- Fader 4 = crossfade center / splice position coarse
+- Rotary 4 = stepped crossfade center movement
+- Option + Fader 4 = fine center movement
+- Option + Rotary 4 = fine stepped center movement
+- Select 4 = cycle crossfade shape
+- Record Arm 4 = lock availability
+- Mute 4 = audition / focus listen on the crossfade intersection
 
-CH 5
-- Spare for now
+CH 5 – CROSSFADE LENGTH
+- Fader 5 = crossfade length coarse
+- Rotary 5 = stepped crossfade length
+- Option + Fader 5 = fine crossfade length
+- Option + Rotary 5 = fine stepped crossfade length
+- Select 5 = fixed default crossfade length anchor
+- Record Arm 5 = lock availability
+- Mute 5 = bypass crossfade / hear the hard cut
 
 CH 6 – FADE IN
 - Fader 6 = fade in length
@@ -66,20 +81,35 @@ CH 7 – FADE OUT
 CH 8 – ITEM VOLUME
 - Fader 8 = item volume coarse
 - Rotary 8 = stepped volume
-- Option = fine volume
+- Option + Fader 8 = fine volume
+- Option + Rotary 8 = fine stepped volume
 - Select 8 could be fixed anchors like -6 / 0 / +6 if wanted later
 - Mute 8 = mute item
+
+WHY 4 AND 5 NOW MAKE SENSE
+- Crossfades are a big part of item shaping.
+- They belong here because they affect the transition between items, not physical item placement.
+- Channel 4 controls where the transition sits.
+- Channel 5 controls how wide the transition is.
+- This makes the middle of the surface the transition cluster.
+- Left side stays tone / time / space.
+- Right side stays amplitude envelope.
+
+AUDITION / BYPASS LOGIC FOR CROSSFADES
+- Mute 4 = listen focus on the overlap / transition area.
+- Mute 5 = bypass the crossfade so the raw edit can be heard.
+- Record Arm 4 and 5 = on/off availability for editing those crossfade controls.
 
 NOTES
 - Fade in on 6, fade out on 7, item volume on 8 feels right together.
 - Right hand = amplitude envelope cluster.
 - Left side = tone / time / space.
-- Channels 4 and 5 remain open until a truly useful function appears.
-- Crossfade / take-comping ideas were discussed, but not locked in here.
+- Middle = transition / crossfade handling.
+- Crossfade control on 4 and 5 is more useful than leaving them empty if crossfades are a repeated action.
 - Keep this zone uncluttered.
 - Only add functions that solve real repeated actions.
 
 CURRENT OPEN QUESTIONS
-- What, if anything, belongs on channels 4 and 5?
 - Do channels 2 and 3 need fixed Select anchors like channel 1?
+- Should channel 5 Select be a single default crossfade anchor or a short cycle of useful lengths?
 - Should channel 8 definitely get Select anchors (-6 / 0 / +6), or stay unused for now?
