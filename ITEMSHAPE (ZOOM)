@@ -1,0 +1,85 @@
+ITEMSHAPE (ZOOM) – WORKING NOTE
+
+Purpose:
+Sound-shaping zone for selected items.
+Not for physical item placement/nudging.
+
+CORE LAWS
+- Faders and rotaries mirror the same channel parameter.
+- Fader = continuous/macro control.
+- Rotary = stepped/discrete control.
+- Option = fine / alternate control in this zone.
+- Shift + Jog = add more items to selection while staying in this zone.
+- Rotaries handle list stepping/cycling.
+- Select buttons are NOT for long list cycling here.
+- Select buttons MAY be used for fixed anchor values where useful.
+- Flip = phase invert (for now).
+
+BUTTON LOGIC
+- Record Arm row = lock/availability per channel.
+- Red ON = available / active for editing.
+- Dark = locked / unavailable.
+- Mute row = bypass the relevant channel effect.
+- We already have lock, so Mute is for audition/bypass.
+
+CHANNEL LAYOUT
+
+CH 1 – PITCH
+- Fader 1 = pitch coarse
+- Rotary 1 = semitone steps
+- Option + Fader 1 = fine pitch
+- Option + Rotary 1 = fine stepped pitch
+- Select 1 = fixed musical anchors:
+  0 -> +7 -> +12 -> -12 -> back round
+  (normal / 5th / octave up / octave down)
+
+CH 2 – PLAYRATE / TIME
+- Fader 2 = playrate coarse
+- Rotary 2 = stepped playrate
+- Option = fine playrate
+- Select use not fixed yet
+
+CH 3 – PAN
+- Fader 3 = pan coarse
+- Rotary 3 = stepped pan
+- Option = fine pan
+- Select use not fixed yet
+
+CH 4
+- Spare for now
+
+CH 5
+- Spare for now
+
+CH 6 – FADE IN
+- Fader 6 = fade in length
+- Rotary 6 = fade in shape / stepped fade options
+- Record Arm 6 = lock availability
+- Mute 6 = bypass fade-in effect
+
+CH 7 – FADE OUT
+- Fader 7 = fade out length
+- Rotary 7 = fade out shape / stepped fade options
+- Record Arm 7 = lock availability
+- Mute 7 = bypass fade-out effect
+
+CH 8 – ITEM VOLUME
+- Fader 8 = item volume coarse
+- Rotary 8 = stepped volume
+- Option = fine volume
+- Select 8 could be fixed anchors like -6 / 0 / +6 if wanted later
+- Mute 8 = mute item
+
+NOTES
+- Fade in on 6, fade out on 7, item volume on 8 feels right together.
+- Right hand = amplitude envelope cluster.
+- Left side = tone / time / space.
+- Channels 4 and 5 remain open until a truly useful function appears.
+- Crossfade / take-comping ideas were discussed, but not locked in here.
+- Keep this zone uncluttered.
+- Only add functions that solve real repeated actions.
+
+CURRENT OPEN QUESTIONS
+- What, if anything, belongs on channels 4 and 5?
+- Do channels 2 and 3 need fixed Select anchors like channel 1?
+- Should channel 8 definitely get Select anchors (-6 / 0 / +6), or stay unused for now?
