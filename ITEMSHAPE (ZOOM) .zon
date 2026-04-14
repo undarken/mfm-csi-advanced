@@ -1,0 +1,135 @@
+// VERSION: MCU PRO LAYER 1 ARCHITECTURE V2.0
+// ZONE: ItemShape_Zoom
+
+Zone ItemShape_Zoom
+
+    // LEAVE ZONE
+    Zoom                GoZone Home
+
+    // ==========================================
+    // CHANNEL 1: PITCH
+    // ==========================================
+    Fader1              FXParam 0 "JSCSI_ItemShape"    // Pitch Coarse
+    Rotary1             FXParam 0 "JSCSI_ItemShape"    // Pitch Stepped
+    Option+Fader1       FXParam 1 "JSCSI_ItemShape"    // Pitch Fine
+    Option+Rotary1      FXParam 1 "JSCSI_ItemShape"    // Pitch Fine
+    Select1             FXParam 2 "JSCSI_ItemShape" [ 0.0 0.583 1.0 0.0 ] // Anchors: 0, +7, +12, -12
+    DisplayUpper1       TrackNameDisplay
+    DisplayLower1       FXParamNameDisplay 0 "JSCSI_ItemShape"
+
+    // ==========================================
+    // CHANNEL 2: PLAYRATE / TIME
+    // ==========================================
+    Fader2              FXParam 3 "JSCSI_ItemShape"    // Playrate Coarse
+    Rotary2             FXParam 3 "JSCSI_ItemShape"    // Playrate Stepped
+    Option+Fader2       FXParam 4 "JSCSI_ItemShape"    // Playrate Fine
+    Option+Rotary2      FXParam 4 "JSCSI_ItemShape"    // Playrate Fine
+    Select2             FXParam 5 "JSCSI_ItemShape" [ 0.25 0.5 1.0 ] // Anchors: 0.5x, 1.0x, 2.0x
+    DisplayUpper2       TrackNameDisplay
+    DisplayLower2       FXParamNameDisplay 3 "JSCSI_ItemShape"
+
+    // ==========================================
+    // CHANNEL 3: PAN
+    // ==========================================
+    Fader3              FXParam 6 "JSCSI_ItemShape"    // Pan Coarse
+    Rotary3             FXParam 6 "JSCSI_ItemShape"    // Pan Stepped
+    Option+Fader3       FXParam 7 "JSCSI_ItemShape"    // Pan Fine
+    Option+Rotary3      FXParam 7 "JSCSI_ItemShape"    // Pan Fine
+    Select3             FXParam 8 "JSCSI_ItemShape" [ 0.0 0.5 1.0 ] // Anchors: L, C, R
+    DisplayUpper3       TrackNameDisplay
+    DisplayLower3       FXParamNameDisplay 6 "JSCSI_ItemShape"
+
+    // ==========================================
+    // CHANNEL 4: CROSSFADE CENTER
+    // ==========================================
+    Fader4              FXParam 9 "JSCSI_ItemShape"    // X-Fade Center Coarse
+    Rotary4             FXParam 9 "JSCSI_ItemShape"    // X-Fade Center Stepped
+    Option+Fader4       FXParam 10 "JSCSI_ItemShape"   // X-Fade Center Fine
+    Option+Rotary4      FXParam 10 "JSCSI_ItemShape"   // X-Fade Center Fine
+    Alt+Fader4          FXParam 11 "JSCSI_ItemShape"   // X-Fade Shape Coarse
+    Alt+Rotary4         FXParam 11 "JSCSI_ItemShape"   // X-Fade Shape Stepped
+    Alt+Option+Fader4   FXParam 12 "JSCSI_ItemShape"   // X-Fade Shape Fine
+    Alt+Option+Rotary4  FXParam 12 "JSCSI_ItemShape"   // X-Fade Shape Fine
+    Alt+Select4         FXParam 11 "JSCSI_ItemShape" [ 0.0 0.166 0.333 0.5 0.666 0.833 1.0 ] // 7 Shapes
+    RecordArm4          Reaper 40044                   // Lock X-Fade Center (Dummy action ID, replace if needed)
+    Mute4               Reaper "_RS_Audition_XFade"    // Audition Intersection
+    DisplayUpper4       TrackNameDisplay
+    DisplayLower4       FXParamNameDisplay 9 "JSCSI_ItemShape"
+    Alt+DisplayLower4   FixedTextDisplay "SHAPE"       // Display updates when Alt is held
+
+    // ==========================================
+    // CHANNEL 5: CROSSFADE LENGTH
+    // ==========================================
+    Fader5              FXParam 13 "JSCSI_ItemShape"   // X-Fade Length Coarse
+    Rotary5             FXParam 13 "JSCSI_ItemShape"   // X-Fade Length Stepped
+    Option+Fader5       FXParam 14 "JSCSI_ItemShape"   // X-Fade Length Fine
+    Option+Rotary5      FXParam 14 "JSCSI_ItemShape"   // X-Fade Length Fine
+    Alt+Fader5          FXParam 15 "JSCSI_ItemShape"   // X-Fade Shape Alternate Coarse
+    Alt+Rotary5         FXParam 15 "JSCSI_ItemShape"   // X-Fade Shape Alternate Stepped
+    Alt+Option+Fader5   FXParam 16 "JSCSI_ItemShape"   // X-Fade Shape Alternate Fine
+    Alt+Option+Rotary5  FXParam 16 "JSCSI_ItemShape"   // X-Fade Shape Alternate Fine
+    Select5             FXParam 17 "JSCSI_ItemShape" [ 0.05 0.1 0.5 1.0 ] // Anchors: 5ms, 10ms, 50ms, 100ms
+    Alt+Select5         FXParam 15 "JSCSI_ItemShape" [ 0.0 0.166 0.333 0.5 0.666 0.833 1.0 ] // 7 Shapes
+    RecordArm5          Reaper 40044                   // Lock X-Fade Length
+    Mute5               Reaper "_RS_Bypass_XFade"      // Bypass X-fade
+    DisplayUpper5       TrackNameDisplay
+    DisplayLower5       FXParamNameDisplay 13 "JSCSI_ItemShape"
+    Alt+DisplayLower5   FixedTextDisplay "SHAPE"
+
+    // ==========================================
+    // CHANNEL 6: FADE IN
+    // ==========================================
+    Fader6              FXParam 18 "JSCSI_ItemShape"   // Fade In Length Coarse
+    Rotary6             FXParam 18 "JSCSI_ItemShape"   // Fade In Length Stepped
+    Option+Fader6       FXParam 19 "JSCSI_ItemShape"   // Fade In Length Fine
+    Option+Rotary6      FXParam 19 "JSCSI_ItemShape"   // Fade In Length Fine
+    Alt+Fader6          FXParam 20 "JSCSI_ItemShape"   // Fade In Shape Coarse
+    Alt+Rotary6         FXParam 20 "JSCSI_ItemShape"   // Fade In Shape Stepped
+    Alt+Option+Fader6   FXParam 21 "JSCSI_ItemShape"   // Fade In Shape Fine
+    Alt+Option+Rotary6  FXParam 21 "JSCSI_ItemShape"   // Fade In Shape Fine
+    Alt+Select6         FXParam 20 "JSCSI_ItemShape" [ 0.0 0.166 0.333 0.5 0.666 0.833 1.0 ] // 7 Shapes
+    RecordArm6          Reaper 40044                   // Lock Fade In
+    Mute6               Reaper "_RS_Bypass_FadeIn"     // Bypass Fade In
+    DisplayUpper6       TrackNameDisplay
+    DisplayLower6       FXParamNameDisplay 18 "JSCSI_ItemShape"
+    Alt+DisplayLower6   FixedTextDisplay "SHAPE"
+
+    // ==========================================
+    // CHANNEL 7: FADE OUT
+    // ==========================================
+    Fader7              FXParam 22 "JSCSI_ItemShape"   // Fade Out Length Coarse
+    Rotary7             FXParam 22 "JSCSI_ItemShape"   // Fade Out Length Stepped
+    Option+Fader7       FXParam 23 "JSCSI_ItemShape"   // Fade Out Length Fine
+    Option+Rotary7      FXParam 23 "JSCSI_ItemShape"   // Fade Out Length Fine
+    Alt+Fader7          FXParam 24 "JSCSI_ItemShape"   // Fade Out Shape Coarse
+    Alt+Rotary7         FXParam 24 "JSCSI_ItemShape"   // Fade Out Shape Stepped
+    Alt+Option+Fader7   FXParam 25 "JSCSI_ItemShape"   // Fade Out Shape Fine
+    Alt+Option+Rotary7  FXParam 25 "JSCSI_ItemShape"   // Fade Out Shape Fine
+    Alt+Select7         FXParam 24 "JSCSI_ItemShape" [ 0.0 0.166 0.333 0.5 0.666 0.833 1.0 ] // 7 Shapes
+    RecordArm7          Reaper 40044                   // Lock Fade Out
+    Mute7               Reaper "_RS_Bypass_FadeOut"    // Bypass Fade Out
+    DisplayUpper7       TrackNameDisplay
+    DisplayLower7       FXParamNameDisplay 22 "JSCSI_ItemShape"
+    Alt+DisplayLower7   FixedTextDisplay "SHAPE"
+
+    // ==========================================
+    // CHANNEL 8: ITEM VOLUME
+    // ==========================================
+    Fader8              FXParam 26 "JSCSI_ItemShape"   // Item Volume Coarse
+    Rotary8             FXParam 26 "JSCSI_ItemShape"   // Item Volume Stepped
+    Option+Fader8       FXParam 27 "JSCSI_ItemShape"   // Item Volume Fine
+    Option+Rotary8      FXParam 27 "JSCSI_ItemShape"   // Item Volume Fine
+    Select8             FXParam 28 "JSCSI_ItemShape" [ 0.25 0.5 0.75 ] // Anchors: -6dB, 0dB, +6dB (normalized)
+    RecordArm8          Reaper 40044                   // Lock Item Volume
+    Mute8               Reaper 40151                   // Item: Mute items
+    DisplayUpper8       TrackNameDisplay
+    DisplayLower8       FXParamNameDisplay 26 "JSCSI_ItemShape"
+
+    // ==========================================
+    // GLOBAL LOGIC
+    // ==========================================
+    Shift+JogWheelRotaryCW   Reaper 40117              // Move edit cursor forward
+    Shift+JogWheelRotaryCCW  Reaper 40118              // Move edit cursor backward
+    Flip                     Reaper 40131              // Take: Toggle take phase (invert)
+
+ZoneEnd
