@@ -1,5 +1,5 @@
 Zone SelectedTrackSend
-// Revision: 3.2.3
+// Revision: 3.2.4
 
                         
                  DisplayUpper|       TrackSendNameDisplay
@@ -46,6 +46,22 @@ Zone SelectedTrackSend
                          Touch       Reaper _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                                           Feedback=No // show selected track send envelopes
                          Touch       TrackAutoMode 2                                                                   Feedback=No // set touch mode before writing
                          Touch       GoZone SelectedTrackSendAutomation                                                Feedback=No // enter sends automation sub-zone
+                         Write       Reaper 41150                                                                      Feedback=No // hide all envelopes before automation focus
+                         Write       Reaper _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                                           Feedback=No // show selected track send envelopes
+                         Write       TrackAutoMode 3                                                                   Feedback=No // set write mode before writing
+                         Write       GoZone SelectedTrackSendAutomation                                                Feedback=No // enter sends automation sub-zone
+                         Latch       Reaper 41150                                                                      Feedback=No // hide all envelopes before automation focus
+                         Latch       Reaper _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                                           Feedback=No // show selected track send envelopes
+                         Latch       TrackAutoMode 4                                                                   Feedback=No // set latch mode before writing
+                         Latch       GoZone SelectedTrackSendAutomation                                                Feedback=No // enter sends automation sub-zone
+                          Read       Reaper 41150                                                                      Feedback=No // hide all envelopes before automation focus
+                          Read       Reaper _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                                           Feedback=No // show selected track send envelopes
+                          Read       TrackAutoMode 1                                                                   Feedback=No // set read mode before editing
+                          Read       GoZone SelectedTrackSendAutomation                                                Feedback=No // enter sends automation sub-zone
+                          Trim       Reaper 41150                                                                      Feedback=No // hide all envelopes before automation focus
+                          Trim       Reaper _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                                           Feedback=No // show selected track send envelopes
+                          Trim       TrackAutoMode 0                                                                   Feedback=No // set trim/read mode before editing
+                          Trim       GoZone SelectedTrackSendAutomation                                                Feedback=No // enter sends automation sub-zone
                Zoom+Scrub               GoZone SelectedTrackSendAutomation
                               
 // TRACK - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTracks ZONE:

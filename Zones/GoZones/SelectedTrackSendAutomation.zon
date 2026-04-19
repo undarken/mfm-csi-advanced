@@ -1,5 +1,5 @@
 Zone SelectedTrackSendAutomation
-// Revision: 3.2.5
+// Revision: 3.2.6
 
 OnZoneDeactivation ClearModifiers
 
@@ -27,6 +27,11 @@ Trim        TrackAutoMode 0
 Touch       TrackAutoMode 2
 Latch       TrackAutoMode 4
 Group       TrackAutoMode 5
+Read        GoZone SelectedTrackSendAutomationPoint
+Write       GoZone SelectedTrackSendAutomationPoint
+Trim        GoZone SelectedTrackSendAutomationPoint
+Touch       GoZone SelectedTrackSendAutomationPoint
+Latch       GoZone SelectedTrackSendAutomationPoint
 
 Global+Read   GlobalAutoMode 1
 Global+Write  GlobalAutoMode 3

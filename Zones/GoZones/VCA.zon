@@ -23,12 +23,41 @@ Zone VCA
     Option+Flip+Rotary|         TrackPanAutoRight RingStyle=Dot
     Option+Flip+Fader|          TrackPanAutoRight RingStyle=Dot
 
-// Enter Pan automation sub-zone (Touch button)
+// Enter Pan automation sub-zone (all automode buttons share same access)
+         Read                   Reaper 41150 Feedback=No            // hide all envelopes all tracks
+         Read                   Reaper 41868 Feedback=No            // select pan envelope
+         Read                   Reaper 41870 Feedback=No            // select width envelope
+         Read                   Reaper 40330 Feedback=No            // select points in time selection
+         Read                   TrackAutoMode 1
+         Read                   GoZone VCAAutomation
+
+         Trim                   Reaper 41150 Feedback=No            // hide all envelopes all tracks
+         Trim                   Reaper 41868 Feedback=No            // select pan envelope
+         Trim                   Reaper 41870 Feedback=No            // select width envelope
+         Trim                   Reaper 40330 Feedback=No            // select points in time selection
+         Trim                   TrackAutoMode 0
+         Trim                   GoZone VCAAutomation
+
          Touch                  Reaper 41150 Feedback=No            // hide all envelopes all tracks
          Touch                  Reaper 41868 Feedback=No            // select pan envelope
          Touch                  Reaper 41870 Feedback=No            // select width envelope
          Touch                  Reaper 40330 Feedback=No            // select points in time selection
+         Touch                  TrackAutoMode 2
          Touch                  GoZone VCAAutomation
+
+         Write                  Reaper 41150 Feedback=No            // hide all envelopes all tracks
+         Write                  Reaper 41868 Feedback=No            // select pan envelope
+         Write                  Reaper 41870 Feedback=No            // select width envelope
+         Write                  Reaper 40330 Feedback=No            // select points in time selection
+         Write                  TrackAutoMode 3
+         Write                  GoZone VCAAutomation
+
+         Latch                  Reaper 41150 Feedback=No            // hide all envelopes all tracks
+         Latch                  Reaper 41868 Feedback=No            // select pan envelope
+         Latch                  Reaper 41870 Feedback=No            // select width envelope
+         Latch                  Reaper 40330 Feedback=No            // select points in time selection
+         Latch                  TrackAutoMode 4
+         Latch                  GoZone VCAAutomation
 
 // Pan toggle: hard exit back to main SelectedTracks editing zone
            Pan                  ClearModifiers
