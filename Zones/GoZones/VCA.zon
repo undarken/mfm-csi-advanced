@@ -1,5 +1,5 @@
 Zone VCA
-// Revision: 3.2.3
+// Revision: 3.2.4
     
     VUMeter|                    TrackOutputMeterMaxPeakLR
     DisplayUpper|               TrackNameDisplay { Track }
@@ -35,6 +35,12 @@ Zone VCA
            Pan                  Reaper 41150 Feedback=No            // hide all envelopes all tracks
            Pan                  Reaper 40088 Feedback=No            // set automation trim/read
            Pan                  GoZone SelectedTracks
+
+// Width zone toggle (mirrors pan structure)
+         Width                  ClearModifiers
+         Width                  Reaper 41150 Feedback=No            // hide all envelopes all tracks
+         Width                  Reaper 40088 Feedback=No            // set automation trim/read
+         Width                  GoZone Folder
 					       
     RecordArm|                  TrackRecordArm
 					       

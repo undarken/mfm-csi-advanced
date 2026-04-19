@@ -15,6 +15,7 @@ Zone GoZones
         TrackFXMenu
         VCA
         VCAAutomation
+        VCAAutomationPoint
         Folder
         SelectedTrackTCPFX
         LDT_Markers_Rotary   MasterTrackNavigator

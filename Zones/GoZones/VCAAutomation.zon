@@ -1,5 +1,5 @@
 Zone VCAAutomation
-// Revision: 3.2.0
+// Revision: 3.2.1
 
 OnZoneDeactivation ClearModifiers
 
@@ -31,16 +31,12 @@ DisplayUpper|       TrackNameDisplay { Track }
 DisplayLower|       TrackPanAutoLeftDisplay
 Flip+DisplayLower|  TrackPanAutoRightDisplay
 
-// Envelope point navigation/manipulation
-Decrease+JogWheel         Reaper _8020284d1ca8482b828f464e3852bdf4
-Increase+JogWheel         Reaper "40647"
-Scrub+Decrease+JogWheel   Reaper _94c40da4c31a4c35814cf1dbc5812c3b
-Scrub+Increase+JogWheel   Reaper _b77dd8a94d974d8f95da0f2d931edc90
+// Level 1 (default): envelope lane navigation
+Decrease+JogWheel         Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+Increase+JogWheel         Reaper _b77dd8a94d974d8f95da0f2d931edc90
 
-Option+Decrease+JogWheel  Reaper 41181
-Option+Increase+JogWheel  Reaper 41180
-Alt+Decrease+JogWheel     Reaper 42382
-Alt+Increase+JogWheel     Reaper 42381
+// Level 2 enter: scrub focuses into point-navigation sub-zone
+Scrub                     GoZone VCAAutomationPoint
 
 // Arm/bypass currently selected envelope
 Scrub+Record              Reaper 40863
