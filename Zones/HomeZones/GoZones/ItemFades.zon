@@ -1,0 +1,109 @@
+Zone ItemFades
+
+    // --- DISPLAYS ---
+    DisplayUpper1   FixedTextDisplay "FadeIn"
+    DisplayLower1   FXParamValueDisplay 0 "CSI_ItemEdit Dummy Plugin"
+
+    DisplayUpper2   FixedTextDisplay "FadeOut"
+    DisplayLower2   FXParamValueDisplay 1 "CSI_ItemEdit Dummy Plugin"
+
+    DisplayUpper3   FixedTextDisplay ""
+    DisplayLower3   FixedTextDisplay ""
+
+    DisplayUpper4   FixedTextDisplay ""
+    DisplayLower4   FixedTextDisplay ""
+
+    DisplayUpper5   FixedTextDisplay ""
+    DisplayLower5   FixedTextDisplay ""
+
+    DisplayUpper6   FixedTextDisplay ""
+    DisplayLower6   FixedTextDisplay ""
+
+    DisplayUpper7   FixedTextDisplay ""
+    DisplayLower7   FixedTextDisplay ""
+
+    DisplayUpper8   FixedTextDisplay " Volume"
+    DisplayLower8   FXParamValueDisplay 2 "CSI_ItemEdit Dummy Plugin"
+
+
+    // --- FADERS & ROTARIES ---
+    
+    // Channel 1 (FADE IN BLOCK)
+    Fader1          FXParam 0 "CSI_ItemEdit Dummy Plugin"
+    Rotary1         FXParam 0 "CSI_ItemEdit Dummy Plugin"
+
+    // Channel 2 (FADE OUT BLOCK)
+    Fader2          FXParam 1 "CSI_ItemEdit Dummy Plugin"
+    Rotary2         FXParam 1 "CSI_ItemEdit Dummy Plugin"
+
+    // Channel 3, 4, 5, 6, 7 (Empty)
+    Fader3          NoAction
+    Rotary3         NoAction
+    Fader4          NoAction
+    Rotary4         NoAction
+    Fader5          NoAction
+    Rotary5         NoAction
+    Fader6          NoAction
+    Rotary6         NoAction
+    Fader7          NoAction
+    Rotary7         NoAction
+
+    // Channel 8 (ITEM VOLUME)
+    Fader8          FXParam 2 "CSI_ItemEdit Dummy Plugin"
+    Rotary8         FXParam 2 "CSI_ItemEdit Dummy Plugin"
+
+
+    // --- SELECT BUTTONS ---
+    Select1         Reaper 41520        // Cycles through Fade In shapes
+    Select2         Reaper 41527        // Cycles through Fade Out shapes
+    Select3         NoAction
+    Select4         NoAction
+    Select5         NoAction
+    Select6         NoAction
+    Select7         NoAction
+    Select8         NoAction
+
+
+    // --- LOCK OUT ALL TRACK CONTROLS ---
+    Mute1           NoAction
+    Mute2           NoAction
+    Mute3           NoAction
+    Mute4           NoAction
+    Mute5           NoAction
+    Mute6           NoAction
+    Mute7           NoAction
+    Mute8           NoAction
+
+    Solo1           NoAction
+    Solo2           NoAction
+    Solo3           NoAction
+    Solo4           NoAction
+    Solo5           NoAction
+    Solo6           NoAction
+    Solo7           NoAction
+    Solo8           NoAction
+
+    RecordArm1      NoAction
+    RecordArm2      NoAction
+    RecordArm3      NoAction
+    RecordArm4      NoAction
+    RecordArm5      NoAction
+    RecordArm6      NoAction
+    RecordArm7      NoAction
+    RecordArm8      Reaper "_RSxxxxxx"  // PASTE MFM_NORMALIZE_MINUS6DB ID HERE
+
+
+    // --- JOG WHEEL OVERRIDES ---
+    Increase+JogWheel             Reaper "40647"                                               
+    Decrease+JogWheel             Reaper _8020284d1ca8482b828f464e3852bdf4                     
+                                                                            
+    Control+Decrease+JogWheel     Reaper 40286                                                   
+    Control+Increase+JogWheel     Reaper 40285                                                   
+                        
+    Alt+Increase+JogWheel         Reaper _RS0f8d338b34550c87e8a6d8714a53838f3968ed99          
+    Alt+Decrease+JogWheel         Reaper _RS3727b9dc4409b238fe55128302daccc9f42ce177          
+                                
+    Shift+Increase+JogWheel       Reaper "_RSad2a78042d0ed14a5009a5332680ca70c7e8c44c" 
+    Shift+Decrease+JogWheel       Reaper "_RSdf4886667a484e9d497b259bd0df964c4e5b10f1" 
+
+ZoneEnd

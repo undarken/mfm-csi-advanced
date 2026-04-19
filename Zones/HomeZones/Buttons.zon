@@ -121,7 +121,7 @@ Zone Buttons
                           
  
 Zoom     Reaper  _SWS_ITEMZOOM // SWS: Zoom to selected items
-Zoom      GoZone "ItemFades"
+Zoom      GoZone ItemFades
 
 // L/R/U/D            
 

@@ -1,0 +1,535 @@
+Zone SelectedTracks 
+
+/Shift+Option+RecordArm1 LearnFocusedFX
+
+                   Footswitch1       Reaper _ad515113b8a549f4bc1f8fa9e113d2c3 //record drop in
+                   Footswitch2       Reaper _ad515113b8a549f4bc1f8fa9e113d2c3 //record drop in 
+                   
+                   
+          /Shift+Option+Flip        LearnFocusedFX 
+          
+    /             RotaryPush|       ToggleChannel
+    /    Toggle+DisplayUpper|       FixedTextDisplay ".WIDTH "                                            // TEXT  WIDTH
+	/	 Toggle+DisplayLower|       TrackPanAutoRightDisplay                                              // WIDTH NUMERICAL
+    /          Toggle+Rotary|       TrackPanAutoRight RingStyle=Dot                                       // WIDTH / PAN SELECTION     
+           
+           NO Modifiers:
+
+                      Fader|       TrackVolume
+                    VUMeter|       TrackOutputMeterMaxPeakLR
+                     Rotary|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL
+                 RotaryPush|       TrackPanAutoLeft RingStyle=Dot	           [ 0.5 ]                   // SET PAN TO CENTRE    : RESETS TRACK PAN 
+            Hold+RotaryPush|       TrackVolume	                               [ 0.75 ]                  // SET VOLUME TO 0.0    : RESETS TRACK VOLUME
+                    
+               DisplayUpper|       TrackNameDisplay                                                      // TEXT NAME
+               DisplayLower|       TrackPanAutoLeftDisplay                                               // TEXT PAN                                      
+         Touch+DisplayLower|       TrackVolumeDisplay                                                    // VOLUME
+         
+         
+         //SHIFT Modifier = PAN
+                                
+         Shift+DisplayUpper|       FixedTextDisplay "..PAN"                                              // TEXT PAN  
+         Shift+DisplayLower|       TrackPanAutoLeftDisplay                                               // PAN PARAMETER
+                Shift+Fader|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL   
+               Shift+Rotary|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL
+                                          
+           Shift+RotaryPush|       TrackPanAutoLeft RingStyle=Dot [ 0.0 0.5 1.0 ]  				    	  // PAN L  C  R
+             
+        Option+DisplayUpper|       FixedTextDisplay ".WIDTH "                                            // TEXT  WIDTH        
+        Option+DisplayLower|       TrackPanAutoRightDisplay                                              // WIDTH NUMERICAL 
+               Option+Fader|       TrackPanAutoRight RingStyle=Dot                                       // WIDTH NUMERICAL
+              Option+Rotary|       TrackPanAutoRight RingStyle=Dot                                       // WIDTH NUMERICAL 
+                            
+          Option+RotaryPush|       TrackPanAutoRight RingStyle=Dot [ 0.0 0.5 1.0 ]                       // WIDTH -100  M  +100     
+                                                
+ /      Control+DisplayUpper|       NoAction                                                              // TEXT NAME
+ /      Control+DisplayLower|       NoAction                                                              // DISPLAY TYPE of AUTOMATION
+ /            /Control+Rotary|      NoAction                  							             	 // CYCLE AUTOMATION MODES 	
+ /        /Control+RotaryPush|      NoAction                  							             	 // CYCLE AUTOMATION MODES
+ /            /Control+Select|      NoAction                  							             	 // CYCLE AUTOMATION MODES 	- cant use this as it is for adding tacks to selection
+             
+          Alt+DisplayUpper|        NoAction                                                              // TEXT AUTOMATION
+          Alt+DisplayLower|        NoAction                                                              // DISPLAY Record
+             Alt+RecordArm|        NoAction                                              [ 0.0 0.5 1.0 ] // CYCLE AUTOMATION MODES 	
+                /Alt+Rotary|       NoAction                                        [ 0.0 0.33 0.66 1.0 ] // CYCLE input monitor  MODES 
+                Alt+Rotary|        NoAction                          [ 0.0 0.25 0.33 0.5 0.66 0.75 1.0 ] // CYCLE AUTOMATION MODES 	
+
+                    
+                    RecordArm|       TrackRecordArm
+                    RecordArm|       Reaper  40740                                Feedback=No HoldDelay=500                              // auto rec arm
+              Shift+RecordArm|       CycleTrackInputMonitor      
+              Shift+RecordArm|       TrackInputMonitorDisplay      
+                 
+                         Solo|       TrackSolo      
+                   Shift+Solo|       ClearAllSolo      
+                   Shift+Solo|       TrackSolo      
+                     
+                        Mute|       TrackMute    
+                   /Shift+Mute|       Reaper 40339                                                                                       // Track: Unmute all tracks
+         
+                      Select|      Reaper _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
+                      Select|      TrackUniqueSelect
+                Shift+Select|      TrackRangeSelect    
+              Control+Select|      TrackSelect
+        Shift+Control+Select|      Reaper _84c1039ca1624decbba3f6dd060d5955  // unselect tracks and items ALL
+
+                        
+                /Option+Select|       TrackSelect 
+           
+                        Fader|       TrackVolume 
+                      VUMeter|       TrackOutputMeter  
+                       
+                  BankLeft           Bank SelectedTrack -8 
+                  BankRight          Bank SelectedTrack 8 
+                  ChannelLeft        Bank SelectedTrack -1 
+                  ChannelRight       Bank SelectedTrack 1    
+                  
+                         Zoom        Zoom  
+                         Option      Option
+                         Shift       Shift  
+                           Alt       Alt         
+ 
+ 
+// TRACK - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE GoHome ZONE FROM SelectedTracks ZONE: 
+ 
+ 
+                         Track       Reaper  _SWSTL_SHOWALL                                                                              // show all tracks 
+                         Track       ClearModifiers                                                                                      // ClearModifiers
+                         Track       Reaper  41150                                                                                       // hide all envelopes all tracks
+                         Track       Reaper  40088                                                                                       // Automation: Set all tracks automation mode to trim/read
+                         Track       Reaper  40454                                                                                       // Screenset: Load window set #01
+                         Track       Reaper _RS9f80e4095144a2a58da117d417663a332e05b640                                                  // Script: Archie_View; Zoom TCP to fit screen.lua  
+                         Track       Reaper _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                  // Script: Lokasenna_Scroll mixer to first selected track.lua
+                         Track       Reaper   40781                                                                                      // Grid: Set to 1
+                               
+                         Track       GoZone SelectedTracks        
+                                                        
+                               
+// SEND - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackSend ZONE:        
+                              
+                          Send       ClearModifiers                                           Feedback=No                                //
+                          Send       Reaper _SWSTL_SHOWALL                                    Feedback=No                                // show all tracks 
+                          Send       Reaper  40086                                            Feedback=No                                // Automation: Set all tracks automation mode to trim/read
+                          Send       Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No                                //  
+                          Send       Reaper   40458                                           Feedback=No                                // Screenset: Load window set #05 
+                          Send       Reaper  _S&M_WNCLS3                                      Feedback=No                                // SWS/S&M: Close all floating FX windows  
+                          Send       Reaper  _S&M_WNCLS4                                      Feedback=No                                // SWS/S&M: Close all FX chain windows                
+                          Send       Reaper   40406                                           Feedback=No                                // Track: Toggle track volume envelope visible                                                              
+                          Send       Reaper  _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                  Feedback=No                                // SHOW_SEND_ENV_SEL_ALL_TRACK
+                          Send       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640      Feedback=No                                // Script: Archie_View; Zoom TCP to fit screen.lua
+                          Send       Reaper  _XENAKIOS_SELFIRSTOFSELTRAX                      Feedback=No                                // Xenakios/SWS: Select first of selected tracks
+                          Send       Reaper  40086                                            Feedback=No                                // Automation: Set all tracks automation mode to trim/read     
+                                                                                                                                                             
+                          Send       GoZone SelectedTrackSend        
+                          
+                          
+// PLUGIN - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackFX ZONE:
+                                            
+                         Plugin      Reaper  41150                                            Feedback=No                                // Envelope: Hide all envelopes for all tracks                     
+                         Plugin      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db      Feedback=No                                // Script: mpl_Minimize all tracks envelopes heights.lua                                   
+                         Plugin      ClearModifier Shift                                      Feedback=No                                // ClearModifier Shift      
+                         Plugin      ClearModifier Option                                     Feedback=No                                // ClearModifier Option 
+                         Plugin      Reaper  40401                                            Feedback=No                                // Automation: Set all tracks automation mode to read                          
+                         Plugin      Reaper  _SWS_UNSELMASTER                                 Feedback=No                                // SWS: Unselect master track
+                         Plugin      Reaper  _SWS_HIDEMASTER                                  Feedback=No                                // SWS: Hide master track                                        
+                         Plugin      Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No                                // SWS: Hide unselected track(s)                            
+                         Plugin      Reaper  _BR_SHOW_FX_ENV_SEL_TRACK                        Feedback=No                                // SWS/BR: Show all FX envelopes for selected tracks
+                         Plugin      Reaper   40406                                           Feedback=No                                // Track: Toggle track volume envelope visible       
+                         Plugin      Reaper   42020                                           Feedback=No                                // Track: Toggle track trim envelope visible                          
+                         Plugin      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db      Feedback=No                                // Script: mpl_Minimize all tracks envelopes heights.lua
+                         Plugin      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6      Feedback=No                                // Script: mpl_Maximize selected tracks envelopes heights.lua                          
+                         Plugin      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No                                // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                         Plugin      Reaper  40456                                            Feedback=No                                // Screenset:Load window set #02
+                         Plugin      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No                                // Script: HeDa_View Scroll Top.lu                              
+                                                                
+                 InverFB+Plugin      GoZone SelectedTrackFXMenu                               Feedback=No                                //
+                    
+                    
+//F1-F8
+
+                    
+                    
+                    
+// AUTOMATION BUTTONS
+                                                  
+                    
+                      /Trim/Read      Reaper  _SWS_UNSELMASTER                                  Feedback=No                               // SWS: Unselect master track
+                      /Trim/Read      Reaper  _SWS_HIDEMASTER                                   Feedback=No                               // SWS: Hide master track                                        
+                      /Trim/Read      Reaper  _SWSTL_HIDEUNSEL                                  Feedback=No                               // SWS: Hide unselected track(s)                            
+                      /Trim/Read      Reaper   41148                                            Feedback=No                               //  Envelope: Show all envelopes for tracks
+                      /Trim/Read      Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                   Feedback=No                               // HIDE_SEND_ENV_SEL_ALL_TRACK
+                      /Trim/Read      Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                         Feedback=No                               // HIDE_FX_ENV_SEL_TRACK 
+                      /Trim/Read      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db       Feedback=No                               // Script: mpl_Minimize all tracks envelopes heights.lua
+                      /Trim/Read      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6       Feedback=No                               // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                      /Trim/Read      Reaper  40454                                             Feedback=No                               // Screenset:Load window set #01
+                      /Trim/Read      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69       Feedback=No                               // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                      /Trim/Read      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5       Feedback=No                               // Script: HeDa_View Scroll Top.lua  
+                      /Trim/Read      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02
+                      /Trim/Read      Reaper  40031                                             Feedback=No                               // View: Zoom time selection
+                      
+                      Trim/Read      TrackAutoMode 0                                                                                     // Trim/Read                             
+                                                     
+                                                             
+                          /Read      Reaper  _SWS_UNSELMASTER                                  Feedback=No                               // SWS: Unselect master track
+                          /Read      Reaper  _SWS_HIDEMASTER                                   Feedback=No                               // SWS: Hide master track                                        
+                          /Read      Reaper  _SWSTL_HIDEUNSEL                                  Feedback=No                               // SWS: Hide unselected track(s)                            
+                          /Read      Reaper   41148                                            Feedback=No                               //  Envelope: Show all envelopes for tracks
+                          /Read      Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                   Feedback=No                               // HIDE_SEND_ENV_SEL_ALL_TRACK
+                          /Read      Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                         Feedback=No                               // HIDE_FX_ENV_SEL_TRACK 
+                          /Read      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db       Feedback=No                               // Script: mpl_Minimize all tracks envelopes heights.lua
+                          /Read      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6       Feedback=No                               // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                          /Read      Reaper  40454                                             Feedback=No                               // Screenset:Load window set #01
+                          /Read      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69       Feedback=No                               // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                          /Read      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5       Feedback=No                               // Script: HeDa_View Scroll Top.lua  
+                          /Read      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02
+                          /Read      Reaper  40031                                             Feedback=No                               // View: Zoom time selection
+                                
+                           Read      TrackAutoMode 1                                                                                     // Read           
+                                     
+            
+                          /Touch      ClearModifier Shift                                       Feedback=No                               // ClearModifier Shift      
+                          /Touch      ClearModifier Option                                      Feedback=No                               // ClearModifier Option                          
+                          /Touch      Reaper  _SWS_UNSELMASTER                                  Feedback=No                               // SWS: Unselect master track
+                          /Touch      Reaper  _SWS_HIDEMASTER                                   Feedback=No                               // SWS: Hide master track                                        
+                          /Touch      Reaper  _SWSTL_HIDEUNSEL                                  Feedback=No                               // SWS: Hide unselected track(s)                            
+                          /Touch      Reaper   41148                                            Feedback=No                               //  Envelope: Show all envelopes for tracks
+                          /Touch      Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                   Feedback=No                               // HIDE_SEND_ENV_SEL_ALL_TRACK
+                          /Touch      Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                         Feedback=No                               // HIDE_FX_ENV_SEL_TRACK
+                          /Touch      Reaper   42020                                            Feedback=No                               // Track: Toggle track trim envelope visible 
+                          /Touch      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db       Feedback=No                               // Script: mpl_Minimize all tracks envelopes heights.lua
+                          /Touch      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6       Feedback=No                               // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                          /Touch      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02
+                          /Touch      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69       Feedback=No                               // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                          /Touch      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5       Feedback=No                               // Script: HeDa_View Scroll Top.lua    
+                          /Touch      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02 
+                          /Touch      Reaper  40031                                             Feedback=No                               // View: Zoom time selection
+                               
+                          Touch      TrackAutoMode 2                                                                                     // Touch
+                                                                     
+                                                                                                   
+                                                                                                            
+                          /Write      Reaper  _SWS_UNSELMASTER                                  Feedback=No                               // SWS: Unselect master track
+                          /Write      Reaper  _SWS_HIDEMASTER                                   Feedback=No                               // SWS: Hide master track                                        
+                          /Write      Reaper  _SWSTL_HIDEUNSEL                                  Feedback=No                               // SWS: Hide unselected track(s)                            
+                          /Write      Reaper   41148                                            Feedback=No                               //  Envelope: Show all envelopes for tracks
+                          /Write      Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                   Feedback=No                               // HIDE_SEND_ENV_SEL_ALL_TRACK
+                          /Write      Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                         Feedback=No                               // HIDE_FX_ENV_SEL_TRACK 
+                          /Write      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db       Feedback=No                               // Script: mpl_Minimize all tracks envelopes heights.lua
+                          /Write      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6       Feedback=No                               // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                          /Write      Reaper  40454                                             Feedback=No                               // Screenset:Load window set #01
+                          /Write      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69       Feedback=No                               // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                          /Write      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5       Feedback=No                               // Script: HeDa_View Scroll Top.lua  
+                          /Write      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02
+                          /Write      Reaper  40031                                             Feedback=No                               // View: Zoom time selection
+                               
+                          Write      TrackAutoMode 3 
+                  Control+Write       Reaper  _RS01405fd8d0b982d26f88867cfd8a38da3c5d7a16		Feedback=Yes                               // Script: X-Raym_Copy visible armed envelope points in time selection of last touched track and insert in selected tracks.lua               
+                                
+       
+                                                     
+                          /Latch      Reaper  _SWS_UNSELMASTER                                  Feedback=No                               // SWS: Unselect master track
+                          /Latch      Reaper  _SWS_HIDEMASTER                                   Feedback=No                               // SWS: Hide master track                                        
+                          /Latch      Reaper  _SWSTL_HIDEUNSEL                                  Feedback=No                               // SWS: Hide unselected track(s)                            
+                          /Latch      Reaper   41148                                            Feedback=No                               //  Envelope: Show all envelopes for tracks
+                          /Latch      Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                   Feedback=No                               // HIDE_SEND_ENV_SEL_ALL_TRACK
+                          /Latch      Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                         Feedback=No                               // HIDE_FX_ENV_SEL_TRACK 
+                          /Latch      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db       Feedback=No                               // Script: mpl_Minimize all tracks envelopes heights.lua
+                          /Latch      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6       Feedback=No                               // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                          /Latch      Reaper  40454                                             Feedback=No                               // Screenset:Load window set #01
+                          /Latch      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69       Feedback=No                               // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                          /Latch      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5       Feedback=No                               // Script: HeDa_View Scroll Top.lua  
+                          /Latch      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02
+                          /Latch      Reaper  40031                                             Feedback=No                               // View: Zoom time selection
+                               
+                          Latch      TrackAutoMode 4                                                                                     // latch 
+                        
+                        
+                                               
+                          /Group      Reaper  _SWS_UNSELMASTER                                  Feedback=No                               // SWS: Unselect master track
+                          /Group      Reaper  _SWS_HIDEMASTER                                   Feedback=No                               // SWS: Hide master track                                        
+                          /Group      Reaper  _SWSTL_HIDEUNSEL                                  Feedback=No                               // SWS: Hide unselected track(s)                            
+                          /Group      Reaper   41148                                            Feedback=No                               //  Envelope: Show all envelopes for tracks
+                          /Group      Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                   Feedback=No                               // HIDE_SEND_ENV_SEL_ALL_TRACK
+                          /Group      Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                         Feedback=No                               // HIDE_FX_ENV_SEL_TRACK 
+                          /Group      Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db       Feedback=No                               // Script: mpl_Minimize all tracks envelopes heights.lua
+                          /Group      Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6       Feedback=No                               // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                          /Group      Reaper  40454                                             Feedback=No                               // Screenset:Load window set #01
+                          /Group      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69       Feedback=No                               // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
+                          /Group      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5       Feedback=No                               // Script: HeDa_View Scroll Top.lua  
+                          /Group      Reaper  40455                                             Feedback=No                               // Screenset:Load window set #02 
+                          /Group      Reaper  40031                                             Feedback=No                               // View: Zoom time selection
+                               
+                          Group      TrackAutoMode 5                                                                                     // latchPREVIEW
+                               
+                          Group      Reaper 42013										                  HoldDelay=300 Feedback=No      // Automation: Write current values for actively-writing envelopes to time selection
+                          
+                          
+                          
+                          
+                    
+                            Save      Reaper  _RSa5270cb7c5e28b002fe880b9108a70434c4915e6      Feedback=No                               // Script:  MIKE - Copy envelope points in time selection and paste at edit cursor preserving destination edges.lua
+                           Enter      Reaper  _BR_COPY_ENV_PT_SEL_TR_ENVS_MOUSE_CUR            Feedback=No                               // SWS/BR: Copy points in time selection in selected envelope to all visible envelopes in selected tracks (paste at edit cursor)          
+                     Group+Enter      Reaper   42013                                                                                     // Automation: Write current values for actively-writing envelopes to time selection                        
+              Control+GroupEnter      Reaper   42013                                                                                     // Automation: Write current values for actively-writing envelopes to time selection
+                Hold+Group+Enter      Reaper   42017                                                                                     // Automation: Write current values for actively-writing envelopes to entire envelope
+        Hold+Group+Control+Enter      Reaper   42017                                                                                     // Automation: Write current values for actively-writing envelopes to entire envelope                                         
+              Group+Global+Enter      Reaper   42013                                                                                     // Automation: Write current values for actively-writing envelopes to time selection                        
+      Control+Group+Global+Enter      Reaper   42013                                                                                     // Automation: Write current values for actively-writing envelopes to time selection
+         Hold+Global+Group+Enter      Reaper   42017                                                                                     // Automation: Write current values for actively-writing envelopes to entire envelope
+ Hold+Control+Group+Global+Enter      Reaper   42017                                                                                     // Automation: Write current values for actively-writing envelopes to entire envelope
+                                          
+             
+                    
+// MOVE CURSOR:
+                  
+                           
+               Decrease+JogWheel      Reaper _8020284d1ca8482b828f464e3852bdf4                                                            // Move cursor left to grid division and sel items on sel track                
+               Increase+JogWheel      Reaper "40647"                                                                                      // Move cursor right to grid division   
+      /Control+Decrease+JogWheel      Reaper _8020284d1ca8482b828f464e3852bdf4                                                            // Move cursor left to grid division and sel items on sel track  // ALREADY SELECTS TRACK!!                                             
+      /Control+Increase+JogWheel      Reaper "40647"                                                                                      // Move cursor right to grid division                   // ALREADY SELECTS TRACK!!
+                                                         
+                                                         
+ // SELECT NEXT/PREV  TRACK    
+                   
+                   
+                           Up         Reaper 40286                                                                                        // Track: Go to previous track
+                           Up         Reaper _XENAKIOS_TVPAGEUP                                                                           // Xenakios/SWS: Scroll track view up (page)
+                           Down       Reaper 40285                                                                                        // Track: Go to next     track 
+                           Down       Reaper _XENAKIOS_TVPAGEDOWN                                                                         // Xenakios-SWS: Scroll track view down 
+                                          
+                                                                                                              
+      Control+Decrease+JogWheel       Reaper 40286                                                                                        // Track: Go to previous track      
+      Control+Increase+JogWheel       Reaper 40285                                                                                        // Track: Go to next     track 
+              
+                         
+                                      //ADD PREV/NEXT TRACK KEEPING SELECTION         
+                                              
+                                                                                          
+       /Shift+Decrease+JogWheel       Reaper  _XENAKIOS_SELPREVTRACKKEEP                                                                  //Xenakios/SWS: Select prev tracks, keeping current selection 
+       /Shift+Increase+JogWheel       Reaper  _XENAKIOS_SELNEXTTRACKKEEP                                                                  //Xenakios/SWS: Select next tracks, keeping current selection
+       
+                                                
+                                                     
+            
+// SCRUB+ALLBUTTONS:        
+                                                                                                 
+                                     Scrub       Scrub                                                                       Feedback=Yes //  
+                                     Scrub       ClearModifier Shift                                                         Feedback=No // ClearModifier Shift    
+                                     Scrub       ClearModifier Control                                                       Feedback=No // ClearModifier Control
+                                     Scrub       ClearModifier Option                                                        Feedback=No // ClearModifier Option 
+                                     Scrub      /Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                                     Feedback=No // HIDE_SEND_ENV_SEL_ALL_TRACK
+                                     Scrub      / Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                                           Feedback=No // HIDE_FX_ENV_SEL_TRACK
+                                     Scrub       Reaper  41150                                                               Feedback=No // Envelope: Hide all envelopes for all tracks
+                                     Scrub       Reaper  _SWS_UNSELMASTER                                                    Feedback=No // SWS: Unselect master track
+                                     Scrub       Reaper  _SWS_HIDEMASTER                                                     Feedback=No // SWS: Hide master track
+                                     Scrub       /Reaper  _SWSTL_HIDEUNSEL                                                    Feedback=No // SWS: Hide unselected track(s)
+                                     Scrub       Reaper  _SWS_VZOOMFIT_NO_ENV                                                Feedback=No // SWS: Vertical zoom to selected tracks (ignore last track's envelope lanes)                                       
+                                                                         
+                                     Scrub       Reaper   41148                                                              Feedback=No //  Envelope: Show all envelopes for tracks
+                                     Scrub       Reaper  _BR_HIDE_SEND_ENV_SEL_ALL_TRACK                                     Feedback=No // HIDE_SEND_ENV_SEL_ALL_TRACK
+                                     Scrub       Reaper  _BR_HIDE_FX_ENV_SEL_TRACK                                           Feedback=No // HIDE_FX_ENV_SEL_TRACK
+                                     Scrub       Reaper   42020                                                              Feedback=No // Track: Toggle track trim envelope visible 
+                                     Scrub       Reaper  _BR_UNSEL_ENV                                                       Feedback=No // SWS/BR: Unselect envelope  
+                                     Scrub       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                         Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
+                                     Scrub       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                         Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua 
+                                     Scrub       Reaper  40455                                                               Feedback=No // Screenset:Load window set #02
+                                     Scrub       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                         Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua
+                                     /Scrub       Reaper  40031                                                               Feedback=No // View: Zoom time selection
+                                     Scrub       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                         Feedback=No // Script: HeDa_View Scroll Top.lua  
+                                     /Scrub       Reaper  _RS01405fd8d0b982d26f88867cfd8a38da3c5d7a16						 Feedback=No // Script: X-Raym_Copy visible armed envelope points in time selection of last touched track and insert in selected tracks.lua
+                                             
+                                                  
+                            Shift+JogWheel       Reaper _RS110b21a831674290451ba233d3d511158358f209									    		 // Custom: select GRID  0 - 1/128  on pedal
+
+                         Scrub+Rewind            Reaper _RS2a2550d39129b310256c72ba74993b7f92f8e235    Feedback=No                       //  edit prev  vis grid                                
+                         Scrub+FastForward       Reaper _RS15fe264880bb8d5030dabb8c1b1d6767a4c36b28    Feedback=No                       //  edit next  vis grid   
+                                                  
+                /Control+Scrub+Rewind            Reaper _RS2a2550d39129b310256c72ba74993b7f92f8e235    Feedback=No                       //  edit prev  vis grid 
+                /Control+Scrub+FastForward       Reaper _RS15fe264880bb8d5030dabb8c1b1d6767a4c36b28    Feedback=No                       //  edit next  vis grid
+                        
+                        
+// ENVELOPES                        
+                        
+             
+// ARM/UNARM ENVELOPE -ENVELOPE O/O        
+        
+                              Scrub+Record       Reaper  40863                                        Feedback=Yes                       // Envelope: Toggle record arm for selected envelope
+                      Control+Scrub+Record       Reaper  40863                                        Feedback=Yes                       // Envelope: Toggle record arm for selected envelope                      
+                         Hold+Scrub+Record 	     Reaper  40883                                        Feedback=Yes HoldDelay=500         // Envelope: Toggle bypass for selected envelope
+                                  
+                               Zoom+Record       Reaper  40863                                        Feedback=Yes                       // Envelope: Toggle record arm for selected envelope
+                       Control+Zoom+Record       Reaper  40863                                        Feedback=Yes                       // Envelope: Toggle record arm for selected envelope                      
+                          Hold+Zoom+Record 	     Reaper  40883                                        Feedback=Yes HoldDelay=500         // Envelope: Toggle bypass for selected envelope
+
+
+                       
+//  SELECT NEXT/PREV ENVELOPE                   
+                                                                          
+ 
+                      Scrub+Decrease+JogWheel    Reaper     _620943cd432647d18758de1c416add71                                               // Prev envelope + sel all points - MUST HAVE TIME SELECTION
+                      										_94c40da4c31a4c35814cf1dbc5812c3b
+                      										_620943cd432647d18758de1c416add71
+                      Scrub+Increase+JogWheel    Reaper _b77dd8a94d974d8f95da0f2d931edc90                                                // next envelope + sel all points - MUST HAVE TIME SELECTION                           
+              Control+Scrub+Decrease+JogWheel    Reaper _94c40da4c31a4c35814cf1dbc5812c3b                                                // Prev envelope + sel all points - MUST HAVE TIME SELECTION
+              Control+Scrub+Increase+JogWheel    Reaper _b77dd8a94d974d8f95da0f2d931edc90                                                // next envelope + sel all points - MUST HAVE TIME SELECTION
+                       
+                                   /  Up+Latch    Reaper _94c40da4c31a4c35814cf1dbc5812c3b                                               // Prev envelope + sel all points - MUST HAVE TIME SELECTION 
+                                   /Down+Latch    Reaper _b77dd8a94d974d8f95da0f2d931edc90                                               // next envelope + sel all points - MUST HAVE TIME SELECTION                   
+                                                                 
+                                                                              
+// NEXT PREV POINT AND SELECT                     
+                    
+
+                                                                                                                                 
+                                         Zoom    ClearModifier Control                                                                   // ClearModifier Control 
+                                         Zoom    Reaper 40031                                                          Feedback=No       // View: Zoom time selection 
+                              
+                                             
+                                         /Zoom    ClearModifier Control                                   HoldDelay=500 Feedback=No       // ClearModifier Control
+                                         /Zoom    Reaper 40031                                            HoldDelay=500 Feedback=No       // View: Zoom time selection           								                             
+                                         /Zoom    Reaper  _WOL_SETSELENVHMAX                              HoldDelay=500 Feedback=No       // Script: mpl_Maximize selected tracks envelopes heights.lua    
+                              /DoublePress+Zoom    Reaper  _WOL_SETSELENVHMAX                                                 // Script: mpl_Maximize selected tracks envelopes heights.lua     
+                                     
+                                         /Option Option
+                                         /Shift  Shift                                   
+                                            
+                       Zoom+Decrease+JogWheel    Reaper  _SWS_BRMOVEEDITSELPREVENV                                                       // SWS/BR: Move cursor to Prev Point + Select it  
+                       Zoom+Increase+JogWheel    Reaper  _SWS_BRMOVEEDITSELNEXTENV                                                       // SWS/BR: Move cursor to next Point + Select it                          
+               Control+Zoom+Decrease+JogWheel    NoAction // Reaper  _SWS_BRMOVEEDITSELPREVENV                                                // SWS/BR: Move cursor to Prev Point + Select it              
+               Control+Zoom+Increase+JogWheel    NoAction // Reaper  _SWS_BRMOVEEDITSELNEXTENV                                                // SWS/BR: Move cursor to next Point + Select it
+               
+                                                            
+// NEXT PREV POINT AND ADD TO SELECTION     
+                                                                                  
+                                            
+                      Shift+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL                                                  // SWS/BR: Move edit cursor to previous envelope point and add to selection
+                      Shift+Increase+JogWheel    Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL                                                  // SWS/BR: Move edit cursor to next envelope point and add to selection
+                                        
+         Control+Zoom+Shift+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL                                                  // SWS/BR: Move edit cursor to previous envelope point and add to selection   
+         Control+Zoom+Shift+Increase+JogWheel    Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL                                                  // SWS/BR: Move edit cursor to next envelope point and add to selection
+                 Zoom+Shift+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL                                                  // SWS/BR: Move edit cursor to previous envelope point and add to selection
+                 Zoom+Shift+Increase+JogWheel    Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL                                                  // SWS/BR: Move edit cursor to next envelope point and add to selection
+                      Shift+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL                                                  // SWS/BR: Move edit cursor to previous envelope point and add to selection
+                      Shift+Increase+JogWheel    Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL                                                  // SWS/BR: Move edit cursor to next envelope point and add to selection
+                Scrub+Shift+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL                                                  // SWS/BR: Move edit cursor to previous envelope point and add to selection
+                Scrub+Shift+Increase+JogWheel    Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL                                                  // SWS/BR: Move edit cursor to next envelope point and add to selection
+                             
+                          
+// MOVE SELECTED POINT    Up/Down 1DB         
+                                                                   
+                                  Option         ClearModifier Shift
+        Option+Zoom+Control+Decrease+JogWheel    Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+        Option+Zoom+Control+Increase+JogWheel    Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                                                                  
+        Option+Zoom+Decrease+JogWheel            Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+        Option+Zoom+Increase+JogWheel            Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                                              
+        Option+Decrease+JogWheel                 Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+        Option+Increase+JogWheel                 Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                                                                           
+        Option+Scrub+Decrease+JogWheel           Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+        Option+Scrub+Increase+JogWheel           Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+        
+        
+                                 Hold+Option    Reaper  _WOL_SETSELENVHMAX                                                              // Script: mpl_Maximize selected tracks envelopes heights.lua          
+  Hold+Option+Zoom+Control+Decrease+JogWheel    Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+  Hold+Option+Zoom+Control+Increase+JogWheel    Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                                                                  
+  Hold+Option+Zoom+Decrease+JogWheel            Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+  Hold+Option+Zoom+Increase+JogWheel            Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                                              
+  Hold+Option+Decrease+JogWheel                 Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+  Hold+Option+Increase+JogWheel                 Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                                                                           
+  Hold+Option+Scrub+Decrease+JogWheel           Reaper  41181                                                                           // Envelopes: Move selected points down 1DB
+  Hold+Option+Scrub+Increase+JogWheel           Reaper  41180                                                                           // Envelopes: Move selected points up   1DB
+                             
+                                                                  
+// MOVE SELECTED POINT    Up/Down 0.2DB                  
+                                                                                                       
+                                                                  
+  Shift+Option+Zoom+Control+Decrease+JogWheel    Reaper  42382                                                                           // Envelopes: Move selected points down 0.2DB
+  Shift+Option+Zoom+Control+Increase+JogWheel    Reaper  42381                                                                           // Envelopes: Move selected points up   0.2DB
+                                                            
+  Shift+Option+Zoom+Decrease+JogWheel            Reaper  42382                                                                           // Envelopes: Move selected points down 0.2DB
+  Shift+Option+Zoom+Increase+JogWheel            Reaper  42381                                                                           // Envelopes: Move selected points up   0.2DB
+                                        
+  Shift+Option+Scrub+Decrease+JogWheel           Reaper  42382                                                                           // Envelopes: Move selected points down 0.2DB
+  Shift+Option+Scrub+Increase+JogWheel           Reaper  42381                                                                           // Envelopes: Move selected points up   0.2DB
+                                      
+                                        
+  Shift+Option+Decrease+JogWheel                 Reaper  42382                                                                           // Envelopes: Move selected points down 0.2DB
+  Shift+Option+Increase+JogWheel                 Reaper  42381                                                                           // Envelopes: Move selected points up   0.2DB
+    
+    DoublePress+Option    Reaper  _WOL_SETSELENVHMAX                                                 // Script: mpl_Maximize selected tracks envelopes heights.lua  
+    
+
+/ COPY + PASTING ENVELOPE POINTS: SAME TRACK
+
+/ ENTER = COPY POINTS IN ACTIVE ENVELOPES ON SELECTED TRACK TO CURSOR - ENVELOPES MUST BE ACTIVE! DE SELECT to PREVENT COPY/PASTE
+ 
+                                     Enter      Reaper  _RSa5270cb7c5e28b002fe880b9108a70434c4915e6                                                            // Envelopes: paste envelope points in time selection in selected envelope at edit cursor
+ 
+/ ENTER = NO  envelope tracks selected: ALL ACTIVE envelopes copied to cursor = FROM time selection leaving position before and after insert as they were.
+/ ENTER = ONE Envelope track  selected: ONE ACTIVE envelope  copied to cursor = FROM time selection leaving position before and after insert as they were. 
+          
+     
+         
+/ COPY + PASTING ENVELOPE POINTS: OTHER SELECTED TRACKS
+
+/ALT+ENTER = COPY+PASTE ENVELOPE POINTS TO MOUSE POINTER - ENVELOPES DONT NEED TO BE ACTIVE - COPYS A SINGLE SELECTED ENVELOPE SET OF POINTS IN TIME SELECTION, PASTE AT EDIT CURSOR TO ENVELOPE UNDER MOUSE
+
+                                  Alt+Enter      Reaper  _BR_COPY_ENV_TS_SEL_TR_ENVS_MOUSE_CUR      															// Envelopes: paste envelope points in time selection in selected envelope at edit cursor to envelope under mouse pointer 
+          	
+
+
+   
+                              Control+Enter      Reaper  _RS82677e647421b6e42f5e810c922d13be0b326938													    	// Script: X-Raym_Copy visible armed envelope of last touched track and paste to selected tracks.lua
+                              Control+Enter      Reaper _XENAKIOS_SELFIRSTOFSELTRAX																				// Xenakios/SWS: Select first of selected tracks
+                              Control+Enter      Reaper 40296																									// Track: Select all tracks
+                              Control+Enter      Reaper _RS82677e647421b6e42f5e810c922d13be0b326938																// Script: X-Raym_Copy visible armed envelope of last touched track and paste to selected tracks.lua
+ 
+     
+/ CONTROL+ENTER = COPIES MULTIPLE ENVELOPES TO THE FIRST SELECTED TRACKS FROM THE LAST SELECTED TRACK.(in order track of selection NOT position) WHOLE SONG FROM START TO END OR FIRST SELECTED TRACK TIME SELECTION TO TIME SELCTION TO OTHER SELECTED TRACKS TIME SELECTION- CURSOR HAS NO EFFECT.
+/ CONTROL+ENTER = ENVELOPES NEED TO BE ARMED AND VISIBLE ON ALL OF THE SELECTED TRACKS TO COPY. UNARM ENVELOPE ON EITHER THE TRACK YOURE PASTING FROM OR TO, TO PREVENT COPY.
+
+
+
+                           Control+Alt+Enter      Reaper 40769																									// Unselect (clear selection of) all tracks/items/envelope points
+						   Control+Alt+Enter      Reaper 40914																									// Track: Set first selected track as last touched track                           
+						   Control+Alt+Enter      Reaper 40505																									// Track: Select last touched track
+						   /Control+Alt+Enter      Reaper 41150																						        	// Envelope: Hide all envelopes for all tracks  
+						   /Control+Alt+Enter      Reaper _BR_T_SHOW_ACT_SEND_ENV_ALL_SEL_TRACK																	// SWS/BR: Toggle show all active send envelopes for selected tracks
+						   
+						   Control+Alt+Enter      Reaper 40505																									// Track: Select last touched track
+						   Control+Alt+Enter      Reaper 40214																									// Insert new MIDI item...
+						   Control+Alt+Enter      Reaper 40698           																						// Edit: Copy items
+						   Control+Alt+Enter      Reaper 40029																									// Edit: Undo
+						   /Control+Alt+Enter      Reaper 40151																									// View: Go to edit cursor 
+					   
+						    /Control+Alt+Enter      Reaper _SWS_TOGTRACKSEL 																						// SWS: Toggle (invert) track selection
+						    Control+Alt+Enter      Reaper _SWS_AWPASTE  						          
+
+						         
+						   
+						    						
+     
+						   /Control+Alt+Enter      Reaper 40914																									// Track: Set first selected track as last touched track   
+						   /Control+Alt+Enter      Reaper _SWS_AWPASTE       
+						   /Control+Alt+Enter      Reaper       
+						   /Control+Alt+Enter      Reaper       
+						   /Control+Alt+Enter      Reaper       
+                   
+
+						   /Control+Alt+Enter      Reaper       
+	   
+	   
+
+    
+    
+    
+    
+    
+    
+    
+ZoneEnd  
