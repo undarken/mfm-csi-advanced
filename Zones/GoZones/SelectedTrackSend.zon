@@ -76,7 +76,7 @@ Zone SelectedTrackSend
                          Plugin      Reaper  40456                                                                     Feedback=No // Screenset:Load window set #02
                          Plugin      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                               Feedback=No // Script: HeDa_View Scroll Top.lu                              
                                                                                     
-                 InverFB+Plugin      GoZone SelectedTrackFXMenu                                                        Feedback=No //                             
+               InvertFB+Plugin      GoZone SelectedTrackFXMenu                                                        Feedback=No //                             
 
 //F1-F8
 
