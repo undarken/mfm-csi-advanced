@@ -1,5 +1,5 @@
 Zone Track
-// Revision: 3.2.1
+// Revision: 3.2.2
 
 
 
@@ -32,21 +32,7 @@ Zone Track
                DisplayUpper|       TrackNameDisplay                                                      // TEXT NAME
                DisplayLower|       TrackPanAutoLeftDisplay                                               // TEXT PAN                                      
          Touch+DisplayLower|       TrackVolumeDisplay                                                    // VOLUME
-         
-         
-         //SHIFT Modifier = PAN
-                                
-         Shift+DisplayUpper|       FixedTextDisplay "..PAN"                                              // TEXT PAN  
-         Shift+DisplayLower|       TrackPanAutoLeftDisplay                                               // PAN NUMERICAL
-                Shift+Fader|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL   
-               Shift+Rotary|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL                           
-           Shift+RotaryPush|       TrackPanAutoLeft RingStyle=Dot [ 0.0 0.5 1.0 ]  				    	  // PAN L  C  R
-             
-        Option+DisplayUpper|       FixedTextDisplay ".WIDTH "                                            // TEXT  WIDTH        
-        Option+DisplayLower|       TrackPanAutoRightDisplay                                              // WIDTH NUMERICAL       
-              Option+Rotary|       TrackPanAutoRight RingStyle=Dot                                       // WIDTH NUMERICAL              
-          Option+RotaryPush|       TrackPanAutoRight RingStyle=Dot [ 0.0 0.5 1.0 ]                       // WIDTH -100  M  +100     
-                                                
+        
    /    Control+DisplayUpper|       TrackNameDisplay                                                      // TEXT NAME
    /    Control+DisplayLower|       TrackAutoModeDisplay                                                  // DISPLAY TYPE of AUTOMATION
    /          /Control+Rotary|       NoAction                  							             	 // CYCLE AUTOMATION MODES 	
