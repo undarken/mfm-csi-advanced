@@ -6,6 +6,7 @@ Zone GoZones
         SelectedTrackSendAutomation
         SelectedTrackReceive
         SelectedTrackFXMenu
+        SelectedTrackFXMenuAutomation
         MasterTrackFXMenu
         TrackSend
         TrackReceive

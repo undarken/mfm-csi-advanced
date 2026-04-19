@@ -27,6 +27,7 @@ Zone Home
         SelectedTrackSendAutomation
         SelectedTrackReceive
         SelectedTrackFXMenu
+        SelectedTrackFXMenuAutomation
         MasterTrackFXMenu
         TrackSend
         TrackReceive
