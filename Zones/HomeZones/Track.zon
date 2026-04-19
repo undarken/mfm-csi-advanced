@@ -1,4 +1,5 @@
 Zone Track
+// Revision: 3.2.1
 
 
 
@@ -65,7 +66,6 @@ Zone Track
    //       Option+Flip+Fader|       TrackPanAutoRight
    //              
                   RecordArm|       TrackRecordArm 
-                  RecordArm|       Reaper                         40740  Feedback=No HoldDelay=500         // auto rec arm
             Shift+RecordArm|       CycleTrackInputMonitor
             Shift+RecordArm|       TrackInputMonitorDisplay
             
@@ -77,13 +77,10 @@ Zone Track
                 / Shift+Mute|       Reaper 40339   // Track: Unmute all tracks
                  /Shift+Mute|       TrackMute
 
-                      /Select|      TrackUniqueSelect
-                      
-                      Select|      Reaper _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
                       Select|      TrackSelect
                 Shift+Select|      TrackRangeSelect    
-              Control+Select|      TrackSelect
-        Shift+Control+Select|      Reaper _84c1039ca1624decbba3f6dd060d5955  // unselect tracks and items ALL
+              Control+Select|      TrackRangeSelect
+        Shift+Control+Select|      TrackRangeSelect
        
        
        / SHOW SENDS of selected tracks
