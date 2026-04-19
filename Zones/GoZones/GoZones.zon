@@ -1,7 +1,9 @@
 Zone GoZones
         GlobalViewZone
         SelectedTracks
+        SelectedTracksAutomation
         SelectedTrackSend
+        SelectedTrackSendAutomation
         SelectedTrackReceive
         SelectedTrackFXMenu
         MasterTrackFXMenu

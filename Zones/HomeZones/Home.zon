@@ -22,7 +22,9 @@ Zone Home
         GoZones
         GlobalViewZone
         SelectedTracks
+        SelectedTracksAutomation
         SelectedTrackSend
+        SelectedTrackSendAutomation
         SelectedTrackReceive
         SelectedTrackFXMenu
         MasterTrackFXMenu

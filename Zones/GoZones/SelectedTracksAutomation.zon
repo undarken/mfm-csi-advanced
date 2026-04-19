@@ -1,0 +1,45 @@
+Zone SelectedTracksAutomation
+// Revision: 3.2.2
+
+OnZoneDeactivation ClearModifiers
+
+                        Scrub       Scrub
+                         Zoom       Zoom
+                        Shift       Shift
+                       Option       Option
+                      Control       Control
+                          Alt       Alt
+
+// In/Out toggle (same combo enters and exits)
+                   Zoom+Scrub       GoZone SelectedTracks
+
+// Keep automation-focused behavior available while in the sub-zone
+               Decrease+JogWheel    Reaper _8020284d1ca8482b828f464e3852bdf4
+               Increase+JogWheel    Reaper "40647"
+       Control+Decrease+JogWheel    Reaper 40286
+       Control+Increase+JogWheel    Reaper 40285
+
+                  Scrub+Record      Reaper 40863
+          Control+Scrub+Record      Reaper 40863
+             Hold+Scrub+Record      Reaper 40883 Feedback=Yes HoldDelay=500
+
+                   Zoom+Record      Reaper 40863
+           Control+Zoom+Record      Reaper 40863
+              Hold+Zoom+Record      Reaper 40883 Feedback=Yes HoldDelay=500
+
+        Scrub+Decrease+JogWheel     Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+        Scrub+Increase+JogWheel     Reaper _b77dd8a94d974d8f95da0f2d931edc90
+Control+Scrub+Decrease+JogWheel     Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+Control+Scrub+Increase+JogWheel     Reaper _b77dd8a94d974d8f95da0f2d931edc90
+
+         Zoom+Decrease+JogWheel     Reaper _SWS_BRMOVEEDITSELPREVENV
+         Zoom+Increase+JogWheel     Reaper _SWS_BRMOVEEDITSELNEXTENV
+        Shift+Decrease+JogWheel     Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL
+        Shift+Increase+JogWheel     Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL
+
+        Option+Decrease+JogWheel    Reaper 41181
+        Option+Increase+JogWheel    Reaper 41180
+  Shift+Option+Decrease+JogWheel    Reaper 42382
+  Shift+Option+Increase+JogWheel    Reaper 42381
+
+ZoneEnd
