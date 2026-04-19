@@ -1,5 +1,5 @@
 Zone SelectedTrackSendAutomationPoint
-// Revision: 3.2.0
+// Revision: 3.2.1
 
 OnZoneDeactivation ClearModifiers
 
@@ -26,11 +26,17 @@ Increase+JogWheel               Reaper _SWS_BRMOVEEDITSELNEXTENV
 Shift+Decrease+JogWheel         Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL
 Shift+Increase+JogWheel         Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL
 
-// Level 3: point moves
-Option+Decrease+JogWheel        Reaper 41181
-Option+Increase+JogWheel        Reaper 41180
+// Level 3: point moves (law-abiding)
+// Option = fine detail/slower movement
+Option+Decrease+JogWheel        Reaper 42382
+Option+Increase+JogWheel        Reaper 42381
+// Shift+Option = include + fine detail while editing points
 Shift+Option+Decrease+JogWheel  Reaper 42382
 Shift+Option+Increase+JogWheel  Reaper 42381
+
+// Alt = horizontal zoom/grid (time/X-axis)
+Alt+Decrease+JogWheel           Reaper _RS3727b9dc4409b238fe55128302daccc9f42ce177
+Alt+Increase+JogWheel           Reaper _RS0f8d338b34550c87e8a6d8714a53838f3968ed99
 
 // Envelope arm/bypass controls stay available while focused
 Scrub+Record              Reaper 40863
