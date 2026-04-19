@@ -17,7 +17,7 @@ Decrease+JogWheel        Reaper 40112
 Shift+Decrease+JogWheel  Reaper 40111
 
 // In/Out Toggle Rule (same button in and out)
-Control+Track            GoHome
+Control+Track            GoZone SelectedTracks
 
 // LOCKED OUT CONTROLS (Safety Constraints)
 Pan                      NoAction
