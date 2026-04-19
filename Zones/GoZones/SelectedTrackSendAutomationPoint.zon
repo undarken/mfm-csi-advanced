@@ -1,0 +1,44 @@
+Zone SelectedTrackSendAutomationPoint
+// Revision: 3.2.0
+
+OnZoneDeactivation ClearModifiers
+
+// Scrub toggles back to envelope navigation level
+Scrub       GoZone SelectedTrackSendAutomation
+
+// Send button remains the hard eject to main mix zone
+Send        ClearModifiers
+Send        Reaper 41150 Feedback=No
+Send        Reaper 40088 Feedback=No
+Send        GoZone SelectedTracks
+
+// Keep modifiers explicit
+Shift       Shift
+Option      Option
+Control     Control
+Alt         Alt
+Zoom        Zoom
+Touch       Touch
+
+// Level 2: point navigation on the active envelope
+Decrease+JogWheel               Reaper _SWS_BRMOVEEDITSELPREVENV
+Increase+JogWheel               Reaper _SWS_BRMOVEEDITSELNEXTENV
+Shift+Decrease+JogWheel         Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL
+Shift+Increase+JogWheel         Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL
+
+// Level 3: point moves
+Option+Decrease+JogWheel        Reaper 41181
+Option+Increase+JogWheel        Reaper 41180
+Shift+Option+Decrease+JogWheel  Reaper 42382
+Shift+Option+Increase+JogWheel  Reaper 42381
+
+// Envelope arm/bypass controls stay available while focused
+Scrub+Record              Reaper 40863
+Control+Scrub+Record      Reaper 40863
+Hold+Scrub+Record         Reaper 40883 Feedback=No HoldDelay=500
+
+Zoom+Record               Reaper 40863
+Control+Zoom+Record       Reaper 40863
+Hold+Zoom+Record          Reaper 40883 Feedback=No HoldDelay=500
+
+ZoneEnd

@@ -5,6 +5,7 @@ Zone GoZones
         SelectedTracksAutomation
         SelectedTrackSend
         SelectedTrackSendAutomation
+        SelectedTrackSendAutomationPoint
         SelectedTrackReceive
         SelectedTrackFXMenu
         SelectedTrackFXMenuAutomation

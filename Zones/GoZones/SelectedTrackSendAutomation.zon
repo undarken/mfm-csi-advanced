@@ -1,5 +1,5 @@
 Zone SelectedTrackSendAutomation
-// Revision: 3.2.2
+// Revision: 3.2.4
 
 OnZoneDeactivation ClearModifiers
 
@@ -44,15 +44,17 @@ Zoom+Record               Reaper 40863
 Control+Zoom+Record       Reaper 40863
 Hold+Zoom+Record          Reaper 40883 Feedback=No HoldDelay=500
 
-// Navigation inside automation workflows
-Decrease+JogWheel         Reaper _8020284d1ca8482b828f464e3852bdf4
-Increase+JogWheel         Reaper "40647"
-Scrub+Decrease+JogWheel   Reaper _94c40da4c31a4c35814cf1dbc5812c3b
-Scrub+Increase+JogWheel   Reaper _b77dd8a94d974d8f95da0f2d931edc90
+// Level 1 (default): envelope lane navigation
+Decrease+JogWheel         Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+Increase+JogWheel         Reaper _b77dd8a94d974d8f95da0f2d931edc90
 
-Zoom+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITSELPREVENV
-Zoom+Increase+JogWheel    Reaper _SWS_BRMOVEEDITSELNEXTENV
-Shift+Decrease+JogWheel   Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL
-Shift+Increase+JogWheel   Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL
+// Level 3 (direct point moves in current context)
+Option+Decrease+JogWheel        Reaper 41181
+Option+Increase+JogWheel        Reaper 41180
+Shift+Option+Decrease+JogWheel  Reaper 42382
+Shift+Option+Increase+JogWheel  Reaper 42381
+
+// Level 2 enter: scrub focuses into point-navigation sub-zone
+Scrub                    GoZone SelectedTrackSendAutomationPoint
 
 ZoneEnd
