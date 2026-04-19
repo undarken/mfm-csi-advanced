@@ -1,5 +1,5 @@
 Zone Buttons 
-// Revision: 3.2.1
+// Revision: 3.2.2
 
 
 
@@ -89,9 +89,20 @@ Zone Buttons
 // DISPLAY    
 
                       NameValue      NameValue 
-         
-             
-             /AssignmentDisplay      GlobalModeDisplay 
+
+              AssignmentDisplay      FixedTextDisplay "  "
+        Shift+AssignmentDisplay      FixedTextDisplay "S "
+      Control+AssignmentDisplay      FixedTextDisplay "C "
+       Option+AssignmentDisplay      FixedTextDisplay "O "
+          Alt+AssignmentDisplay      FixedTextDisplay "A "
+
+Shift+Control+AssignmentDisplay      FixedTextDisplay "S C"
+Shift+Option+AssignmentDisplay       FixedTextDisplay "S O"
+Shift+Alt+AssignmentDisplay          FixedTextDisplay "S A"
+Control+Option+AssignmentDisplay     FixedTextDisplay "C O"
+Control+Alt+AssignmentDisplay        FixedTextDisplay "C A"
+Option+Alt+AssignmentDisplay         FixedTextDisplay "O A"
+
                    /TimeDisplay      MCUTimeDisplay
                      smpteBeats      CycleTimeDisplayModes    
 
