@@ -1,5 +1,5 @@
 Zone SelectedTrackSendAutomationPoint
-// Revision: 3.2.1
+// Revision: 3.2.2
 
 OnZoneDeactivation ClearModifiers
 
@@ -19,6 +19,13 @@ Control     Control
 Alt         Alt
 Zoom        Zoom
 Touch       Touch
+
+// Coarse write controls stay tactile in point-focus mode
+DisplayUpper|             TrackSendNameDisplay
+DisplayLower|             TrackSendPanDisplay
+Touch+DisplayLower|       TrackSendVolumeDisplay
+Fader|                    TrackSendVolume
+Rotary|                   TrackSendPan
 
 // Level 2: point navigation on the active envelope
 Decrease+JogWheel               Reaper _SWS_BRMOVEEDITSELPREVENV
