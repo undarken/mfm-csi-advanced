@@ -123,7 +123,8 @@ Option+Alt+AssignmentDisplay         FixedTextDisplay "O A"
                           Shift      Shift  
                      Shift+solo      NoAction      
                          Option      Option        
-                        Control      Control        
+                        Control      Control
+                Control+Track        GoZone HomePeek
                             Alt      Alt 
                             Zoom     Zoom   
                   GlobalView         Global 
