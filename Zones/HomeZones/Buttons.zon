@@ -102,6 +102,11 @@ Shift+Alt+AssignmentDisplay          FixedTextDisplay "S A"
 Control+Option+AssignmentDisplay     FixedTextDisplay "C O"
 Control+Alt+AssignmentDisplay        FixedTextDisplay "C A"
 Option+Alt+AssignmentDisplay         FixedTextDisplay "O A"
+Shift+Control+Option+AssignmentDisplay  FixedTextDisplay "SCO"
+Shift+Control+Alt+AssignmentDisplay     FixedTextDisplay "SCA"
+Shift+Option+Alt+AssignmentDisplay      FixedTextDisplay "SOA"
+Control+Option+Alt+AssignmentDisplay    FixedTextDisplay "COA"
+Shift+Control+Option+Alt+AssignmentDisplay FixedTextDisplay "ALL"
 
                    /TimeDisplay      MCUTimeDisplay
                      smpteBeats      CycleTimeDisplayModes    
@@ -128,6 +133,7 @@ Option+Alt+AssignmentDisplay         FixedTextDisplay "O A"
                             Alt      Alt 
                             Zoom     Zoom   
                   GlobalView         Global 
+            Hold+GlobalView         GoZone GlobalViewZone  Feedback=No HoldDelay=180
                           Scrub      Scrub
                           
 //ZOOM TO ITEM AND INTO ITEMFADES ZONE
