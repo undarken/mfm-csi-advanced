@@ -1,10 +1,16 @@
 Zone SelectedTrackSendAutomation
-// Revision: 3.2.1
+// Revision: 3.2.2
 
 OnZoneDeactivation ClearModifiers
 
 // Same in/out toggle combo as parent zone
 Zoom+Scrub  GoZone SelectedTrackSend
+
+// Send button is a hard eject back to main editing zone
+Send        ClearModifiers
+Send        Reaper 41150 Feedback=No
+Send        Reaper 40088 Feedback=No
+Send        GoZone SelectedTracks
 
 // Keep modifier behavior explicit in automation mode
 Shift       Shift

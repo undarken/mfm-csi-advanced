@@ -1,0 +1,50 @@
+Zone VCAAutomation
+// Revision: 3.2.0
+
+OnZoneDeactivation ClearModifiers
+
+// Keep modifiers explicit in automation mode
+Shift       Shift
+Option      Option
+Control     Control
+Alt         Alt
+Zoom        Zoom
+Scrub       Scrub
+Touch       Touch
+
+// Pan button is the hard eject toggle for the whole Pan tree
+Pan         ClearModifiers
+Pan         Reaper 41150 Feedback=No            // hide all envelopes all tracks
+Pan         Reaper 40088 Feedback=No            // set automation trim/read
+Pan         GoZone SelectedTracks
+
+// Optional Touch exit for local in/out toggle of this sub-zone only
+Touch       GoZone VCA
+
+// Core pan/width writing controls stay on the strips
+Fader|      TrackPanAutoLeft RingStyle=Dot
+Rotary|     TrackPanAutoLeft RingStyle=Dot
+Flip+Fader| TrackPanAutoRight RingStyle=Dot
+Flip+Rotary| TrackPanAutoRight RingStyle=Dot
+
+DisplayUpper|       TrackNameDisplay { Track }
+DisplayLower|       TrackPanAutoLeftDisplay
+Flip+DisplayLower|  TrackPanAutoRightDisplay
+
+// Envelope point navigation/manipulation
+Decrease+JogWheel         Reaper _8020284d1ca8482b828f464e3852bdf4
+Increase+JogWheel         Reaper "40647"
+Scrub+Decrease+JogWheel   Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+Scrub+Increase+JogWheel   Reaper _b77dd8a94d974d8f95da0f2d931edc90
+
+Option+Decrease+JogWheel  Reaper 41181
+Option+Increase+JogWheel  Reaper 41180
+Alt+Decrease+JogWheel     Reaper 42382
+Alt+Increase+JogWheel     Reaper 42381
+
+// Arm/bypass currently selected envelope
+Scrub+Record              Reaper 40863
+Control+Scrub+Record      Reaper 40863
+Hold+Scrub+Record         Reaper 40883 Feedback=No HoldDelay=500
+
+ZoneEnd

@@ -1,5 +1,5 @@
 Zone SelectedTrackSend
-// Revision: 3.2.1
+// Revision: 3.2.2
 
                         
                  DisplayUpper|       TrackSendNameDisplay
@@ -38,6 +38,10 @@ Zone SelectedTrackSend
                           Send       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua  
                           Send       Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                Feedback=No // Script: Lokasenna_Scroll mixer to first selected track.lua               
                     InvertFB+Send       GoHome
+                          Send       ClearModifiers                                                                     Feedback=No // zone toggle hard reset
+                          Send       Reaper 41150                                                                      Feedback=No // hide all envelopes all tracks
+                          Send       Reaper 40088                                                                      Feedback=No // set automation trim/read
+                          Send       GoZone SelectedTracks                                                             Feedback=No // return to main editing zone
                Zoom+Scrub               GoZone SelectedTrackSendAutomation
                               
 // TRACK - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTracks ZONE:

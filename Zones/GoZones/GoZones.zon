@@ -13,6 +13,7 @@ Zone GoZones
         TrackReceive
         TrackFXMenu
         VCA
+        VCAAutomation
         Folder
         SelectedTrackTCPFX
         LDT_Markers_Rotary   MasterTrackNavigator
