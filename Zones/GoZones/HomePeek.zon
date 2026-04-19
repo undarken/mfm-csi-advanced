@@ -1,0 +1,35 @@
+Zone HomePeek
+// Revision: 3.2.0
+
+// ALLOWED CONTROLS (Macro Mix Balancing)
+Fader|                   TrackVolume
+Mute|                    TrackMute
+Solo|                    TrackSolo
+Select|                  TrackUniqueSelect
+
+Control                  Control
+Shift                    Shift
+
+// Universal Timeline (Always Active)
+Increase+JogWheel        Reaper 40111
+Shift+Increase+JogWheel  Reaper 40112
+Decrease+JogWheel        Reaper 40112
+Shift+Decrease+JogWheel  Reaper 40111
+
+// In/Out Toggle Rule (same button in and out)
+Control+Track            GoZone SelectedTracks
+
+// LOCKED OUT CONTROLS (Safety Constraints)
+Pan                      NoAction
+Send                     NoAction
+Plugin                   NoAction
+EQ                       NoAction
+Rotary|                  NoAction
+RotaryPush|              NoAction
+RecordArm|               NoAction
+Read                     NoAction
+Write                    NoAction
+Trim                     NoAction
+Touch                    NoAction
+Latch                    NoAction
+ZoneEnd

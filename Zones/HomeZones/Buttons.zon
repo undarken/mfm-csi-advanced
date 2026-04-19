@@ -1,4 +1,5 @@
 Zone Buttons 
+// Revision: 3.2.2
 
 
 
@@ -77,7 +78,7 @@ Zone Buttons
                         
                         
                     Pan              GoZone VCA
-                    //Global+Pan       GoZone Folder
+                    Global+Pan       GoZone Folder
                     EQ               GoZone SelectedTrackReceive
                     //Global+EQ        GoZone TrackReceive
               
@@ -88,9 +89,20 @@ Zone Buttons
 // DISPLAY    
 
                       NameValue      NameValue 
-         
-             
-             /AssignmentDisplay      GlobalModeDisplay 
+
+              AssignmentDisplay      FixedTextDisplay "  "
+        Shift+AssignmentDisplay      FixedTextDisplay "S "
+      Control+AssignmentDisplay      FixedTextDisplay "C "
+       Option+AssignmentDisplay      FixedTextDisplay "O "
+          Alt+AssignmentDisplay      FixedTextDisplay "A "
+
+Shift+Control+AssignmentDisplay      FixedTextDisplay "S C"
+Shift+Option+AssignmentDisplay       FixedTextDisplay "S O"
+Shift+Alt+AssignmentDisplay          FixedTextDisplay "S A"
+Control+Option+AssignmentDisplay     FixedTextDisplay "C O"
+Control+Alt+AssignmentDisplay        FixedTextDisplay "C A"
+Option+Alt+AssignmentDisplay         FixedTextDisplay "O A"
+
                    /TimeDisplay      MCUTimeDisplay
                      smpteBeats      CycleTimeDisplayModes    
 
@@ -111,7 +123,8 @@ Zone Buttons
                           Shift      Shift  
                      Shift+solo      NoAction      
                          Option      Option        
-                        Control      Control        
+                        Control      Control
+                Control+Track        GoZone HomePeek
                             Alt      Alt 
                             Zoom     Zoom   
                   GlobalView         Global 

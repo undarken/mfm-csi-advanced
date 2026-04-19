@@ -1,0 +1,56 @@
+Zone SelectedTrackFXMenuAutomation
+// Revision: 3.2.0
+
+OnZoneDeactivation ClearModifiers
+
+// Same in/out toggle combo as parent zone
+Zoom+Scrub  GoZone SelectedTrackFXMenu
+
+// Keep modifier behavior explicit in automation mode
+Shift       Shift
+Option      Option
+Control     Control
+Alt         Alt
+Zoom        Zoom
+Scrub       Scrub
+
+// Core automation mode controls
+Read        TrackAutoMode 1
+Write       TrackAutoMode 3
+Trim        TrackAutoMode 0
+Touch       TrackAutoMode 2
+Latch       TrackAutoMode 4
+Group       TrackAutoMode 5
+Control+Read    TrackAutoMode 1
+Control+Write   TrackAutoMode 3
+Control+Trim    TrackAutoMode 0
+Control+Touch   TrackAutoMode 2
+Control+Latch   TrackAutoMode 4
+Control+Group   TrackAutoMode 5
+
+Global+Read     GlobalAutoMode 1
+Global+Write    GlobalAutoMode 3
+Global+Trim     GlobalAutoMode 0
+Global+Touch    GlobalAutoMode 2
+Global+Latch    GlobalAutoMode 4
+Global+Group    GlobalAutoMode 5
+
+// Envelope arm/bypass controls
+Scrub+Record              Reaper 40863
+Control+Scrub+Record      Reaper 40863
+Hold+Scrub+Record         Reaper 40883 Feedback=No HoldDelay=500
+Zoom+Record               Reaper 40863
+Control+Zoom+Record       Reaper 40863
+Hold+Zoom+Record          Reaper 40883 Feedback=No HoldDelay=500
+
+// Navigation inside automation workflows
+Decrease+JogWheel         Reaper _8020284d1ca8482b828f464e3852bdf4
+Increase+JogWheel         Reaper "40647"
+Scrub+Decrease+JogWheel   Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+Scrub+Increase+JogWheel   Reaper _b77dd8a94d974d8f95da0f2d931edc90
+Zoom+Decrease+JogWheel    Reaper _SWS_BRMOVEEDITSELPREVENV
+Zoom+Increase+JogWheel    Reaper _SWS_BRMOVEEDITSELNEXTENV
+Shift+Decrease+JogWheel   Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL
+Shift+Increase+JogWheel   Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL
+
+ZoneEnd

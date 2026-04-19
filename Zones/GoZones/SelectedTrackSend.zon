@@ -1,4 +1,5 @@
 Zone SelectedTrackSend
+// Revision: 3.2.1
 
                         
                  DisplayUpper|       TrackSendNameDisplay
@@ -36,7 +37,8 @@ Zone SelectedTrackSend
                           Send       Reaper  40454                                                                      Feedback=No // Screenset: Load window set #01
                           Send       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua  
                           Send       Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                Feedback=No // Script: Lokasenna_Scroll mixer to first selected track.lua               
-                 InvertFB+Send       GoHome     
+                    InvertFB+Send       GoHome
+               Zoom+Scrub               GoZone SelectedTrackSendAutomation
                               
 // TRACK - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTracks ZONE:
    	  	
@@ -74,7 +76,7 @@ Zone SelectedTrackSend
                          Plugin      Reaper  40456                                                                     Feedback=No // Screenset:Load window set #02
                          Plugin      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                               Feedback=No // Script: HeDa_View Scroll Top.lu                              
                                                                                     
-                 InverFB+Plugin      GoZone SelectedTrackFXMenu                                                        Feedback=No //                             
+               InvertFB+Plugin      GoZone SelectedTrackFXMenu                                                        Feedback=No //                             
 
 //F1-F8
 

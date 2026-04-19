@@ -1,9 +1,13 @@
 Zone GoZones
+        HomePeek
         GlobalViewZone
         SelectedTracks
+        SelectedTracksAutomation
         SelectedTrackSend
+        SelectedTrackSendAutomation
         SelectedTrackReceive
         SelectedTrackFXMenu
+        SelectedTrackFXMenuAutomation
         MasterTrackFXMenu
         TrackSend
         TrackReceive
