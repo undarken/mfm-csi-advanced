@@ -1,104 +1,35 @@
 Zone Track
-// Revision: 3.2.3
+// Revision: 3.2.4
 
+// Base mixing zone only: keep this file lean and current.
+BankLeft          Bank SelectedTrack -8
+BankRight         Bank SelectedTrack 8
+ChannelLeft       Bank SelectedTrack -1
+ChannelRight      Bank SelectedTrack 1
 
+Fader|            TrackVolume
+VUMeter|          TrackOutputMeterMaxPeakLR
+Rotary|           TrackPanAutoLeft RingStyle=Dot
+RotaryPush|       TrackPanAutoLeft RingStyle=Dot [ 0.5 ]
+Hold+RotaryPush|  TrackVolume [ 0.75 ]
 
-    
-    
-    
- BankLeft          Bank SelectedTrack -8
- /BankLeft          Reaper _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
- BankLeft          Reaper TrackSelect
- 
- BankRight         Bank SelectedTrack  8
- /BankRight         Reaper _84c1039ca1624decbba3f6dd060d5955                                                                  // unselect tracks and items ALL
- BankRight         Reaper TrackSelect
- 
-          //Shift+Option+Flip        LearnFocusedFX 
-          
-    /             RotaryPush|       ToggleChannel
-    /    Toggle+DisplayUpper|       FixedTextDisplay ".WIDTH "                                            // TEXT  WIDTH
-	/	 Toggle+DisplayLower|       TrackPanAutoRightDisplay                                              // WIDTH NUMERICAL
-    /          Toggle+Rotary|       TrackPanAutoRight RingStyle=Dot                                       // WIDTH / PAN SELECTION     
-           
-           NO Modifiers:
+DisplayUpper|     TrackNameDisplay
+DisplayLower|     TrackPanAutoLeftDisplay
+Touch+DisplayLower| TrackVolumeDisplay
 
-                      Fader|       TrackVolume
-                    VUMeter|       TrackOutputMeterMaxPeakLR
-                     Rotary|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL
-                 RotaryPush|       TrackPanAutoLeft RingStyle=Dot	           [ 0.5 ]                   // SET PAN TO CENTRE    : RESETS TRACK PAN 
-            Hold+RotaryPush|       TrackVolume	                               [ 0.75 ]                  // SET VOLUME TO 0.0    : RESETS TRACK VOLUME
-                    
-               DisplayUpper|       TrackNameDisplay                                                      // TEXT NAME
-               DisplayLower|       TrackPanAutoLeftDisplay                                               // TEXT PAN                                      
-         Touch+DisplayLower|       TrackVolumeDisplay                                                    // VOLUME
-        
-   /    Control+DisplayUpper|       TrackNameDisplay                                                      // TEXT NAME
-   /    Control+DisplayLower|       TrackAutoModeDisplay                                                  // DISPLAY TYPE of AUTOMATION
-   /          /Control+Rotary|       NoAction                  							             	 // CYCLE AUTOMATION MODES 	
-   /      /Control+RotaryPush|       NoAction                  							             	 // CYCLE AUTOMATION MODES
-   /          /Control+Select|       NoAction                  							             	 // CYCLE AUTOMATION MODES 	- cant use this as it is for adding tacks to selection
-             
-    Control+Alt+DisplayUpper|       TrackInputMonitorDisplay                                               // TEXT AUTOMATION
-    Control+Alt+DisplayLower|       TrackRecordInputDisplay                                                // DISPLAY Record
-    Control+Alt+RecordArm|          CycleTrackInputMonitor                                 [ 0.0 0.5 1.0 ] // CYCLE AUTOMATION MODES 	
-    Control+Alt+Rotary|             CycleTrackInputMonitor                          [ 0.0 0.33 0.66 1.0 ] // CYCLE input monitor  MODES 
-    Control+Alt+Rotary|             Reaper  _BR_CYCLE_RECORD_MODES    /[ 0.0 0.25 0.33 0.5 0.66 0.75 1.0 ] // CYCLE AUTOMATION MODES 
-    
+RecordArm|        TrackRecordArm
+Shift+RecordArm|  CycleTrackInputMonitor
+Shift+RecordArm|  TrackInputMonitorDisplay
 
+Solo|             TrackSolo
+Shift+Solo|       ClearAllSolo
+Shift+Solo|       TrackSolo
 
-   //             Flip+Rotary|       TrackVolume
-   //              Flip+Fader|       TrackPan
-   //       Option+Flip+Fader|       TrackPanAutoRight
-   //              
-                  RecordArm|       TrackRecordArm 
-            Shift+RecordArm|       CycleTrackInputMonitor
-            Shift+RecordArm|       TrackInputMonitorDisplay
-            
-                       Solo|       TrackSolo
-                 Shift+Solo|       ClearAllSolo
-                 Shift+Solo|       TrackSolo
-            
-                        Mute|       TrackMute
-                / Shift+Mute|       Reaper 40339   // Track: Unmute all tracks
-                 /Shift+Mute|       TrackMute
+Mute|             TrackMute
 
-                      Select|      TrackSelect
-                Shift+Select|      TrackRangeSelect    
-              Control+Select|      TrackRangeSelect
-        Shift+Control+Select|      TrackRangeSelect
-       
-       
-       / SHOW SENDS of selected tracks
-       
-                Hold+Select|      Reaper _3de632b74003493686e0e1e5fe14c508                 Feedback=No HoldDelay=500                         // Custom: zoom vert and centre track
-                Hold+Select|      Reaper   40088                                           Feedback=No HoldDelay=500                         // set all tracks automation to trim/read                      
-                Hold+Select|      Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=500                         // Hide Unselected Track 
-                Hold+Select|      Reaper  _b7a8a1143093436c81ba5c26504c811a                Feedback=No HoldDelay=500                         // Custom: CSI show only Selected track with Routing/sends
-                Hold+Select|      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=500                         // zoom fit arr/screen
-                Hold+Select|      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=500                         // scroll top
-                Hold+Select|      Reaper  40297                                            Feedback=No HoldDelay=500                         // UNselect all tracks
-                Hold+Select|      GoHome                                                   Feedback=No HoldDelay=500                         // tracks and busses Zone
-                
-                
-      / SHOW RECEIVES  of selected tracks
-              
-    Hold+Shift+Select|      Reaper   40088                                           Feedback=No HoldDelay=500                             // set all tracks automation to trim/read                      
-    Hold+Shift+Select|      Reaper  _SWSTL_HIDEUNSEL                                 Feedback=No HoldDelay=500                             // Hide Unselected Track 
-    Hold+Shift+Select|      Reaper  _c096f65aa0a44a29a8e528875f54c256                Feedback=No HoldDelay=500                             // Custom: CSI show only Selected track with Routing/Receives
-    Hold+Shift+Select|      Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69      Feedback=No HoldDelay=500                             // zoom fit arr/screen
-    Hold+Shift+Select|      Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No HoldDelay=500                             // scroll top
-    Hold+Shift+Select|      Reaper  40297                                            Feedback=No HoldDelay=500                             // UNselect all tracks
-    Hold+Shift+Select|      GoHome                                                   Feedback=No HoldDelay=500                             // tracks and busses Zone
-                
-
-         
-
-
-    
-
-
-                    
-              
+Select|           TrackSelect
+Shift+Select|     TrackRangeSelect
+Control+Select|   TrackRangeSelect
+Shift+Control+Select| TrackRangeSelect
 
 ZoneEnd
