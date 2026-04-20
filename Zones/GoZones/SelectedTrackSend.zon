@@ -1,5 +1,5 @@
 Zone SelectedTrackSend
-// Revision: 3.2.5
+// Revision: 3.2.6
 
                         
                  DisplayUpper|       TrackSendNameDisplay
@@ -9,9 +9,8 @@ Zone SelectedTrackSend
          Control+RotaryPush|         TrackSendPrePost
           Option+RotaryPush|         TrackSendInvertPolarity
          
-                    RecordArm|       TrackRecordArm
-               Hold+RecordArm|       CycleTrackInputMonitor
-               Hold+RecordArm|       TrackInputMonitorDisplay
+                    RecordArm|       NoAction                                   // reserved: send link/unlock behavior TBD
+               Hold+RecordArm|       NoAction                                   // reserved: hold behavior TBD
          
                          Solo|       TrackSolo
                          Solo|       Reaper 40493                                 // Track: Set track record monitor to on
@@ -26,9 +25,9 @@ Zone SelectedTrackSend
                        Rotary|       TrackSendPan
                    RotaryPush|       Reaper 40291                                 // Track: View FX chain for current/last touched track
                         Fader|       TrackSendVolume
-                     Select|         NoAction
-               Shift+Select|         NoAction
-             Control+Select|         NoAction
+                     Select|         NoAction                                   // reserved: send-zone select behavior TBD
+               Shift+Select|         NoAction                                   // reserved: send-zone select behavior TBD
+             Control+Select|         NoAction                                   // reserved: send-zone select behavior TBD
            
                  ChannelLeft         Bank SelectedTrackSend -1
                  ChannelRight        Bank SelectedTrackSend 1
@@ -152,9 +151,9 @@ Zone SelectedTrackSend
                    Global+Latch      GlobalAutoMode 4  
                    Global+Group      GlobalAutoMode 5                                                                              //Set all tracks automation mode to latch preview 
  
-                    /RecordArm|      TrackRecordArm
-               /Hold+RecordArm|      CycleTrackInputMonitor
-               /Hold+RecordArm|      TrackInputMonitorDisplay     
+                    /RecordArm|      NoAction
+               /Hold+RecordArm|      NoAction
+               /Hold+RecordArm|      NoAction     
                      
                                  
                        
