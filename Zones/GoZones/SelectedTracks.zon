@@ -1,5 +1,5 @@
 Zone SelectedTracks 
-// Revision: 3.2.3
+// Revision: 3.2.5
 
 /Shift+Option+RecordArm1 LearnFocusedFX
 
@@ -20,7 +20,7 @@ Zone SelectedTracks
                     VUMeter|       TrackOutputMeterMaxPeakLR
                      Rotary|       TrackPanAutoLeft RingStyle=Dot	                                     // PAN	NUMERICAL
                  RotaryPush|       TrackPanAutoLeft RingStyle=Dot	           [ 0.5 ]                   // SET PAN TO CENTRE    : RESETS TRACK PAN 
-            Hold+RotaryPush|       TrackVolume	                               [ 0.75 ]                  // SET VOLUME TO 0.0    : RESETS TRACK VOLUME
+           Hold+RotaryPush|       NoAction                                                             // disabled to prevent unintended unity jumps
                     
                DisplayUpper|       TrackNameDisplay                                                      // TEXT NAME
                DisplayLower|       TrackPanAutoLeftDisplay                                               // TEXT PAN                                      
@@ -80,12 +80,13 @@ Zone SelectedTracks
                         Fader|       TrackVolume 
                       VUMeter|       TrackOutputMeter  
                        
-                  BankLeft           Bank SelectedTrack -8 
-                  BankRight          Bank SelectedTrack 8 
-                  ChannelLeft        Bank SelectedTrack -1 
-                  ChannelRight       Bank SelectedTrack 1    
+                 BankLeft           Bank Track -8 
+                 BankRight          Bank Track 8 
+                 ChannelLeft        Bank Track -1 
+                 ChannelRight       Bank Track 1    
                   
-                         Zoom        Zoom  
+                         Zoom        Reaper _SWS_ITEMZOOM                                              Feedback=No
+                         Zoom        GoZone ItemFades
                    Zoom+Scrub        GoZone SelectedTracksAutomation
                          Option      Option
                          Shift       Shift  
@@ -109,6 +110,9 @@ Zone SelectedTracks
                                
 // SEND - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackSend ZONE:        
                               
+                          Pan       GoZone VCA
+                    Global+Pan       GoZone Folder
+                           EQ       GoZone SelectedTrackReceive
                           Send       ClearModifiers                                           Feedback=No                                //
                           Send       Reaper _SWSTL_SHOWALL                                    Feedback=No                                // show all tracks 
                           Send       Reaper  40086                                            Feedback=No                                // Automation: Set all tracks automation mode to trim/read
@@ -383,8 +387,8 @@ Zone SelectedTracks
                     
 
                                                                                                                                  
-                                         Zoom    ClearModifier Control                                                                   // ClearModifier Control 
-                                         Zoom    Reaper 40031                                                          Feedback=No       // View: Zoom time selection 
+                                       /Zoom    ClearModifier Control                                                                   // ClearModifier Control 
+                                       /Zoom    Reaper 40031                                                          Feedback=No       // View: Zoom time selection 
                               
                                              
                                          /Zoom    ClearModifier Control                                   HoldDelay=500 Feedback=No       // ClearModifier Control
