@@ -1,5 +1,5 @@
 Zone Track
-// Revision: 3.2.5
+// Revision: 3.2.6
 
 // Base mixing zone only: keep this file lean and current.
 BankLeft          Bank SelectedTrack -8
@@ -55,5 +55,14 @@ Control+Option+Increase+JogWheel  Reaper _RS811925625c25145349dba5cd9cfc86b6f68d
 Control+Option+Decrease+JogWheel  Reaper _RSa0d0b219798abaed779cb880edeb63d0430383b3
 Shift+Option+Decrease+JogWheel    Reaper _XENAKIOS_SELITEMSTOSTARTOFTRACK
 Shift+Option+Increase+JogWheel    Reaper _XENAKIOS_SELITEMSTOENDOFTRACK
+
+// Zone button routing fallback (kept local for reliability).
+Track             GoZone SelectedTracks
+Send              GoZone SelectedTrackSend
+Pan               GoZone VCA
+Global+Pan        GoZone Folder
+EQ                GoZone SelectedTrackReceive
+Plugin            GoZone SelectedTrackFXMenu
+Control+Track     GoZone HomePeek
 
 ZoneEnd
