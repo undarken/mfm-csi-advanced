@@ -23,9 +23,9 @@ Shift+Solo|       TrackSolo
 
 Mute|             TrackMute
 
-Select|           TrackSelect
+Select|           TrackUniqueSelect
 Shift+Select|     TrackRangeSelect
-Control+Select|   TrackRangeSelect
+Control+Select|   TrackSelect
 Shift+Control+Select| TrackRangeSelect
 
 ZoneEnd
