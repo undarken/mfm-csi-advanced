@@ -1,5 +1,5 @@
 Zone Home
-// Revision: 3.2.5
+// Revision: 3.2.6
      OnInitialization            SetDoublePressTime 400      // if you want to change from 400ms default 
     /OnInitialization            ToggleRestrictTextLength 7
 /    OnInitialization           DisableFocusedFXMapping         //Uncomment this line to disable FocusedFX mapping on startup
@@ -35,8 +35,8 @@ Zone Home
         TrackSend
         TrackReceive
         TrackFXMenu
-        VCA
-        VCAAutomation
+        Pan
+        Width
         Folder
         SelectedTrackTCPFX
         LDT_Markers_Rotary

@@ -1,6 +1,8 @@
 Zone GoZones
         HomePeek
         GlobalViewZone
+        Pan
+        Width
         SelectedTracks
         SelectedTracksAutomation
         SelectedTrackSend
