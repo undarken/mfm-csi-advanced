@@ -1,0 +1,41 @@
+Zone Width
+// Revision: 3.2.0
+
+VUMeter|                    TrackOutputMeterMaxPeakLR
+DisplayUpper|               TrackNameDisplay { Track }
+DisplayLower|               TrackPanAutoRightDisplay
+Touch+DisplayLower|         TrackPanAutoRightDisplay
+
+Fader|                      TrackPanAutoRight RingStyle=Dot
+Rotary|                     TrackPanAutoRight RingStyle=Dot
+RotaryPush|                 TrackPanAutoRight RingStyle=Dot [ 0.0 0.5 1.0 ]
+FaderPush|                  TrackPanAutoRight RingStyle=Dot [ 0.0 0.5 1.0 ]
+
+Option+Fader|               TrackPanAutoRight RingStyle=Dot
+Option+Rotary|              TrackPanAutoRight RingStyle=Dot
+
+// Flip toggles back to Pan zone.
+Flip                        GoZone Pan
+
+// Pan button hard exits from either sub-zone.
+Pan                         ClearModifiers
+Pan                         Reaper 41150 Feedback=No
+Pan                         Reaper 40088 Feedback=No
+Pan                         GoHome
+
+RecordArm|                  TrackRecordArm
+Solo|                       TrackSolo
+Shift+Solo|                 ClearAllSolo
+Mute|                       TrackMute
+Shift+Mute|                 Reaper 40339 Feedback=No
+
+Select|                     TrackUniqueSelect
+Shift+Select|               TrackRangeSelect
+Control+Select|             TrackSelect
+
+BankLeft                    Bank Track -8
+BankRight                   Bank Track 8
+ChannelLeft                 Bank Track -1
+ChannelRight                Bank Track 1
+
+ZoneEnd

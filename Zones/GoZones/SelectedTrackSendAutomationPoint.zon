@@ -1,0 +1,58 @@
+Zone SelectedTrackSendAutomationPoint
+// Revision: 3.2.2
+
+OnZoneDeactivation ClearModifiers
+
+// Scrub toggles back to envelope navigation level
+Scrub       GoZone SelectedTrackSendAutomation
+
+// Send button remains the hard eject to main Home zone
+Send        ClearModifiers
+Send        Reaper 41150 Feedback=No
+Send        Reaper 40088 Feedback=No
+Send        GoHome
+
+// Keep modifiers explicit
+Shift       Shift
+Option      Option
+Control     Control
+Alt         Alt
+Zoom        Zoom
+Touch       Touch
+
+// Coarse write controls stay tactile in point-focus mode
+DisplayUpper|             TrackSendNameDisplay
+DisplayLower|             TrackSendPanDisplay
+Touch+DisplayLower|       TrackSendVolumeDisplay
+Fader|                    TrackSendVolume
+Rotary|                   TrackSendPan
+
+// Level 2: point navigation on the active envelope
+Decrease+JogWheel               Reaper _SWS_BRMOVEEDITSELPREVENV
+Increase+JogWheel               Reaper _SWS_BRMOVEEDITSELNEXTENV
+Shift+Decrease+JogWheel         Reaper _SWS_BRMOVEEDITTOPREVENVADDSELL
+Shift+Increase+JogWheel         Reaper _SWS_BRMOVEEDITTONEXTENVADDSELL
+
+// Level 3: point moves (law-abiding)
+// Option = fine detail/slower movement
+Option+Decrease+JogWheel        Reaper 42382
+Option+Increase+JogWheel        Reaper 42381
+// Shift+Option = include + fine detail while editing points
+Shift+Option+Decrease+JogWheel  Reaper 42382
+Shift+Option+Increase+JogWheel  Reaper 42381
+
+// Alt = horizontal zoom/grid (time/X-axis)
+Alt+Decrease+JogWheel           Reaper _RS3727b9dc4409b238fe55128302daccc9f42ce177
+Alt+Increase+JogWheel           Reaper _RS0f8d338b34550c87e8a6d8714a53838f3968ed99
+
+// Envelope arm/bypass controls stay available while focused
+RecordArm|                 Reaper 40863
+Scrub+Record              Reaper 40863
+Control+Scrub+Record      Reaper 40863
+Hold+Scrub+Record         Reaper 40883 Feedback=No HoldDelay=500
+
+Zoom+Record               Reaper 40863
+Control+Zoom+Record       Reaper 40863
+Hold+Zoom+Record          Reaper 40883 Feedback=No HoldDelay=500
+
+ZoneEnd

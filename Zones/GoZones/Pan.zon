@@ -1,0 +1,67 @@
+Zone Pan
+// Revision: 3.2.0
+
+VUMeter|                    TrackOutputMeterMaxPeakLR
+DisplayUpper|               TrackNameDisplay { Track }
+DisplayLower|               TrackPanAutoLeftDisplay
+Touch+DisplayLower|         TrackPanAutoLeftDisplay
+
+Fader|                      TrackPanAutoLeft RingStyle=Dot
+Rotary|                     TrackPanAutoLeft RingStyle=Dot
+RotaryPush|                 TrackPanAutoLeft RingStyle=Dot [ 0.0 0.5 1.0 ]
+FaderPush|                  TrackPanAutoLeft RingStyle=Dot [ 0.0 0.5 1.0 ]
+
+// Flip enters width sub-zone
+Flip                        GoZone Width
+
+// Pan is the hard in/out toggle for this whole tree
+Pan                         ClearModifiers
+Pan                         Reaper 41150 Feedback=No
+Pan                         Reaper 40088 Feedback=No
+Pan                         GoHome
+
+RecordArm|                  TrackRecordArm
+Solo|                       TrackSolo
+Shift+Solo|                 ClearAllSolo
+Mute|                       TrackMute
+Select|                     TrackUniqueSelect
+Shift+Select|               TrackRangeSelect
+Control+Select|             TrackSelect
+
+BankLeft                    Bank Track -8
+BankRight                   Bank Track 8
+ChannelLeft                 Bank Track -1
+ChannelRight                Bank Track 1
+
+// Shared automation access pattern
+Read                        Reaper 41150 Feedback=No
+Read                        Reaper 41868 Feedback=No
+Read                        Reaper 40330 Feedback=No
+Read                        TrackAutoMode 1
+Read                        GoZone VCAAutomation
+
+Trim                        Reaper 41150 Feedback=No
+Trim                        Reaper 41868 Feedback=No
+Trim                        Reaper 40330 Feedback=No
+Trim                        TrackAutoMode 0
+Trim                        GoZone VCAAutomation
+
+Touch                       Reaper 41150 Feedback=No
+Touch                       Reaper 41868 Feedback=No
+Touch                       Reaper 40330 Feedback=No
+Touch                       TrackAutoMode 2
+Touch                       GoZone VCAAutomation
+
+Write                       Reaper 41150 Feedback=No
+Write                       Reaper 41868 Feedback=No
+Write                       Reaper 40330 Feedback=No
+Write                       TrackAutoMode 3
+Write                       GoZone VCAAutomation
+
+Latch                       Reaper 41150 Feedback=No
+Latch                       Reaper 41868 Feedback=No
+Latch                       Reaper 40330 Feedback=No
+Latch                       TrackAutoMode 4
+Latch                       GoZone VCAAutomation
+
+ZoneEnd

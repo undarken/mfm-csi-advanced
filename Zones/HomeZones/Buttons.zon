@@ -1,4 +1,5 @@
 Zone Buttons 
+// Revision: 3.2.5
 
 
 
@@ -12,73 +13,25 @@ Zone Buttons
 
                            
    	 
-// TRACK  - This is what you want to happen going to the SELECTED TRACKS ZONE:
+// CORE ZONE BUTTONS (centralized here; do not duplicate in GoZones)
+                         Track       ClearModifiers                                                                       Feedback=No
+                         Track       Reaper 41150                                                                         Feedback=No // hide all envelopes all tracks
+                         Track       Reaper 40088                                                                         Feedback=No // set automation trim/read
+                         Track       GoHome                                                                              Feedback=No
+               InvertFB+Track       GoHome                                                                              Feedback=No
 
-   	    	 
-                         Track       ClearModifiers  		          
-                         Track       Reaper  _SWS_MINTRACKS                                                               Feedback=No // SWS: Minimize selected track(s)                                                                            
-                         Track       Reaper   40401                                                                       Feedback=No // Automation: Set all tracks automation mode to read                              
-                         Track       Reaper   41150                                                                       Feedback=No // hide all envelopes all tracks 
-                         Track       Reaper  _SWSTL_HIDEUNSEL                                                             Feedback=No // SWS: Hide unselected track(s) 
-                         Track       Reaper   41148                                                                       Feedback=No // Envelope: Show all envelopes for tracks
-                         Track       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                  Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
-                         Track       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                                  Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua 
-                         Track       Reaper   40457                                                                       Feedback=No // Screenset: Load track view #04 - track envelopes
-                         Track       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                  Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua
-                         Track       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                  Feedback=No // Script: HeDa_View Scroll Top.lua
-                         Track       Reaper  _SWS_VZOOMFITMIN   
-                                     
-                         Track       GoZone SelectedTracks    
-                         
-// Plugin - This is what you want to happen going to the SelectedTrackFXMenu Zone:
-
-                         
-                        Plugin       ClearModifier Shift                                                                  Feedback=No // ClearModifier Shift      
-                        Plugin       ClearModifier Option                                                                 Feedback=No // ClearModifier Option 
-                        Plugin       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                  Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua  
-                        Plugin       Reaper  40401                                                                        Feedback=No // Automation: Set all tracks automation mode to read                          
-                        Plugin       Reaper  _SWS_UNSELMASTER                                                             Feedback=No // SWS: Unselect master track
-                        Plugin       Reaper  _SWS_HIDEMASTER                                                              Feedback=No // SWS: Hide master track
-                        Plugin       Reaper   41150                                                                       Feedback=No // Envelope: Hide all envelopes for all tracks                                        
-                        Plugin       Reaper  _SWSTL_HIDEUNSEL                                                             Feedback=No // SWS: Hide unselected track(s)                            
-                        Plugin       Reaper  _BR_SHOW_FX_ENV_SEL_TRACK                                                    Feedback=No // SWS/BR: Show all FX envelopes for selected tracks 
-                        Plugin       Reaper   40406                                                                       Feedback=No // Track: Toggle track volume envelope visible 
-                        Plugin       Reaper   42020                                                                       Feedback=No // Track: Toggle track trim envelope visible                        
-                        Plugin       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                  Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
-                        Plugin       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                                  Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua                          
-                        /Plugin       Reaper  _RS8a2f5d17e78c47e7dcdbd1fda74079a421864e69                                  Feedback=No // Script: Archie_View; Zoom TCP and Arrange to fit screen.lua 
-                        Plugin       Reaper   40456                                                                       Feedback=No // Screenset:Load window set #02
-                        Plugin       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                  Feedback=No // Script: HeDa_View Scroll Top.lu
-                                                                 
-                        Plugin       GoZone SelectedTrackFXMenu                                                           Feedback=No // Go to selected track FX Menu zone
+                        Plugin       ClearModifiers                                                                       Feedback=No
+                        Plugin       GoZone SelectedTrackFXMenu                                                           Feedback=No
+              InvertFB+Plugin       GoHome                                                                              Feedback=No
      
- 
-                     
-// SEND  - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackSend ZONE FROM Home ZONE: 
+                          Send       ClearModifiers                                                                       Feedback=No
+                          Send       GoZone SelectedTrackSend                                                             Feedback=No
+                InvertFB+Send       GoHome                                                                              Feedback=No
 
- 
-                          Send       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                   Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua 
-                          Send       ClearModifiers                                                                        Feedback=No // ClearModifiers
-                          Send       Reaper _SWSTL_SHOWALL                                                                 Feedback=No // show all tracks 
-                          Send       Reaper  _SWSTL_HIDEUNSEL                                                              Feedback=No // SWS: Hide unselected track(s)                                                    
-                          Send       Reaper  40086                                                                         Feedback=No // Automation: Set all tracks automation mode to read
-                          Send       Reaper   40458                                                                        Feedback=No // Screenset: Load window set #05 
-                          Send       Reaper  _S&M_WNCLS3                                                                   Feedback=No // SWS/S&M: Close all floating FX windows  
-                          Send       Reaper  _S&M_WNCLS4                                                                   Feedback=No // SWS/S&M: Close all FX chain windows
-                          Send       Reaper  41150																		   Feedback=No // Envelope: Hide all envelopes for all tracks                            
-                          Send       Reaper  _BR_SHOW_SEND_ENV_VOL_SEL_TRACK                                               Feedback=No // SHOW_SEND_ENV_VOL_SEL_TRACK
-                          Send       Reaper  _RSaeb8288b2019d5651b11138904e570e27a58c2db                                   Feedback=No // Script: mpl_Minimize all tracks envelopes heights.lua
-                          Send       Reaper  _RS0864070d129fe58581acadd27a177b6c942943e6                                   Feedback=No // Script: mpl_Maximize selected tracks envelopes heights.lua                                                                                             
-                          Send       Reaper  _RS9f80e4095144a2a58da117d417663a332e05b640                                   Feedback=No // Script: Archie_View; Zoom TCP to fit screen.lua     
-                          Send       Reaper  _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                   Feedback=No // Script: Lokasenna_Scroll mixer to first selected track.lua
-                                     
-                          Send       GoZone SelectedTrackSend                                             //
- 
-                        
-                        
-                    Pan              GoZone VCA
-                    //Global+Pan       GoZone Folder
-                    EQ               GoZone SelectedTrackReceive
+                           Pan       GoZone Pan                                                                           Feedback=No
+                 InvertFB+Pan       GoHome                                                                              Feedback=No
+                    Global+Pan       NoAction
+                            EQ       GoZone SelectedTrackReceive
                     //Global+EQ        GoZone TrackReceive
               
                     //Global+Send      GoZone TrackSend
@@ -88,9 +41,25 @@ Zone Buttons
 // DISPLAY    
 
                       NameValue      NameValue 
-         
-             
-             /AssignmentDisplay      GlobalModeDisplay 
+
+              AssignmentDisplay      FixedTextDisplay "  "
+        Shift+AssignmentDisplay      FixedTextDisplay "S "
+      Control+AssignmentDisplay      FixedTextDisplay "C "
+       Option+AssignmentDisplay      FixedTextDisplay "O "
+          Alt+AssignmentDisplay      FixedTextDisplay "A "
+
+Shift+Control+AssignmentDisplay      FixedTextDisplay "S C"
+Shift+Option+AssignmentDisplay       FixedTextDisplay "S O"
+Shift+Alt+AssignmentDisplay          FixedTextDisplay "S A"
+Control+Option+AssignmentDisplay     FixedTextDisplay "C O"
+Control+Alt+AssignmentDisplay        FixedTextDisplay "C A"
+Option+Alt+AssignmentDisplay         FixedTextDisplay "O A"
+Shift+Control+Option+AssignmentDisplay  FixedTextDisplay "SCO"
+Shift+Control+Alt+AssignmentDisplay     FixedTextDisplay "SCA"
+Shift+Option+Alt+AssignmentDisplay      FixedTextDisplay "SOA"
+Control+Option+Alt+AssignmentDisplay    FixedTextDisplay "COA"
+Shift+Control+Option+Alt+AssignmentDisplay FixedTextDisplay "ALL"
+
                    /TimeDisplay      MCUTimeDisplay
                      smpteBeats      CycleTimeDisplayModes    
 
@@ -111,10 +80,12 @@ Zone Buttons
                           Shift      Shift  
                      Shift+solo      NoAction      
                          Option      Option        
-                        Control      Control        
+                        Control      Control
+                Control+Track        GoZone HomePeek
                             Alt      Alt 
                             Zoom     Zoom   
                   GlobalView         Global 
+            Hold+GlobalView         GoZone GlobalViewZone  Feedback=No HoldDelay=180
                           Scrub      Scrub
                           
 //ZOOM TO ITEM AND INTO ITEMFADES ZONE

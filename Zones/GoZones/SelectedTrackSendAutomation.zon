@@ -1,0 +1,59 @@
+Zone SelectedTrackSendAutomation
+// Revision: 3.2.7
+
+OnZoneDeactivation ClearModifiers
+
+// Same in/out toggle combo as parent zone
+Zoom+Scrub  GoZone SelectedTrackSend
+
+// Send button is a hard eject back to main editing zone
+Send        ClearModifiers
+Send        Reaper 41150 Feedback=No
+Send        Reaper 40088 Feedback=No
+Send        GoHome
+
+// Keep modifier behavior explicit in automation mode
+Shift       Shift
+Option      Option
+Control     Control
+Alt         Alt
+Zoom        Zoom
+Scrub       Scrub
+
+// Core automation mode controls
+Read        TrackAutoMode 1
+Write       TrackAutoMode 3
+Trim        TrackAutoMode 0
+Touch       TrackAutoMode 2
+Latch       TrackAutoMode 4
+Group       TrackAutoMode 5
+Read        GoZone SelectedTrackSendAutomationPoint
+Write       GoZone SelectedTrackSendAutomationPoint
+Trim        GoZone SelectedTrackSendAutomationPoint
+Touch       GoZone SelectedTrackSendAutomationPoint
+Latch       GoZone SelectedTrackSendAutomationPoint
+
+Global+Read   GlobalAutoMode 1
+Global+Write  GlobalAutoMode 3
+Global+Trim   GlobalAutoMode 0
+Global+Touch  GlobalAutoMode 2
+Global+Latch  GlobalAutoMode 4
+Global+Group  GlobalAutoMode 5
+
+// Envelope arm/bypass controls
+Scrub+Record              Reaper 40863
+Control+Scrub+Record      Reaper 40863
+Hold+Scrub+Record         Reaper 40883 Feedback=No HoldDelay=500
+
+Zoom+Record               Reaper 40863
+Control+Zoom+Record       Reaper 40863
+Hold+Zoom+Record          Reaper 40883 Feedback=No HoldDelay=500
+
+// Level 1 (default): envelope lane navigation
+Decrease+JogWheel         Reaper _94c40da4c31a4c35814cf1dbc5812c3b
+Increase+JogWheel         Reaper _b77dd8a94d974d8f95da0f2d931edc90
+
+// Level 2 enter: scrub focuses into point-navigation sub-zone
+Scrub                    GoZone SelectedTrackSendAutomationPoint
+
+ZoneEnd

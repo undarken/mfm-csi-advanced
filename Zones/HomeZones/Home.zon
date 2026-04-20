@@ -1,4 +1,5 @@
 Zone Home
+// Revision: 3.2.6
      OnInitialization            SetDoublePressTime 400      // if you want to change from 400ms default 
     /OnInitialization            ToggleRestrictTextLength 7
 /    OnInitialization           DisableFocusedFXMapping         //Uncomment this line to disable FocusedFX mapping on startup
@@ -18,7 +19,28 @@ Zone Home
         Track
         MasterTrack
         Buttons
-        /SelectedTrackSend
+        GoZones
+        HomePeek
+        GlobalViewZone
+        SelectedTracks
+        SelectedTracksAutomation
+        SelectedTrackSend
+        SelectedTrackSendAutomation
+        SelectedTrackSendAutomationPoint
+        VCAAutomationPoint
+        SelectedTrackReceive
+        SelectedTrackFXMenu
+        SelectedTrackFXMenuAutomation
+        MasterTrackFXMenu
+        TrackSend
+        TrackReceive
+        TrackFXMenu
+        Pan
+        Width
+        Folder
+        SelectedTrackTCPFX
+        LDT_Markers_Rotary
+        ItemFades
         IncludedZonesEnd
 
 ZoneEnd

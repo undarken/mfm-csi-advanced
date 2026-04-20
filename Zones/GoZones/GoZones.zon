@@ -1,14 +1,23 @@
 Zone GoZones
+        HomePeek
         GlobalViewZone
+        Pan
+        Width
         SelectedTracks
+        SelectedTracksAutomation
         SelectedTrackSend
+        SelectedTrackSendAutomation
+        SelectedTrackSendAutomationPoint
         SelectedTrackReceive
         SelectedTrackFXMenu
+        SelectedTrackFXMenuAutomation
         MasterTrackFXMenu
         TrackSend
         TrackReceive
         TrackFXMenu
         VCA
+        VCAAutomation
+        VCAAutomationPoint
         Folder
         SelectedTrackTCPFX
         LDT_Markers_Rotary   MasterTrackNavigator
