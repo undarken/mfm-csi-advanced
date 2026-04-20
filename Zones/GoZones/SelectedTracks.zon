@@ -105,7 +105,7 @@ Zone SelectedTracks
                          Track       Reaper _RS7fb3d74a01cfeae229ad75b83192ca5086acbdbd                                                  // Script: Lokasenna_Scroll mixer to first selected track.lua
                          Track       Reaper   40781                                                                                      // Grid: Set to 1
                                
-                         Track       GoZone SelectedTracks        
+                         Track       GoHome        
                                                         
                                
 // SEND - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackSend ZONE:        

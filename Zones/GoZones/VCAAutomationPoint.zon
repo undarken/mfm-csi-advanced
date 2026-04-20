@@ -1,5 +1,5 @@
 Zone VCAAutomationPoint
-// Revision: 3.2.1
+// Revision: 3.2.2
 
 OnZoneDeactivation ClearModifiers
 
@@ -10,7 +10,7 @@ Scrub       GoZone VCAAutomation
 Pan         ClearModifiers
 Pan         Reaper 41150 Feedback=No
 Pan         Reaper 40088 Feedback=No
-Pan         GoZone SelectedTracks
+Pan         GoHome
 
 // Keep modifiers explicit
 Shift       Shift

@@ -1,11 +1,7 @@
 Zone Track
-// Revision: 3.2.7
+// Revision: 3.2.8
 
-// Base mixing zone only: keep this file lean and current.
-BankLeft          Bank Track -8
-BankRight         Bank Track 8
-ChannelLeft       Bank Track -1
-ChannelRight      Bank Track 1
+// Base channel-strip mappings only.
 
 Fader|            TrackVolume
 VUMeter|          TrackOutputMeterMaxPeakLR
@@ -31,40 +27,5 @@ Select|           TrackSelect
 Shift+Select|     TrackRangeSelect
 Control+Select|   TrackRangeSelect
 Shift+Control+Select| TrackRangeSelect
-
-// Keep local modifier declarations so jog combos remain reliable.
-Option            Option
-Shift             Shift
-Control           Control
-Alt               Alt
-Zoom              Zoom
-Scrub             Scrub
-
-// Jog wheel core navigation + modifier tricks.
-Decrease+JogWheel                 Reaper _8020284d1ca8482b828f464e3852bdf4
-Increase+JogWheel                 Reaper 40647
-Control+Decrease+JogWheel         Reaper 40286
-Control+Increase+JogWheel         Reaper 40285
-Alt+Increase+JogWheel             Reaper _RS0f8d338b34550c87e8a6d8714a53838f3968ed99
-Alt+Decrease+JogWheel             Reaper _RS3727b9dc4409b238fe55128302daccc9f42ce177
-Shift+Decrease+JogWheel           Reaper _XENAKIOS_SELPREVTRACKKEEP
-Shift+Increase+JogWheel           Reaper _XENAKIOS_SELNEXTTRACKKEEP
-Control+Shift+Decrease+JogWheel   Reaper _XENAKIOS_SELPREVTRACKKEEP
-Control+Shift+Increase+JogWheel   Reaper _XENAKIOS_SELNEXTTRACKKEEP
-Control+Option+Increase+JogWheel  Reaper _RS811925625c25145349dba5cd9cfc86b6f68d76c5
-Control+Option+Decrease+JogWheel  Reaper _RSa0d0b219798abaed779cb880edeb63d0430383b3
-Shift+Option+Decrease+JogWheel    Reaper _XENAKIOS_SELITEMSTOSTARTOFTRACK
-Shift+Option+Increase+JogWheel    Reaper _XENAKIOS_SELITEMSTOENDOFTRACK
-
-// Zone button routing fallback (kept local for reliability).
-Track             GoHome
-Send              GoZone SelectedTrackSend
-Pan               GoZone VCA
-Global+Pan        GoZone Folder
-EQ                GoZone SelectedTrackReceive
-Plugin            GoZone SelectedTrackFXMenu
-Control+Track     GoZone HomePeek
-Zoom              Reaper _SWS_ITEMZOOM                                              Feedback=No
-Zoom              GoZone ItemFades
 
 ZoneEnd

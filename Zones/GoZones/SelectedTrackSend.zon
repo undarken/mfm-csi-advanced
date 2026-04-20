@@ -1,5 +1,5 @@
 Zone SelectedTrackSend
-// Revision: 3.2.6
+// Revision: 3.2.7
 
                         
                  DisplayUpper|       TrackSendNameDisplay
@@ -53,7 +53,7 @@ Zone SelectedTrackSend
                           Send       ClearModifiers                                                                     Feedback=No // zone toggle hard reset
                           Send       Reaper 41150                                                                      Feedback=No // hide all envelopes all tracks
                           Send       Reaper 40088                                                                      Feedback=No // set automation trim/read
-                          Send       GoZone SelectedTracks                                                             Feedback=No // return to main editing zone
+                          Send       GoHome                                                                           Feedback=No // return to main editing zone
                          Touch       Reaper 41150                                                                      Feedback=No // hide all envelopes before automation focus
                          Touch       Reaper _BR_SHOW_SEND_ENV_ALL_SEL_TRACK                                           Feedback=No // show selected track send envelopes
                          Touch       TrackAutoMode 2                                                                   Feedback=No // set touch mode before writing
@@ -91,7 +91,7 @@ Zone SelectedTrackSend
                          Track       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5      Feedback=No // Script: HeDa_View Scroll Top.lua
                          Track       Reaper  _SWS_VZOOMFITMIN   
                                    
-                         Track       GoZone SelectedTracks   
+                         Track       GoHome   
                          
 // PLUGIN - THIS WHAT YOU WANT TO HAPPEN WHEN GOING INTO THE SelectedTrackFX ZONE:
                                             

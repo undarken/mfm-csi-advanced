@@ -6,11 +6,11 @@ OnZoneDeactivation ClearModifiers
 // Scrub toggles back to envelope navigation level
 Scrub       GoZone SelectedTrackSendAutomation
 
-// Send button remains the hard eject to main mix zone
+// Send button remains the hard eject to main Home zone
 Send        ClearModifiers
 Send        Reaper 41150 Feedback=No
 Send        Reaper 40088 Feedback=No
-Send        GoZone SelectedTracks
+Send        GoHome
 
 // Keep modifiers explicit
 Shift       Shift

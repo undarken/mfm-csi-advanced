@@ -1,5 +1,5 @@
 Zone SelectedTrackSendAutomation
-// Revision: 3.2.6
+// Revision: 3.2.7
 
 OnZoneDeactivation ClearModifiers
 
@@ -10,7 +10,7 @@ Zoom+Scrub  GoZone SelectedTrackSend
 Send        ClearModifiers
 Send        Reaper 41150 Feedback=No
 Send        Reaper 40088 Feedback=No
-Send        GoZone SelectedTracks
+Send        GoHome
 
 // Keep modifier behavior explicit in automation mode
 Shift       Shift

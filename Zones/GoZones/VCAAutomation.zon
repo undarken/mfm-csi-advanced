@@ -16,7 +16,7 @@ Touch       Touch
 Pan         ClearModifiers
 Pan         Reaper 41150 Feedback=No            // hide all envelopes all tracks
 Pan         Reaper 40088 Feedback=No            // set automation trim/read
-Pan         GoZone SelectedTracks
+Pan         GoHome
 
 // Optional Touch exit for local in/out toggle of this sub-zone only
 Touch       GoZone VCA

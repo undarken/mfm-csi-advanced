@@ -1,5 +1,5 @@
 Zone Buttons 
-// Revision: 3.2.3
+// Revision: 3.2.4
 
 
 
@@ -29,7 +29,7 @@ Zone Buttons
                          Track       Reaper  _RS8659c058fc32cd3fb1a7dcdedd2505d977ce6ec5                                  Feedback=No // Script: HeDa_View Scroll Top.lua
                          Track       Reaper  _SWS_VZOOMFITMIN   
                                      
-                         Track       GoZone SelectedTracks    
+                         Track       GoHome    
                          
 // Plugin - This is what you want to happen going to the SelectedTrackFXMenu Zone:
 
