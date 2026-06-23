@@ -1,0 +1,260 @@
+Zone "ItemShape"
+// MFM VERSION: 26 FINAL MFM
+
+             Zoom       Reaper 40727
+    InvertFB+Zoom                GoZone Home
+
+    // CH 1: PITCH
+    Fader1               FXParam 2 "JSCSI_ItemShape"
+    Rotary1              FXParam 2 "JSCSI_ItemShape"
+    Option+Fader1        FXParam 0 "JSCSI_ItemShape"
+    Option+Rotary1       FXParam 0 "JSCSI_ItemShape"
+    Option+Shift+Fader1  FXParam 1 "JSCSI_ItemShape"
+    Option+Shift+Rotary1 FXParam 1 "JSCSI_ItemShape"
+    Select1              FXParam 2 "JSCSI_ItemShape" > [ 0.0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1.0 ]
+    Shift+Select1        FXParam 2 "JSCSI_ItemShape" < [ 0.0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1.0 ]
+    Alt+Select1          NoAction
+    Alt+Shift+Select1    NoAction
+    RecordArm1           FXParam 29 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute1                FXParam 37 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Alt+RecordArm1       NoAction
+    Alt+Mute1            NoAction
+    DisplayUpper1        FXParamValueDisplay 2
+    Touch+DisplayUpper1  FXParamValueDisplay 2
+    Option+DisplayUpper1 FXParamValueDisplay 0
+    Option+Touch+DisplayUpper1 FXParamValueDisplay 0
+    Option+Shift+DisplayUpper1 FXParamValueDisplay 1
+    Option+Shift+Touch+DisplayUpper1 FXParamValueDisplay 1
+    Alt+DisplayUpper1    FixedTextDisplay ""
+    Alt+Touch+DisplayUpper1 FixedTextDisplay ""
+    DisplayLower1        FixedTextDisplay "PITCH"
+    Option+DisplayLower1 FixedTextDisplay "PITCH"
+    Option+Shift+DisplayLower1 FixedTextDisplay " PiFINE"
+    Alt+DisplayLower1    FixedTextDisplay ""
+
+    // CH 2: RATE
+    Fader2               FXParam 5 "JSCSI_ItemShape"
+    Rotary2              FXParam 5 "JSCSI_ItemShape"
+    Option+Fader2        FXParam 3 "JSCSI_ItemShape"
+    Option+Rotary2       FXParam 3 "JSCSI_ItemShape"
+    Option+Shift+Fader2  FXParam 4 "JSCSI_ItemShape"
+    Option+Shift+Rotary2 FXParam 4 "JSCSI_ItemShape"
+    Select2              FXParam 5 "JSCSI_ItemShape" > [ 0.0 0.1667 0.3333 0.5 0.6667 0.8333 1.0 ]
+    Shift+Select2        FXParam 5 "JSCSI_ItemShape" < [ 0.0 0.1667 0.3333 0.5 0.6667 0.8333 1.0 ]
+    Alt+Select2          NoAction
+    Alt+Shift+Select2    NoAction
+    RecordArm2           FXParam 30 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute2                FXParam 38 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Alt+RecordArm2       NoAction
+    Alt+Mute2            NoAction
+    DisplayUpper2        FXParamValueDisplay 5
+    Touch+DisplayUpper2  FXParamValueDisplay 5
+    Option+DisplayUpper2 FXParamValueDisplay 3
+    Option+Touch+DisplayUpper2 FXParamValueDisplay 3
+    Option+Shift+DisplayUpper2 FXParamValueDisplay 4
+    Option+Shift+Touch+DisplayUpper2 FXParamValueDisplay 4
+    Alt+DisplayUpper2    FixedTextDisplay ""
+    Alt+Touch+DisplayUpper2 FixedTextDisplay ""
+    DisplayLower2        FixedTextDisplay " RATE"
+    Option+DisplayLower2 FixedTextDisplay " RATE"
+    Option+Shift+DisplayLower2 FixedTextDisplay " RaFINE"
+    Alt+DisplayLower2    FixedTextDisplay ""
+
+    // CH 3: PAN
+    Fader3               FXParam 8 "JSCSI_ItemShape"
+    Rotary3              FXParam 8 "JSCSI_ItemShape"
+    Option+Fader3        FXParam 6 "JSCSI_ItemShape"
+    Option+Rotary3       FXParam 6 "JSCSI_ItemShape"
+    Option+Shift+Fader3  FXParam 7 "JSCSI_ItemShape"
+    Option+Shift+Rotary3 FXParam 7 "JSCSI_ItemShape"
+    Select3              FXParam 8 "JSCSI_ItemShape" > [ 0.0 0.5 1.0 ]
+    Shift+Select3        FXParam 8 "JSCSI_ItemShape" < [ 0.0 0.5 1.0 ]
+    Alt+Select3          NoAction
+    Alt+Shift+Select3    NoAction
+    RecordArm3           FXParam 31 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute3                FXParam 39 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Alt+RecordArm3       NoAction
+    Alt+Mute3            NoAction
+    DisplayUpper3        FXParamValueDisplay 8
+    Touch+DisplayUpper3  FXParamValueDisplay 8
+    Option+DisplayUpper3 FXParamValueDisplay 6
+    Option+Touch+DisplayUpper3 FXParamValueDisplay 6
+    Option+Shift+DisplayUpper3 FXParamValueDisplay 7
+    Option+Shift+Touch+DisplayUpper3 FXParamValueDisplay 7
+    Alt+DisplayUpper3    FixedTextDisplay ""
+    Alt+Touch+DisplayUpper3 FixedTextDisplay ""
+    DisplayLower3        FixedTextDisplay " PAN"
+    Option+DisplayLower3 FixedTextDisplay " PAN"
+    Option+Shift+DisplayLower3 FixedTextDisplay " PaFINE"
+    Alt+DisplayLower3    FixedTextDisplay ""
+
+    // CH 4: XFADE CENTER
+    Fader4               FXParam 9 "JSCSI_ItemShape"
+    Rotary4              FXParam 9 "JSCSI_ItemShape"
+    Option+Fader4        FXParam 10 "JSCSI_ItemShape"
+    Option+Rotary4       FXParam 10 "JSCSI_ItemShape"
+    Option+Shift+Fader4  FXParam 10 "JSCSI_ItemShape"
+    Option+Shift+Rotary4 FXParam 10 "JSCSI_ItemShape"
+    Alt+Fader4           FXParam 11 "JSCSI_ItemShape"
+    Alt+Rotary4          FXParam 11 "JSCSI_ItemShape"
+    Alt+Option+Fader4    FXParam 12 "JSCSI_ItemShape"
+    Alt+Option+Rotary4   FXParam 12 "JSCSI_ItemShape"
+    Select4              FXParam 9 "JSCSI_ItemShape" > [ 0.0 0.25 0.5 0.75 1.0 ]
+    Shift+Select4        FXParam 9 "JSCSI_ItemShape" < [ 0.0 0.25 0.5 0.75 1.0 ]
+    Alt+Select4          NoAction
+    Alt+Shift+Select4    NoAction
+    RecordArm4           FXParam 32 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute4                FXParam 40 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    DisplayUpper4        FXParamValueDisplay 9
+    Touch+DisplayUpper4  FXParamValueDisplay 9
+    Option+DisplayUpper4 FXParamValueDisplay 10
+    Option+Touch+DisplayUpper4 FXParamValueDisplay 10
+    Option+Shift+DisplayUpper4 FXParamValueDisplay 10
+    Option+Shift+Touch+DisplayUpper4 FXParamValueDisplay 10
+    Alt+DisplayUpper4    FXParamValueDisplay 11
+    Alt+Touch+DisplayUpper4 FXParamValueDisplay 11
+    Alt+Option+DisplayUpper4 FXParamValueDisplay 12
+    Alt+Option+Touch+DisplayUpper4 FXParamValueDisplay 12
+    DisplayLower4        FixedTextDisplay " XF ctr"
+    Option+DisplayLower4 FixedTextDisplay " XF ctr"
+    Option+Shift+DisplayLower4 FixedTextDisplay " ctrFINE"
+    Alt+DisplayLower4    FixedTextDisplay "ctrTYPE"
+    Alt+Option+DisplayLower4 FixedTextDisplay " ctrFINE"
+
+    // CH 5: XFADE LENGTH
+    Fader5               FXParam 17 "JSCSI_ItemShape"
+    Rotary5              FXParam 17 "JSCSI_ItemShape"
+    Option+Fader5        FXParam 13 "JSCSI_ItemShape"
+    Option+Rotary5       FXParam 13 "JSCSI_ItemShape"
+    Option+Shift+Fader5  FXParam 14 "JSCSI_ItemShape"
+    Option+Shift+Rotary5 FXParam 14 "JSCSI_ItemShape"
+    Alt+Fader5           FXParam 15 "JSCSI_ItemShape"
+    Alt+Rotary5          FXParam 15 "JSCSI_ItemShape"
+    Alt+Option+Fader5    FXParam 16 "JSCSI_ItemShape"
+    Alt+Option+Rotary5   FXParam 16 "JSCSI_ItemShape"
+    Select5              FXParam 17 "JSCSI_ItemShape" > [ 0.0 0.3333 0.6667 1.0 ]
+    Shift+Select5        FXParam 17 "JSCSI_ItemShape" < [ 0.0 0.3333 0.6667 1.0 ]
+    Alt+Select5          FXParam 15 "JSCSI_ItemShape"
+    Alt+Shift+Select5    FXParam 15 "JSCSI_ItemShape"
+    RecordArm5           FXParam 33 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute5                FXParam 41 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    DisplayUpper5        FXParamValueDisplay 17
+    Touch+DisplayUpper5  FXParamValueDisplay 17
+    Option+DisplayUpper5 FXParamValueDisplay 13
+    Option+Touch+DisplayUpper5 FXParamValueDisplay 13
+    Option+Shift+DisplayUpper5 FXParamValueDisplay 14
+    Option+Shift+Touch+DisplayUpper5 FXParamValueDisplay 14
+    Alt+DisplayUpper5    FXParamValueDisplay 15
+    Alt+Touch+DisplayUpper5 FXParamValueDisplay 15
+    Alt+Option+DisplayUpper5 FXParamValueDisplay 16
+    Alt+Option+Touch+DisplayUpper5 FXParamValueDisplay 16
+    DisplayLower5        FixedTextDisplay " XFSize"
+    Option+DisplayLower5 FixedTextDisplay " XFSize"
+    Option+Shift+DisplayLower5 FixedTextDisplay " xfFINE"
+    Alt+DisplayLower5    FixedTextDisplay " xfTYPE"
+    Alt+Option+DisplayLower5 FixedTextDisplay " xfFINE"
+
+    // CH 6: FADE IN
+    Fader6               FXParam 18 "JSCSI_ItemShape"
+    Rotary6              FXParam 18 "JSCSI_ItemShape"
+    Option+Fader6        FXParam 18 "JSCSI_ItemShape"
+    Option+Rotary6       FXParam 18 "JSCSI_ItemShape"
+    Option+Shift+Fader6  FXParam 19 "JSCSI_ItemShape"
+    Option+Shift+Rotary6 FXParam 19 "JSCSI_ItemShape"
+    Alt+Fader6           FXParam 20 "JSCSI_ItemShape"
+    Alt+Rotary6          FXParam 20 "JSCSI_ItemShape"
+    Alt+Option+Fader6    FXParam 21 "JSCSI_ItemShape"
+    Alt+Option+Rotary6   FXParam 21 "JSCSI_ItemShape"
+    Select6              FXParam 18 "JSCSI_ItemShape" > [ 0.0 0.01 0.1 0.3 0.5 0.6 0.8 0.9 1.0 ]
+    Shift+Select6        FXParam 18 "JSCSI_ItemShape" < [ 0.0 0.01 0.1 0.3 0.5 0.6 0.8 0.9 1.0 ]
+    Alt+Select6          FXParam 20 "JSCSI_ItemShape" > [ 0.0 0.1667 0.3333 0.5 0.6667 0.8333 1.0 ]
+    Alt+Shift+Select6    FXParam 20 "JSCSI_ItemShape" < [ 0.0 0.1667 0.3333 0.5 0.6667 0.8333 1.0 ]
+    RecordArm6           FXParam 34 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute6                FXParam 42 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    DisplayUpper6        FXParamValueDisplay 18
+    Touch+DisplayUpper6  FXParamValueDisplay 18
+    Option+DisplayUpper6 FXParamValueDisplay 19
+    Option+Touch+DisplayUpper6 FXParamValueDisplay 19
+    Option+Shift+DisplayUpper6 FXParamValueDisplay 20
+    Option+Shift+Touch+DisplayUpper6 FXParamValueDisplay 20
+    Alt+DisplayUpper6    FXParamValueDisplay 20
+    Alt+Touch+DisplayUpper6 FXParamValueDisplay 20
+    Alt+Option+DisplayUpper6 FXParamValueDisplay 21
+    Alt+Option+Touch+DisplayUpper6 FXParamValueDisplay 21
+    DisplayLower6        FixedTextDisplay " FaIN"
+    Option+DisplayLower6 FixedTextDisplay "  FaIN"
+    Option+Shift+DisplayLower6 FixedTextDisplay "  FiFINE"
+    Alt+DisplayLower6    FixedTextDisplay " FiTYPE"
+    Alt+Option+DisplayLower6 FixedTextDisplay " FiFINE"
+
+    // CH 7: FADE OUT
+    Fader7               FXParam 22 "JSCSI_ItemShape"
+    Rotary7              FXParam 22 "JSCSI_ItemShape"
+    Option+Fader7        FXParam 23 "JSCSI_ItemShape"
+    Option+Rotary7       FXParam 23 "JSCSI_ItemShape"
+    Option+Shift+Fader7  FXParam 24 "JSCSI_ItemShape"
+    Option+Shift+Rotary7 FXParam 24 "JSCSI_ItemShape"
+    Alt+Fader7           FXParam 24 "JSCSI_ItemShape"
+    Alt+Rotary7          FXParam 24 "JSCSI_ItemShape"
+    Alt+Option+Fader7    FXParam 25 "JSCSI_ItemShape"
+    Alt+Option+Rotary7   FXParam 25 "JSCSI_ItemShape"
+    Select7              FXParam 22 "JSCSI_ItemShape" > [ 0.0 0.01 0.1 0.3 0.5 0.6 0.8 0.9 1.0 ]
+    Shift+Select7        FXParam 22 "JSCSI_ItemShape" < [ 0.0 0.01 0.1 0.3 0.5 0.6 0.8 0.9 1.0 ]
+    Alt+Select7          FXParam 24 "JSCSI_ItemShape" > [ 0.0 0.1667 0.3333 0.5 0.6667 0.8333 1.0 ]
+    Alt+Shift+Select7    FXParam 24 "JSCSI_ItemShape" < [ 0.0 0.1667 0.3333 0.5 0.6667 0.8333 1.0 ]
+    RecordArm7           FXParam 35 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute7                FXParam 43 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    DisplayUpper7        FXParamValueDisplay 22
+    Touch+DisplayUpper7  FXParamValueDisplay 22
+    Option+DisplayUpper7 FXParamValueDisplay 23
+    Option+Touch+DisplayUpper7 FXParamValueDisplay 23
+    Option+Shift+DisplayUpper7 FXParamValueDisplay 24
+    Option+Shift+Touch+DisplayUpper7 FXParamValueDisplay 24
+    Alt+DisplayUpper7    FXParamValueDisplay 24
+    Alt+Touch+DisplayUpper7 FXParamValueDisplay 24
+    Alt+Option+DisplayUpper7 FXParamValueDisplay 25
+    Alt+Option+Touch+DisplayUpper7 FXParamValueDisplay 25
+    DisplayLower7        FixedTextDisplay " FaOUT"
+    Option+DisplayLower7 FixedTextDisplay " FaOUT"
+    Option+Shift+DisplayLower7 FixedTextDisplay " FoFINE"
+    Alt+DisplayLower7    FixedTextDisplay "FoTYPE"
+    Alt+Option+DisplayLower7 FixedTextDisplay " FoFINE"
+
+    // CH 8: VOLUME
+    Fader8               FXParam 28 "JSCSI_ItemShape"
+    Rotary8              FXParam 28 "JSCSI_ItemShape"
+    Option+Fader8        FXParam 26 "JSCSI_ItemShape"
+    Option+Rotary8       FXParam 26 "JSCSI_ItemShape"
+    Option+Shift+Fader8  FXParam 27 "JSCSI_ItemShape"
+    Option+Shift+Rotary8 FXParam 27 "JSCSI_ItemShape"
+    Select8              FXParam 28 "JSCSI_ItemShape" > [ 0.0 0.25 0.5 0.75 1.0 ]
+    Shift+Select8        FXParam 28 "JSCSI_ItemShape" < [ 0.0 0.25 0.5 0.75 1.0 ]
+    Alt+Select8          NoAction
+    Alt+Shift+Select8    NoAction
+    RecordArm8           FXParam 36 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Mute8                FXParam 44 "JSCSI_ItemShape" [ 0.0 1.0 ]
+    Alt+RecordArm8       NoAction
+    Alt+Mute8            NoAction
+    DisplayUpper8        FXParamValueDisplay 28
+    Touch+DisplayUpper8  FXParamValueDisplay 28
+    Option+DisplayUpper8 FXParamValueDisplay 26
+    Option+Touch+DisplayUpper8 FXParamValueDisplay 26
+    Option+Shift+DisplayUpper8 FXParamValueDisplay 27
+    Option+Shift+Touch+DisplayUpper8 FXParamValueDisplay 27
+    Alt+DisplayUpper8    FixedTextDisplay ""
+    Alt+Touch+DisplayUpper8 FixedTextDisplay ""
+    DisplayLower8        FixedTextDisplay " VOL"
+    Option+DisplayLower8 FixedTextDisplay " VOL"
+    Option+Shift+DisplayLower8 FixedTextDisplay " VolFINE"
+    Alt+DisplayLower8    FixedTextDisplay ""
+
+    Control+Fader6       Reaper _SWS_AWFADEINEND
+    Control+Rotary6      Reaper _SWS_AWFADEINEND
+    Control+Fader7       Reaper _SWS_AWFADEOUTSTART
+    Control+Rotary7      Reaper _SWS_AWFADEOUTSTART
+
+    Shift+JogWheelRotaryCW   Reaper 40117
+    Shift+JogWheelRotaryCCW  Reaper 40118
+    Flip                     Reaper 40131
+
+ZoneEnd
